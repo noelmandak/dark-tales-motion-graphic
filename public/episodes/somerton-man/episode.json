@@ -1,0 +1,119 @@
+{
+  "id": "somerton-man",
+  "title": "The Man Without a Name",
+  "look": "casefile",
+  "keywords": ["1948", "Tamám", "Shud", "code", "solved", "unknown", "DNA", "confirm", "Webb", "finished"],
+  "displayReplace": {},
+  "scenes": [
+    {
+      "id": "s1",
+      "vo": "In 1948, a man in a suit and tie was found dead on a beach in Adelaide. Every label had been removed from his clothes. Nobody knew who he was.",
+      "shots": [
+        {"at": 0, "type": "board", "tab": "I · FOUND",
+         "items": [
+           {"kind": "card", "x": 540, "y": 520, "rot": -2, "s": 1.1, "title": "CASE FILE", "lines": ["DEC 1, 1948", "SOMERTON BEACH", "ADELAIDE"]},
+           {"kind": "photo", "subject": "beach", "x": 580, "y": 1030, "rot": 3, "caption": "Somerton Beach", "at": "@found"}]},
+        {"at": "@every -0.1", "type": "board", "tab": "I · FOUND",
+         "items": [
+           {"kind": "photo", "id": "c", "subject": "clothes", "x": 340, "y": 780, "rot": -4, "s": 1.05, "caption": "suit and tie"},
+           {"kind": "card", "id": "t", "x": 780, "y": 1085, "rot": 3, "s": 0.95, "at": "@label", "lines": ["LABEL REMOVED", "LABEL REMOVED", "LABEL REMOVED"]}],
+         "strings": [{"from": "c", "to": "t", "at": "@removed"}]},
+        {"at": "@nobody -0.1", "type": "board", "tab": "I · FOUND",
+         "items": [{"kind": "photo", "subject": "unknown", "x": 540, "y": 820, "s": 1.25, "caption": "who was he?"}],
+         "stamps": [{"at": "@who", "text": "UNIDENTIFIED", "y": 1240, "size": 66}]}
+      ],
+      "sfx": [{"at": 0, "file": "bass-hit", "vol": 0.45}, {"at": "@who", "file": "stamp", "vol": 0.4}]
+    },
+    {
+      "id": "s2",
+      "vo": "He carried no wallet and no ID, and police could not find out who he was. Months later, a tiny scrap of paper turned up in a hidden pocket. Two Persian words: Tamám Shud. It means finished.",
+      "shots": [
+        {"at": 0, "type": "board", "tab": "II · THE SCRAP",
+         "items": [{"kind": "card", "x": 540, "y": 720, "rot": -2, "s": 1.2, "title": "EVIDENCE", "lines": ["NO WALLET", "NO ID", "NAME: UNKNOWN"]}]},
+        {"at": "@months -0.1", "type": "board", "tab": "II · THE SCRAP",
+         "items": [{"kind": "photo", "subject": "pocket", "x": 540, "y": 820, "rot": -2, "s": 1.3, "caption": "a hidden pocket"}]},
+        {"at": "@two -0.1", "type": "board", "tab": "II · THE SCRAP",
+         "items": [
+           {"kind": "scrap", "x": 540, "y": 640, "rot": -3, "s": 1.5, "text": "TAMÁM SHUD", "at": "@persian"},
+           {"kind": "card", "x": 540, "y": 1090, "rot": 2, "s": 1.05, "at": "@means", "title": "TRANSLATION", "lines": ["\"FINISHED\""]}]}
+      ],
+      "sfx": []
+    },
+    {
+      "id": "s3",
+      "vo": "The scrap had been torn from a book of Persian poems, the Rubaiyat. A man handed police the copy it came from. Inside the back cover were five lines of faint letters. Some call it a code. It has never been solved.",
+      "shots": [
+        {"at": 0, "type": "board", "tab": "III · THE CODE",
+         "items": [
+           {"kind": "photo", "id": "b", "subject": "book", "x": 390, "y": 820, "rot": -4, "s": 1.1, "caption": "The Rubaiyat", "at": "@book"},
+           {"kind": "scrap", "id": "s", "x": 760, "y": 1130, "rot": 5, "s": 0.95, "text": "TAMÁM SHUD", "at": "@scrap"}],
+         "strings": [{"from": "s", "to": "b", "at": "@torn"}]},
+        {"at": "@man -0.2", "type": "board", "tab": "III · THE CODE",
+         "items": [
+           {"kind": "photo", "id": "b", "subject": "book", "x": 400, "y": 860, "rot": -3, "s": 1.15, "caption": "The Rubaiyat", "at": 0},
+           {"kind": "scrap", "id": "s", "x": 740, "y": 560, "rot": 6, "s": 0.9, "text": "TAMÁM SHUD", "at": 0}],
+         "strings": [{"from": "s", "to": "b", "at": "@copy"}],
+         "stamps": [{"at": "@copy", "text": "MATCH", "y": 1250, "size": 70, "color": "green"}]},
+        {"at": "@inside -0.1", "type": "board", "tab": "III · THE CODE",
+         "items": [
+           {"kind": "photo", "subject": "code", "x": 540, "y": 790, "rot": -2, "s": 1.3, "caption": "inside the back cover"},
+           {"kind": "card", "x": 540, "y": 1230, "rot": 2, "s": 0.9, "at": "@five", "lines": ["5 LINES OF LETTERS"]}],
+         "stamps": [{"at": "@solved", "text": "UNSOLVED", "y": 430, "size": 80}]}
+      ],
+      "sfx": [{"at": "@copy", "file": "stamp", "vol": 0.35}, {"at": "@solved", "file": "stamp", "vol": 0.45}]
+    },
+    {
+      "id": "s4",
+      "vo": "Then, in 2022, after 74 years, a professor announced a name. Using DNA from the man's hair, he said the dead man was Carl Webb, born in Melbourne. Police said they could not yet confirm it. And how he died is still unknown.",
+      "shots": [
+        {"at": 0, "type": "board", "tab": "IV · THE NAME",
+         "items": [{"kind": "clipping", "x": 540, "y": 800, "rot": -2, "s": 1.15, "headline": "NAMED AFTER 74 YEARS?"}]},
+        {"at": "@using -0.1", "type": "board", "tab": "IV · THE NAME",
+         "items": [
+           {"kind": "photo", "id": "d", "subject": "dna", "x": 340, "y": 790, "rot": -4, "s": 1.05, "caption": "DNA from hair"},
+           {"kind": "card", "id": "m", "x": 780, "y": 1120, "rot": 3, "s": 0.95, "at": "@hair", "title": "METHOD", "lines": ["DNA FROM HAIR"]}],
+         "strings": [{"from": "d", "to": "m", "at": "@hair"}]},
+        {"at": "@carl -0.2", "type": "board", "tab": "IV · THE NAME",
+         "items": [{"kind": "card", "x": 540, "y": 720, "rot": -2, "s": 1.2, "title": "CLAIMED NAME", "lines": ["CARL WEBB", "BORN MELBOURNE, 1905"]}],
+         "stamps": [{"at": "@confirm", "text": "UNCONFIRMED", "y": 1090, "size": 68}]},
+        {"at": "@and -0.1", "type": "board", "tab": "IV · THE NAME",
+         "items": [{"kind": "card", "x": 540, "y": 760, "rot": 2, "s": 1.2, "title": "CAUSE OF DEATH", "lines": ["NEVER DETERMINED"]}],
+         "stamps": [{"at": "@unknown", "text": "UNKNOWN", "y": 1130, "size": 84}]}
+      ],
+      "sfx": [{"at": "@confirm", "file": "stamp", "vol": 0.4}, {"at": "@unknown", "file": "stamp", "vol": 0.4}]
+    },
+    {
+      "id": "s5",
+      "vo": "So is the mystery solved? Not really. A name doesn't explain how he died, what the code means, or why a woman's phone number was written in that book. Follow for the next dark true story.",
+      "shots": [
+        {"at": 0, "type": "board", "tab": "V · THE QUESTIONS",
+         "items": [{"kind": "photo", "subject": "unknown", "x": 540, "y": 780, "rot": -2, "s": 1.25, "caption": "?"}],
+         "stamps": [{"at": "@really", "text": "CASE OPEN", "y": 1230, "size": 76}]},
+        {"at": "@name -0.1", "type": "board", "tab": "V · THE QUESTIONS",
+         "items": [
+           {"kind": "photo", "id": "c", "subject": "unknown", "x": 540, "y": 620, "rot": 0, "s": 0.75, "caption": "?"},
+           {"kind": "card", "id": "d1", "x": 290, "y": 1030, "rot": -3, "s": 0.8, "at": "@how", "title": "HOW HE DIED", "lines": ["?"]},
+           {"kind": "card", "id": "d2", "x": 790, "y": 1030, "rot": 3, "s": 0.8, "at": "@code", "title": "THE CODE", "lines": ["?"]},
+           {"kind": "card", "id": "d3", "x": 540, "y": 1250, "rot": -1, "s": 0.8, "at": "@womans", "title": "THE PHONE NUMBER", "lines": ["?"]}],
+         "strings": [{"from": "c", "to": "d1", "at": "@how"}, {"from": "c", "to": "d2", "at": "@code"}, {"from": "c", "to": "d3", "at": "@womans"}]},
+        {"at": "@follow", "type": "board", "cta": true, "items": []}
+      ],
+      "sfx": [{"at": "@really", "file": "stamp", "vol": 0.35}, {"at": "@follow", "file": "whoosh", "vol": 0.3}]
+    }
+  ],
+  "meta": {
+    "title": "The Man Found Dead With No Name (True Story)",
+    "description": "In 1948 a man was found dead on an Australian beach with every label removed from his clothes. A scrap of poetry, a code nobody has solved, and a name announced 74 years later that police could not confirm.",
+    "hashtags": ["#darkhistory", "#truestory", "#unsolvedmysteries", "#truecrime", "#animatedhistory", "#shorts"],
+    "sources": [
+      {"claim": "The man was found dead on 1 December 1948 on Somerton Park beach, Adelaide", "source": "Wikipedia, 'Taman Shud Case'; Canberra Times (2022); ABC News (2021)", "verified": true},
+      {"claim": "He wore a suit/jacket and tie; his clothes had their labels removed; he had no wallet or ID", "source": "Wikipedia, 'Taman Shud Case'; ABC News, 'Tamam Shud and the five other clues' (2021)", "verified": true, "note": "ABC says 'brown suit'; Wikipedia lists jacket, trousers and tie. Narration says 'suit and tie'."},
+      {"claim": "A scrap reading 'Tamám Shud' turned up months later in a hidden pocket; the words mean 'finished'/'ended'", "source": "Wikipedia, 'Taman Shud Case'; ABC News (2021); University of Adelaide Taman Shud wiki", "verified": true, "note": "Sources differ on exactly which pocket (fob pocket sewn inside the trouser pocket vs. waistband) and on timing relative to the inquest; narration says only 'months later' and 'a hidden pocket'."},
+      {"claim": "The scrap came from a Rubaiyat; a man handed police the matching copy; five lines of faint letters inside the back cover; never solved", "source": "Wikipedia, 'Taman Shud Case'; ABC News (2021)", "verified": true, "note": "ABC describes 'a sequence of letters' and says efforts to decipher them, or show they are a code at all, have failed; Wikipedia counts five lines. Narration: 'Some call it a code'. The actual letters are deliberately not shown."},
+      {"claim": "In July 2022 Prof. Derek Abbott announced the man was Carl 'Charles' Webb, born in Melbourne (1905), using DNA from hair", "source": "Canberra Times (27 Jul 2022); ABC News (2 Aug 2022); Wikipedia, 'Taman Shud Case'", "verified": true, "note": "Sources differ on where the hair came from (hair stuck in a plaster bust vs. hair taken from the man); narration says only 'DNA from the man's hair'. Webb is called an electrical engineer in some sources and an instrument maker on his marriage certificate, so no profession is stated."},
+      {"claim": "Police could not yet confirm the identification; it is for the coroner to determine", "source": "ABC News (2 Aug 2022); Wikipedia, 'Taman Shud Case'; ABC report carried by yourlifechoices.com.au", "verified": true, "note": "RE-CHECK BEFORE PUBLISHING: status may have changed. The most recent report found said SA Police had not yet presented findings to the coroner. Narration uses past tense ('Police said they could not yet confirm it')."},
+      {"claim": "How he died has never been determined", "source": "Wikipedia, 'Taman Shud Case' (1949 inquest: probable poison, cause not determined); Canberra Times (2022: 'remains unknown')", "verified": true},
+      {"claim": "A woman's phone number was written in the book (Jessica 'Jo' Thomson)", "source": "ABC News (2021); Wikipedia, 'Taman Shud Case'", "verified": true, "note": "Do not call her a nurse: sources conflict (Wikipedia says nurse; the University of Adelaide wiki says there is no evidence she was one in 1948)."}
+    ]
+  }
+}

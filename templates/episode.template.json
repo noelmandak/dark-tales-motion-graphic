@@ -1,0 +1,53 @@
+{
+  "id": "__ID__",
+  "title": "__TITLE__",
+  "keywords": [],
+  "displayReplace": {},
+  "scenes": [
+    {
+      "id": "s1",
+      "vo": "TODO hook: one or two sentences that make a stranger stop scrolling.",
+      "shots": [
+        {"at": 0, "type": "globe", "label": "TODO PLACE · YEAR"}
+      ],
+      "sfx": [{"at": 0, "file": "bass-hit", "vol": 0.45}]
+    },
+    {
+      "id": "s2",
+      "vo": "TODO problem: who is involved and what is wrong?",
+      "shots": [
+        {"at": 0, "type": "idcard", "name": "TODO Name", "sub": "TODO ROLE · PLACE", "hat": "none"}
+      ]
+    },
+    {
+      "id": "s3",
+      "vo": "TODO escalation: it gets worse, stakes rise.",
+      "shots": [
+        {"at": 0, "type": "scene", "backdrop": "ground", "people": [{"x": 540, "s": 1}]}
+      ]
+    },
+    {
+      "id": "s4",
+      "vo": "TODO twist: the turn nobody expects, with the key facts.",
+      "shots": [
+        {"at": 0, "type": "scene", "backdrop": "ground", "tint": "warm", "people": [{"x": 540, "s": 1}]}
+      ]
+    },
+    {
+      "id": "s5",
+      "vo": "TODO closing thought. Follow for the next dark true story.",
+      "shots": [
+        {"at": 0, "type": "scene", "backdrop": "ground", "tint": "warm", "people": [{"x": 540, "s": 1}]},
+        {"at": "@follow", "type": "cta"}
+      ]
+    }
+  ],
+  "meta": {
+    "title": "TODO title (True Story)",
+    "description": "TODO one or two sentences.",
+    "hashtags": ["#darkhistory", "#truestory", "#history", "#animatedhistory", "#shorts"],
+    "sources": [
+      {"claim": "TODO key claim", "source": "TODO source (author, title, year, link)", "verified": false}
+    ]
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "id": "tarrare-id",
+  "title": "Prajurit yang Tak Pernah Kenyang",
+  "lang": "id",
+  "brandText": {
+    "tagline": "Kisah nyata sejarah, satu bab demi satu bab.",
+    "ctaButton": "Ikuti",
+    "ctaQuestion": "Cerita gelap apa selanjutnya?"
+  },
+  "keywords": ["tarrare", "kucing", "kurir", "rahasia", "lapar", "laparnya", "lima", "gagal", "dikutuk", "sakit", "garpu", "emas", "lebar", "kesembuhan", "sanggup"],
+  "displayReplace": {},
+  "scenes": [
+    {
+      "id": "s1",
+      "vo": "Prancis, tahun seribu tujuh ratus sembilan puluhan. Seorang prajurit bisa memakan kucing hidup. Lalu tentara mencoba memanfaatkan perutnya sebagai kurir rahasia.",
+      "shots": [
+        {"at": 0, "type": "globe", "label": "PRANCIS · 1790-AN"},
+        {"at": "@memakan -0.1", "type": "scene", "backdrop": "barracks", "push": [1, 1.06],
+         "people": [{"x": 560, "y": 1330, "s": 0.95, "hat": "shako", "accent": "red"}],
+         "marks": [{"kind": "cat", "y": 1370, "dur": 36}]},
+        {"at": "@lalu", "type": "scene", "backdrop": "ground", "tint": "red", "moon": true, "groundTint": "#2a0c18", "push": [1, 1.1],
+         "people": [{"x": 540, "y": 1320, "s": 1.15, "hat": "shako", "accent": "red", "bellyRamp": ["@perutnya", "@rahasia"]}],
+         "stamps": [{"at": "@rahasia", "text": "KURIR RAHASIA", "size": 56}]}
+      ],
+      "sfx": [{"at": 0, "file": "bass-hit", "vol": 0.45}, {"at": "@rahasia", "file": "stamp", "vol": 0.4}]
+    },
+    {
+      "id": "s2",
+      "vo": "Namanya Tarrare. Mulutnya sangat lebar, dan rasa laparnya tak bisa dipuaskan makanan apa pun. Konon, para dokter menyajikan makanan untuk lima belas pekerja. Dia menghabiskannya... dan masih meminta lebih.",
+      "shots": [
+        {"at": 0, "type": "idcard", "name": "Tarrare", "sub": "PRAJURIT · PRANCIS", "hat": "shako", "label": "PRANCIS · 1790-AN"},
+        {"at": "@mulutnya -0.1", "type": "idcard", "name": "Tarrare", "sub": "PRAJURIT · PRANCIS", "hat": "shako", "wide": true, "zoom": true},
+        {"at": "@dan", "type": "scene", "backdrop": "ground", "tint": "warm", "push": [1, 1.08], "origin": [540, 900],
+         "people": [{"x": 540, "y": 1320, "s": 1.05, "hat": "shako", "belly": 1}],
+         "marks": [{"kind": "gauge", "at": "@laparnya", "label": "LAPAR", "to": "@dipuaskan"}]},
+        {"at": "@konon -0.1", "type": "scene", "backdrop": "table", "push": [1, 1.07],
+         "people": [{"x": 380, "s": 0.8, "hat": "shako", "belly": 0.7}, {"x": 720, "s": 0.8, "hat": "tricorn", "flip": true}],
+         "platesIn": ["@konon +0.2", "@lima -0.5"],
+         "chips": [{"at": "@lima", "text": "MAKAN UNTUK 15 PEKERJA", "size": 36, "color": "gold"}]},
+        {"at": "@dia -0.1", "type": "scene", "backdrop": "table", "push": [1, 1.07],
+         "people": [{"x": 380, "s": 0.8, "hat": "shako", "belly": 0.7, "arm": "out"}, {"x": 720, "s": 0.8, "hat": "tricorn", "flip": true}],
+         "platesOut": ["@menghabiskannya", "@masih -0.1"],
+         "chips": [{"at": "@masih", "text": "MASIH LAPAR", "dot": true, "size": 44}]}
+      ],
+      "sfx": [{"at": "@laparnya +0.1", "file": "stomach-growl", "vol": 0.35}, {"at": "@konon", "file": "plate-clink", "vol": 0.35}]
+    },
+    {
+      "id": "s3",
+      "vo": "Lalu para dokter militer punya ide gelap. Kalau Tarrare bisa menelan apa saja, dia bisa membawa rahasia. Sebuah kotak kayu. Sebuah surat di dalamnya. Antarkan ke seorang kolonel Prancis yang ditahan pasukan Prusia.",
+      "shots": [
+        {"at": 0, "type": "idcard", "name": "Pierre Percy", "sub": "AHLI BEDAH MILITER", "hat": "tricorn"},
+        {"at": "@ide -0.3", "type": "scene", "backdrop": "ground", "tint": "warm", "push": [1, 1.1], "origin": [540, 700],
+         "people": [{"x": 540, "y": 1320, "s": 1.05, "hat": "tricorn"}],
+         "marks": [{"kind": "bulb", "at": "@ide", "x": 540, "y": 560}, {"kind": "!", "at": "@gelap", "x": 700, "y": 720}]},
+        {"at": "@kalau", "type": "scene", "backdrop": "ground", "push": [1, 1.07],
+         "people": [{"x": 300, "y": 1320, "s": 0.95, "hat": "tricorn", "arm": "up"}, {"x": 780, "y": 1320, "s": 0.95, "hat": "shako", "belly": 0.7, "flip": true}],
+         "chips": [{"at": "@menelan", "text": "MENELAN APA SAJA", "y": 560}, {"at": "@membawa", "text": "MEMBAWA RAHASIA", "y": 670, "dot": "gold", "color": "gold"}]},
+        {"at": "@kotak -0.1", "type": "object", "kind": "box", "cues": {"letterIn": "@kayu", "lid": "@surat +0.2", "seal": "@dalamnya +0.3"},
+         "chips": [{"at": "@kotak", "text": "KOTAK KAYU", "y": 330}, {"at": "@surat", "text": "SEBUAH SURAT", "y": 430, "color": "gold"}]},
+        {"at": "@antarkan", "type": "map", "draw": ["@antarkan +0.4", "@prusia +0.3"],
+         "labels": {"france": "PRANCIS", "prussia": "PRUSIA", "paris": "Paris"},
+         "pin": {"at": "@kolonel +0.5", "label": "KOLONEL"}, "location": {"at": "@ditahan", "text": "DI BALIK GARIS PRUSIA"}}
+      ],
+      "sfx": [{"at": "@gelap", "file": "gold-ting", "vol": 0.3}, {"at": "@dalamnya +0.1", "file": "stamp", "vol": 0.3}]
+    },
+    {
+      "id": "s4",
+      "vo": "Tapi dia tidak pernah berhasil. Tentara Prusia menangkapnya, mencambuknya, dan mengancam akan menggantungnya. Misi itu gagal total. Dia pulang dengan tangan kosong, lalu meminta para dokter menyembuhkannya. Mereka tak sanggup. Saat meninggal pada usia sekitar dua puluh enam tahun, otopsi menemukan kerongkongan yang sangat lebar... dan lambung yang jauh lebih besar dari normal. Konon dia bahkan pernah menelan garpu emas.",
+      "shots": [
+        {"at": 0, "type": "map", "stopAt": 0.66, "labels": {"france": "PRANCIS", "prussia": "PRUSIA", "paris": "Paris"}},
+        {"at": "@tentara", "type": "scene", "backdrop": "field", "push": [1, 1.08],
+         "people": [
+           {"x": 150, "y": 1340, "s": 0.85, "hat": "shako", "accent": "red", "arm": "out", "enter": {"dx": 220, "delay": 4, "dur": 36}},
+           {"x": 300, "y": 1340, "s": 0.85, "hat": "shako", "accent": "red", "arm": "out", "enter": {"dx": 220, "delay": 8, "dur": 36}},
+           {"x": 780, "y": 1340, "s": 0.85, "hat": "shako", "accent": "red", "arm": "out", "flip": true, "enter": {"dx": -220, "delay": 12, "dur": 36}},
+           {"x": 930, "y": 1340, "s": 0.85, "hat": "shako", "accent": "red", "arm": "out", "flip": true, "enter": {"dx": -220, "delay": 16, "dur": 36}},
+           {"x": 640, "y": 1340, "s": 0.85, "hat": "shako", "accent": "red", "arm": "out", "flip": true, "enter": {"dx": -220, "delay": 20, "dur": 36}},
+           {"x": 470, "y": 1360, "s": 1, "belly": 0.4}],
+         "marks": [{"kind": "!", "at": "@menangkapnya", "x": 470, "y": 850, "color": "red"}]},
+        {"at": "@misi", "type": "paper", "lines": 7, "stamp": {"at": "@gagal", "text": "MISI GAGAL", "size": 70, "rot": -10}},
+        {"at": "@dia#2", "type": "scene", "backdrop": "room", "tint": "warm", "push": [1, 1.08],
+         "people": [{"x": 330, "y": 1250, "s": 0.75, "belly": 0.5, "arm": "out"}, {"x": 800, "y": 1330, "s": 0.9, "hat": "tricorn", "flip": true}],
+         "chips": [{"at": "@meminta", "text": "“SEMBUHKAN AKU.”", "x": 440, "y": 600, "size": 40}, {"at": "@sanggup", "text": "MEREKA TAK SANGGUP", "x": 440, "y": 700, "dot": true, "color": "red", "size": 36}]},
+        {"at": "@saat", "type": "sketch", "title": "Otopsi",
+         "strokes": [
+           {"d": "M-100 -380 C-110 -250 -170 -200 -140 -90", "from": "@otopsi", "to": "@lebar"},
+           {"d": "M100 -380 C110 -250 170 -200 140 -90", "from": "@otopsi", "to": "@lebar"},
+           {"d": "M-140 -90 C-330 -40 -330 300 -120 380 C140 450 320 320 250 90 C220 -20 180 -60 140 -90", "from": "@lambung", "to": "@normal"}],
+         "ghosts": [{"d": "M-120 20 C-190 60 -170 200 -60 220 C40 230 120 150 90 60 C80 30 60 20 40 20", "at": "@lambung"}],
+         "labels": [
+           {"at": "@lebar", "x": 150, "y": -268, "text": "terlalu lebar", "underline": [150, 270]},
+           {"at": "@besar", "x": -330, "y": 470, "text": "jauh lebih besar dari normal"}],
+         "chips": [{"at": "@enam -0.3", "text": "WAFAT · SEKITAR 26 TAHUN", "dot": true, "x": 540, "y": 230, "size": 40}]},
+        {"at": "@konon", "type": "object", "kind": "fork", "cues": {"in": "@konon +0.2"},
+         "chips": [{"at": "@garpu", "text": "KONON", "y": 340, "size": 44, "color": "gold"}]}
+      ],
+      "sfx": [{"at": "@tapi +0.2", "file": "fail-thud", "vol": 0.5}, {"at": "@gagal", "file": "stamp", "vol": 0.45}, {"at": "@garpu -0.1", "file": "gold-ting", "vol": 0.45}]
+    },
+    {
+      "id": "s5",
+      "vo": "Apakah dia dikutuk? Atau sekadar sakit parah? Hingga kini tak ada yang tahu pasti. Tapi satu hal jelas: tentara yang memakai rasa lapar itu sebagai alat tak pernah memberinya satu hal yang dia inginkan. Kesembuhan. Ikuti untuk kisah nyata gelap berikutnya.",
+      "shots": [
+        {"at": 0, "type": "scene", "backdrop": "ground", "tint": "warm", "push": [1, 1.08], "origin": [540, 900],
+         "people": [{"x": 540, "y": 1330, "s": 1.0, "belly": 0.5}],
+         "chips": [{"at": "@dikutuk", "text": "DIKUTUK?", "x": 290, "y": 560, "dot": true, "color": "red", "size": 44}, {"at": "@sakit", "text": "SAKIT?", "x": 790, "y": 700, "dot": "gold", "color": "gold", "size": 44}]},
+        {"at": "@hingga", "type": "scene", "backdrop": "tiers", "rows": 3, "baseY": 1060, "push": [1, 1.06],
+         "marks": [{"kind": "!", "at": "@hingga +0.3", "x": 250, "y": 880}, {"kind": "q", "at": "@tahu -0.1", "x": 560, "y": 820}, {"kind": "!", "at": "@pasti", "x": 840, "y": 900}]},
+        {"at": "@tapi", "type": "scene", "backdrop": "tiers", "rows": 3, "hat": "shako", "accent": "red", "baseY": 1080, "moon": true, "push": [1, 1.07],
+         "chips": [{"at": "@lapar", "text": "RASA LAPAR = ALAT", "y": 500, "dot": true, "color": "cream", "size": 38}]},
+        {"at": "@alat -0.1", "type": "scene", "backdrop": "hospital", "push": [1, 1.08],
+         "people": [{"x": 420, "s": 0.8, "belly": 0.4, "enter": {"dx": 480, "dur": 110, "walk": true}}],
+         "chips": [{"at": "@satu#2", "text": "SATU HAL YANG DIA INGINKAN", "y": 420, "size": 34}, {"at": "@kesembuhan -0.2", "text": "KESEMBUHAN", "y": 540, "dot": "gold", "color": "gold", "size": 56}]},
+        {"at": "@ikuti", "type": "cta"}
+      ],
+      "sfx": [{"at": "@alat", "file": "footsteps", "vol": 0.22}, {"at": "@ikuti", "file": "whoosh", "vol": 0.3}]
+    }
+  ],
+  "meta": {
+    "title": "Prajurit yang Tak Pernah Kenyang (Kisah Nyata)",
+    "description": "Di Prancis tahun 1790-an, seorang prajurit bernama Tarrare bisa memakan hampir apa saja, dan tentara mencoba memanfaatkannya sebagai kurir rahasia. Kisah nyata yang jarang diketahui dari sejarah militer.",
+    "hashtags": ["#sejarahgelap", "#kisahnyata", "#sejarah", "#fakta", "#animasisejarah", "#shorts"],
+    "sources": [
+      {"claim": "Tarrare terkenal dengan nafsu makannya yang ekstrem: ia dilaporkan memakan hewan hidup termasuk kucing, dan menghabiskan makanan yang disiapkan untuk 15 pekerja di rumah sakit; mulutnya sangat lebar", "source": "Wikipedia, 'Tarrare' (bersumber dari Memoire sur la polyphagie karya Percy, 1804, dan kompilasi abad ke-19); Mental Floss, 'Tarrare, the Greatest Glutton of All Time'", "verified": true, "note": "Memoar Percy adalah sumber primer, dan hampir semua cerita ulang berasal darinya. Narasi memakai 'Konon' untuk porsi makan."},
+      {"claim": "Ia menelan kotak kayu berisi dokumen sebagai kurir untuk kolonel Prancis yang ditahan Prusia, lalu tertangkap, dicambuk, dan diancam digantung sebelum dilepas", "source": "Wikipedia, 'Tarrare'; Amusing Planet, 'Tarrare: The Man Who Ate Too Much'; The Line-Up", "verified": true, "note": "Menurut Wikipedia (mengikuti Percy), gagasan kurir diusulkan dokter Courville bersama Percy dan Jenderal de Beauharnais; sebagian cerita ulang menyebut Percy. Narasi netral: 'para dokter militer'. Pesannya hanya catatan tiruan, dan apakah kotak itu berhasil dipulihkan masih diperdebatkan."},
+      {"claim": "Ia meminta Percy menyembuhkannya tetapi pengobatan gagal; ia meninggal karena tuberkulosis di Versailles tahun 1798 pada usia sekitar 26; otopsi: kerongkongan sangat lebar dan lambung sangat besar", "source": "Wikipedia, 'Tarrare'; Amusing Planet dan Bored Panda", "verified": true, "note": "Tanggal lahirnya tidak diketahui; 26 adalah perkiraan dokter, jadi narasi memakai 'sekitar dua puluh enam'."},
+      {"claim": "Garpu emas: Tarrare sendiri mengaku pernah menelannya; tidak ditemukan saat otopsi", "source": "Wikipedia, 'Tarrare' ('presented as his own belief'; 'No fork was found at autopsy')", "verified": true, "note": "Narasi memakai 'Konon'. Tentara memakainya sebagai kurir, bukan senjata: hook sengaja memakai 'kurir rahasia'."}
+    ]
+  }
+}

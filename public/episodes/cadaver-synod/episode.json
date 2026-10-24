@@ -1,0 +1,732 @@
+{
+  "id": "cadaver-synod",
+  "title": "The Trial of a Dead Pope",
+  "keywords": [
+    "897",
+    "dead",
+    "trial",
+    "guilty",
+    "strangled",
+    "overturned",
+    "reapproved",
+    "exaggerated",
+    "real",
+    "Formosus",
+    "fingers"
+  ],
+  "displayReplace": {},
+  "scenes": [
+    {
+      "id": "s1",
+      "vo": "In 897, Pope Stephen VI had a dead pope dug up. Then he put him on trial.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "folio",
+          "bg": "plain",
+          "art": [
+            {
+              "kind": "initial",
+              "letter": "I",
+              "x": 540,
+              "y": 640,
+              "s": 1.25
+            }
+          ],
+          "banners": [
+            {
+              "at": 0,
+              "text": "ROME · 897 AD",
+              "y": 1120,
+              "size": 56
+            }
+          ],
+          "chapter": "I · THE EXHUMATION"
+        },
+        {
+          "at": "@stephen -0.1",
+          "type": "folio",
+          "bg": "sky",
+          "art": [
+            {
+              "kind": "tomb",
+              "x": 600,
+              "y": 1230,
+              "s": 0.95
+            },
+            {
+              "kind": "cleric",
+              "x": 210,
+              "y": 1240,
+              "s": 0.95,
+              "robe": "red",
+              "mitre": true,
+              "arm": "point"
+            },
+            {
+              "kind": "cleric",
+              "x": 880,
+              "y": 1250,
+              "s": 0.6,
+              "robe": "brown",
+              "hold": "shovel",
+              "arm": "hold",
+              "flip": true
+            }
+          ],
+          "banners": [
+            {
+              "at": "@stephen",
+              "text": "POPE STEPHEN VI",
+              "y": 300,
+              "size": 50
+            }
+          ],
+          "chapter": "I · THE EXHUMATION"
+        },
+        {
+          "at": "@then",
+          "type": "folio",
+          "bg": "arcade",
+          "art": [
+            {
+              "kind": "throne",
+              "x": 540,
+              "y": 1240,
+              "s": 1.05
+            },
+            {
+              "kind": "cleric",
+              "x": 540,
+              "y": 1204,
+              "s": 1,
+              "robe": "white",
+              "mitre": true,
+              "dead": true,
+              "seated": true,
+              "tilt": -4
+            },
+            {
+              "kind": "cleric",
+              "x": 190,
+              "y": 1240,
+              "s": 0.9,
+              "robe": "blue",
+              "arm": "point"
+            },
+            {
+              "kind": "cleric",
+              "x": 890,
+              "y": 1240,
+              "s": 0.9,
+              "robe": "plum",
+              "arm": "point",
+              "flip": true
+            }
+          ],
+          "stamps": [
+            {
+              "at": "@trial",
+              "text": "ON TRIAL",
+              "y": 380,
+              "size": 66
+            }
+          ],
+          "chapter": "I · THE EXHUMATION"
+        }
+      ],
+      "sfx": [
+        {
+          "at": 0,
+          "file": "bass-hit",
+          "vol": 0.45
+        },
+        {
+          "at": "@trial",
+          "file": "stamp",
+          "vol": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "vo": "The corpse was Pope Formosus. His enemies said he had broken church law to become pope. So the body was propped on a throne in court, and a deacon was appointed to speak for the dead.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "folio",
+          "bg": "plain",
+          "art": [
+            {
+              "kind": "medallion",
+              "x": 540,
+              "y": 700,
+              "s": 1.15,
+              "robe": "white",
+              "name": "FORMOSUS"
+            }
+          ],
+          "chapter": "II · THE ACCUSATION"
+        },
+        {
+          "at": "@his",
+          "type": "folio",
+          "bg": "arcade",
+          "art": [
+            {
+              "kind": "doc",
+              "x": 540,
+              "y": 700,
+              "w": 540,
+              "h": 640,
+              "title": "Canon Law",
+              "lines": 6,
+              "redLines": [
+                2,
+                3
+              ]
+            },
+            {
+              "kind": "cleric",
+              "x": 170,
+              "y": 1240,
+              "s": 0.78,
+              "robe": "red",
+              "arm": "point"
+            },
+            {
+              "kind": "cleric",
+              "x": 340,
+              "y": 1240,
+              "s": 0.78,
+              "robe": "blue",
+              "arm": "point"
+            },
+            {
+              "kind": "cleric",
+              "x": 900,
+              "y": 1240,
+              "s": 0.78,
+              "robe": "plum",
+              "arm": "point",
+              "flip": true
+            }
+          ],
+          "stamps": [
+            {
+              "at": "@broken",
+              "text": "BROKEN CHURCH LAW",
+              "y": 740,
+              "size": 42
+            }
+          ],
+          "chapter": "II · THE ACCUSATION"
+        },
+        {
+          "at": "@so",
+          "type": "folio",
+          "bg": "arcade",
+          "art": [
+            {
+              "kind": "throne",
+              "x": 770,
+              "y": 1240,
+              "s": 0.85
+            },
+            {
+              "kind": "cleric",
+              "x": 770,
+              "y": 1211,
+              "s": 0.8,
+              "robe": "white",
+              "mitre": true,
+              "dead": true,
+              "seated": true,
+              "tilt": -4
+            },
+            {
+              "kind": "cleric",
+              "x": 290,
+              "y": 1240,
+              "s": 1,
+              "robe": "green",
+              "arm": "raise",
+              "hold": "scroll"
+            }
+          ],
+          "banners": [
+            {
+              "at": "@deacon",
+              "text": "A DEACON SPEAKS FOR THE DEAD",
+              "y": 300,
+              "size": 38
+            }
+          ],
+          "chapter": "II · THE ACCUSATION"
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@broken",
+          "file": "stamp",
+          "vol": 0.35
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "vo": "The verdict was guilty. Reportedly, three fingers, the ones used to bless, were cut from his right hand. Then the body was thrown into the Tiber.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "folio",
+          "bg": "plain",
+          "art": [
+            {
+              "kind": "doc",
+              "x": 540,
+              "y": 700,
+              "w": 640,
+              "h": 800,
+              "title": "Verdict",
+              "lines": 7,
+              "redLines": [
+                3
+              ]
+            },
+            {
+              "kind": "seal",
+              "x": 540,
+              "y": 1180,
+              "s": 1
+            }
+          ],
+          "stamps": [
+            {
+              "at": "@guilty",
+              "text": "GUILTY",
+              "y": 760,
+              "size": 124,
+              "rot": -10
+            }
+          ],
+          "chapter": "III · THE VERDICT"
+        },
+        {
+          "at": "@reportedly -0.1",
+          "type": "folio",
+          "bg": "plain",
+          "art": [
+            {
+              "kind": "hand",
+              "x": 540,
+              "y": 640,
+              "s": 1.5,
+              "from": "@reportedly",
+              "to": "@bless",
+              "cut": "@cut"
+            }
+          ],
+          "banners": [
+            {
+              "at": "@bless",
+              "text": "THE THREE BLESSING FINGERS",
+              "y": 1260,
+              "size": 40
+            }
+          ],
+          "chapter": "III · THE VERDICT"
+        },
+        {
+          "at": "@then",
+          "type": "folio",
+          "bg": "sky",
+          "art": [
+            {
+              "kind": "bridge",
+              "y": 690
+            },
+            {
+              "kind": "waves",
+              "y": 900
+            },
+            {
+              "kind": "bundle",
+              "at": "@thrown",
+              "x": 480,
+              "y": 840
+            }
+          ],
+          "banners": [
+            {
+              "at": "@tiber",
+              "text": "INTO THE TIBER",
+              "y": 300,
+              "size": 52
+            }
+          ],
+          "chapter": "III · THE VERDICT"
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@guilty",
+          "file": "stamp",
+          "vol": 0.45
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "vo": "But the backlash came fast. Within months, Stephen was arrested, and strangled in prison. The verdict was overturned, Formosus was reburied in St. Peter's, and trials of dead popes were banned. Years later, Pope Sergius III reapproved the verdict.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "folio",
+          "bg": "sky",
+          "tone": "blood",
+          "art": [
+            {
+              "kind": "crowd"
+            }
+          ],
+          "banners": [
+            {
+              "at": "@backlash",
+              "text": "THE BACKLASH",
+              "y": 300,
+              "size": 56,
+              "color": "red"
+            }
+          ],
+          "chapter": "IV · THE REVERSAL"
+        },
+        {
+          "at": "@within -0.1",
+          "type": "folio",
+          "bg": "cell",
+          "art": [
+            {
+              "kind": "cleric",
+              "x": 540,
+              "y": 1250,
+              "s": 1.1,
+              "robe": "red",
+              "mitre": true
+            },
+            {
+              "kind": "bars"
+            }
+          ],
+          "stamps": [
+            {
+              "at": "@arrested",
+              "text": "ARRESTED",
+              "y": 420,
+              "size": 74,
+              "color": "cream"
+            }
+          ],
+          "banners": [
+            {
+              "at": "@strangled",
+              "text": "STRANGLED IN PRISON",
+              "y": 1290,
+              "size": 42,
+              "color": "red"
+            }
+          ],
+          "chapter": "IV · THE REVERSAL"
+        },
+        {
+          "at": "@verdict -0.2",
+          "type": "folio",
+          "bg": "sky",
+          "art": [
+            {
+              "kind": "church",
+              "x": 540,
+              "y": 1180,
+              "s": 0.85
+            },
+            {
+              "kind": "bier",
+              "x": 540,
+              "y": 1300,
+              "s": 0.8
+            }
+          ],
+          "stamps": [
+            {
+              "at": "@overturned",
+              "text": "OVERTURNED",
+              "y": 380,
+              "size": 64,
+              "color": "cream"
+            }
+          ],
+          "banners": [
+            {
+              "at": "@reburied",
+              "text": "REBURIED IN ST. PETER'S",
+              "y": 1310,
+              "size": 36
+            }
+          ],
+          "chapter": "IV · THE REVERSAL"
+        },
+        {
+          "at": "@trials -0.1",
+          "type": "folio",
+          "bg": "plain",
+          "art": [
+            {
+              "kind": "coffinban",
+              "x": 540,
+              "y": 690,
+              "s": 0.9
+            }
+          ],
+          "stamps": [
+            {
+              "at": "@banned",
+              "text": "NO MORE CORPSE TRIALS",
+              "y": 1180,
+              "size": 40
+            }
+          ],
+          "chapter": "IV · THE REVERSAL"
+        },
+        {
+          "at": "@years -0.1",
+          "type": "folio",
+          "bg": "plain",
+          "art": [
+            {
+              "kind": "medallion",
+              "x": 540,
+              "y": 700,
+              "s": 1.15,
+              "robe": "plum",
+              "name": "SERGIUS III"
+            }
+          ],
+          "banners": [
+            {
+              "at": "@years",
+              "text": "YEARS LATER",
+              "y": 290,
+              "size": 52,
+              "color": "red"
+            }
+          ],
+          "chapter": "IV · THE REVERSAL"
+        },
+        {
+          "at": "@reapproved -0.3",
+          "type": "folio",
+          "bg": "plain",
+          "art": [
+            {
+              "kind": "doc",
+              "x": 540,
+              "y": 700,
+              "w": 640,
+              "h": 800,
+              "title": "Verdict",
+              "lines": 7,
+              "redLines": [
+                3
+              ]
+            },
+            {
+              "kind": "seal",
+              "x": 540,
+              "y": 1180,
+              "s": 1
+            }
+          ],
+          "stamps": [
+            {
+              "at": "@reapproved",
+              "text": "VERDICT RESTORED",
+              "y": 760,
+              "size": 50,
+              "rot": -8
+            }
+          ],
+          "chapter": "IV · THE REVERSAL"
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@arrested",
+          "file": "fail-thud",
+          "vol": 0.4
+        },
+        {
+          "at": "@overturned",
+          "file": "stamp",
+          "vol": 0.4
+        },
+        {
+          "at": "@reapproved",
+          "file": "stamp",
+          "vol": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "vo": "The best-known account was written decades later, so some details may be exaggerated. But the trial itself is real history. Follow for the next dark true story.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "folio",
+          "bg": "arcade",
+          "art": [
+            {
+              "kind": "book",
+              "x": 600,
+              "y": 1040,
+              "s": 1.1
+            },
+            {
+              "kind": "cleric",
+              "x": 200,
+              "y": 1240,
+              "s": 0.85,
+              "robe": "brown",
+              "arm": "hold",
+              "hold": "quill"
+            }
+          ],
+          "banners": [
+            {
+              "at": "@decades",
+              "text": "WRITTEN DECADES LATER",
+              "y": 300,
+              "size": 44
+            },
+            {
+              "at": "@exaggerated",
+              "text": "DETAILS MAY BE EXAGGERATED",
+              "y": 1290,
+              "size": 36,
+              "color": "red"
+            }
+          ],
+          "chapter": "V · THE RECORD"
+        },
+        {
+          "at": "@but",
+          "type": "folio",
+          "bg": "plain",
+          "art": [
+            {
+              "kind": "books",
+              "x": 540,
+              "y": 1200,
+              "s": 1.05
+            },
+            {
+              "kind": "seal",
+              "x": 540,
+              "y": 520,
+              "s": 1.2
+            }
+          ],
+          "stamps": [
+            {
+              "at": "@real",
+              "text": "REAL HISTORY",
+              "y": 700,
+              "size": 74,
+              "color": "gold"
+            }
+          ],
+          "chapter": "V · THE RECORD"
+        },
+        {
+          "at": "@follow",
+          "type": "folio",
+          "cta": true,
+          "bg": "plain",
+          "art": [
+            {
+              "kind": "initial",
+              "letter": "D",
+              "x": 540,
+              "y": 560,
+              "s": 1.1
+            }
+          ],
+          "chapter": "V · THE RECORD"
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@follow",
+          "file": "whoosh",
+          "vol": 0.3
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "title": "The Pope Who Put a Corpse on Trial (True Story)",
+    "description": "In 897, a pope had a dead pope dug up and put on trial. What happened next, and how the verdict was reversed, restored and argued over for years.",
+    "hashtags": [
+      "#darkhistory",
+      "#truestory",
+      "#history",
+      "#medievalhistory",
+      "#animatedhistory",
+      "#shorts"
+    ],
+    "sources": [
+      {
+        "claim": "In early 897 Pope Stephen VI had Formosus's corpse exhumed and put on trial at a synod in Rome",
+        "source": "Wikipedia, 'Cadaver Synod'; National Geographic, 'Vatican dead pope on trial'; Catholic Encyclopedia, 'Pope Formosus'",
+        "verified": true,
+        "note": "Date is 'probably January 897'; narration says only '897'."
+      },
+      {
+        "claim": "Charge: he had broken church law to become pope; corpse propped on a throne; a deacon appointed to speak for it",
+        "source": "Wikipedia, 'Cadaver Synod'; National Geographic; Catholic Encyclopedia (throne)",
+        "verified": true
+      },
+      {
+        "claim": "Verdict guilty; three fingers of the right hand cut off; body thrown into the Tiber",
+        "source": "Wikipedia, 'Cadaver Synod'; National Geographic; Catholic Encyclopedia",
+        "verified": true,
+        "note": "Narration uses 'Reportedly'. The Tiber detail is flagged [citation needed] on Wikipedia; all three sources report it. The fisherman rescue story is legend: not used."
+      },
+      {
+        "claim": "Stephen VI was arrested and strangled in prison within months (July/August 897)",
+        "source": "Wikipedia, 'Cadaver Synod'; National Geographic",
+        "verified": true,
+        "note": "Narration says 'within months' and does not give a date."
+      },
+      {
+        "claim": "The verdict was overturned, Formosus reburied in St. Peter's, trials of dead popes banned",
+        "source": "Wikipedia, 'Cadaver Synod' (Theodore II 897, John IX 898); National Geographic (John IX); Catholic Encyclopedia",
+        "verified": true,
+        "note": "Sources differ on which pope and exact year, so the narration names no one and gives no date."
+      },
+      {
+        "claim": "Years later Pope Sergius III reapproved the verdict (and required re-ordination of clergy ordained by Formosus)",
+        "source": "Wikipedia, 'Pope Formosus'; Catholic Encyclopedia, 'Pope Formosus'",
+        "verified": true,
+        "note": "No year stated in narration (Sergius III's pontificate began 904)."
+      },
+      {
+        "claim": "The best-known account of the trial (Liutprand of Cremona) was written decades later and is considered partisan, so some details may be exaggerated",
+        "source": "Encyclopedia.com, 'Liutprand of Cremona' (Antapodosis written 955-962; 'drastic distortions' from hostility); Wikipedia, 'Pope Formosus' (historians think the account likely exaggerates); Medievalists.net, 'The Cadaver Synod' (Liutprand the only chronicler named for the trial's content)",
+        "verified": true,
+        "note": "Narration says 'best-known' rather than 'only': shorter contemporary mentions exist (e.g. Annales Alamannici; acts of the 898 synods). Not claimed: any specific detail is false."
+      }
+    ]
+  },
+  "look": "manuscript"
+}

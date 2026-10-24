@@ -1,0 +1,762 @@
+{
+  "id": "leningrad-seeds",
+  "title": "The Scientists Who Would Not Eat",
+  "look": "poster",
+  "keywords": [
+    "1941",
+    "Leningrad",
+    "starving",
+    "vault",
+    "refused",
+    "siege",
+    "seed",
+    "barricaded",
+    "grain",
+    "starved",
+    "Vavilov",
+    "arrested",
+    "1940",
+    "1943",
+    "prison",
+    "1944",
+    "survived",
+    "seeds"
+  ],
+  "displayReplace": {},
+  "scenes": [
+    {
+      "id": "s1",
+      "vo": "In 1941, the city of Leningrad was starving. Inside one building, scientists guarded a vault of grain, and refused to eat it.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "poster",
+          "bg": "navy",
+          "layout": "burst",
+          "snow": true,
+          "tab": "I · THE CITY",
+          "art": [
+            {
+              "kind": "beams"
+            },
+            {
+              "kind": "skyline",
+              "x": 0,
+              "y": 1360,
+              "color": "cream"
+            }
+          ],
+          "words": [
+            {
+              "text": "1941",
+              "at": 0,
+              "x": 540,
+              "y": 640,
+              "size": 340,
+              "color": "red"
+            },
+            {
+              "text": "Leningrad",
+              "at": "@leningrad",
+              "x": 540,
+              "y": 800,
+              "size": 150,
+              "color": "cream"
+            },
+            {
+              "text": "STARVING",
+              "at": "@starving",
+              "x": 540,
+              "y": 960,
+              "size": 130,
+              "color": "cream",
+              "bar": "red"
+            }
+          ]
+        },
+        {
+          "at": "@inside -0.1",
+          "type": "poster",
+          "bg": "cream",
+          "layout": "diag",
+          "tab": "I · THE CITY",
+          "art": [
+            {
+              "kind": "crate",
+              "x": 540,
+              "y": 1010,
+              "s": 1.25,
+              "text": "GRAIN"
+            },
+            {
+              "kind": "wheat",
+              "x": 380,
+              "y": 700,
+              "s": 0.8,
+              "rot": -8,
+              "at": "@vault"
+            },
+            {
+              "kind": "wheat",
+              "x": 700,
+              "y": 700,
+              "s": 0.8,
+              "rot": 8,
+              "at": "@vault"
+            }
+          ],
+          "words": [
+            {
+              "text": "A vault of grain",
+              "at": "@vault",
+              "x": 540,
+              "y": 330,
+              "size": 120,
+              "color": "navy"
+            },
+            {
+              "text": "REFUSED",
+              "at": "@refused",
+              "x": 540,
+              "y": 1240,
+              "size": 140,
+              "bar": "red"
+            },
+            {
+              "text": "to eat it",
+              "at": "@eat",
+              "x": 540,
+              "y": 1360,
+              "size": 90,
+              "color": "navy"
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": 0,
+          "file": "bass-hit",
+          "vol": 0.45
+        },
+        {
+          "at": "@refused",
+          "file": "stamp",
+          "vol": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "vo": "The city had been cut off by a siege. But this institute held hundreds of thousands of seed samples, one of the largest collections in the world. To the scientists, it was too important to lose.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "poster",
+          "bg": "red",
+          "layout": "split",
+          "tab": "II · THE COLLECTION",
+          "art": [
+            {
+              "kind": "beams",
+              "color": "cream"
+            },
+            {
+              "kind": "skyline",
+              "x": 0,
+              "y": 1360,
+              "color": "navy"
+            }
+          ],
+          "words": [
+            {
+              "text": "Cut off",
+              "at": "@cut",
+              "x": 540,
+              "y": 640,
+              "size": 260,
+              "color": "navy"
+            },
+            {
+              "text": "by a siege",
+              "at": "@siege",
+              "x": 540,
+              "y": 800,
+              "size": 140,
+              "bar": "navy"
+            }
+          ]
+        },
+        {
+          "at": "@but -0.1",
+          "type": "poster",
+          "bg": "cream",
+          "layout": "frame",
+          "tab": "II · THE COLLECTION",
+          "art": [
+            {
+              "kind": "wheat",
+              "x": 190,
+              "y": 1180,
+              "s": 0.9,
+              "rot": -12,
+              "at": "@institute"
+            },
+            {
+              "kind": "wheat",
+              "x": 365,
+              "y": 1180,
+              "s": 0.9,
+              "rot": -5,
+              "at": "@hundreds"
+            },
+            {
+              "kind": "wheat",
+              "x": 540,
+              "y": 1180,
+              "s": 0.9,
+              "at": "@thousands"
+            },
+            {
+              "kind": "wheat",
+              "x": 715,
+              "y": 1180,
+              "s": 0.9,
+              "rot": 5,
+              "at": "@seed"
+            },
+            {
+              "kind": "wheat",
+              "x": 890,
+              "y": 1180,
+              "s": 0.9,
+              "rot": 12,
+              "at": "@samples"
+            }
+          ],
+          "words": [
+            {
+              "text": "Hundreds",
+              "at": "@hundreds",
+              "x": 540,
+              "y": 380,
+              "size": 170,
+              "color": "navy"
+            },
+            {
+              "text": "of thousands",
+              "at": "@thousands",
+              "x": 540,
+              "y": 520,
+              "size": 130,
+              "bar": "red"
+            },
+            {
+              "text": "of seeds",
+              "at": "@seed",
+              "x": 540,
+              "y": 640,
+              "size": 110,
+              "color": "navy"
+            }
+          ]
+        },
+        {
+          "at": "@scientists -0.3",
+          "type": "poster",
+          "bg": "navy",
+          "layout": "burst",
+          "tab": "II · THE COLLECTION",
+          "art": [
+            {
+              "kind": "star",
+              "x": 540,
+              "y": 560,
+              "s": 1.5,
+              "color": "red"
+            }
+          ],
+          "words": [
+            {
+              "text": "Too important",
+              "at": "@too",
+              "x": 540,
+              "y": 1000,
+              "size": 140,
+              "color": "cream"
+            },
+            {
+              "text": "to lose",
+              "at": "@lose",
+              "x": 540,
+              "y": 1160,
+              "size": 170,
+              "bar": "red"
+            }
+          ]
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "id": "s3",
+      "vo": "The staff barricaded themselves inside with the collection and took turns guarding it. The grain in those rooms could have saved their lives. They did not touch it.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "poster",
+          "bg": "cream",
+          "layout": "diag",
+          "tab": "III · THE GUARD",
+          "art": [
+            {
+              "kind": "crate",
+              "x": 250,
+              "y": 1180,
+              "s": 0.8,
+              "text": "SEEDS"
+            },
+            {
+              "kind": "figure",
+              "x": 760,
+              "y": 1260,
+              "s": 1.05
+            },
+            {
+              "kind": "clock",
+              "x": 540,
+              "y": 560,
+              "s": 0.9,
+              "at": "@turns"
+            }
+          ],
+          "words": [
+            {
+              "text": "Barricaded",
+              "at": "@barricaded",
+              "x": 540,
+              "y": 1395,
+              "size": 120,
+              "color": "navy"
+            }
+          ]
+        },
+        {
+          "at": "@grain -0.1",
+          "type": "poster",
+          "bg": "red",
+          "layout": "burst",
+          "tab": "III · THE GUARD",
+          "art": [
+            {
+              "kind": "wheat",
+              "x": 540,
+              "y": 1180,
+              "s": 1.5,
+              "color": "gold"
+            }
+          ],
+          "words": [
+            {
+              "text": "Could have",
+              "at": "@could",
+              "x": 540,
+              "y": 360,
+              "size": 160,
+              "color": "cream"
+            },
+            {
+              "text": "saved them",
+              "at": "@saved",
+              "x": 540,
+              "y": 520,
+              "size": 160,
+              "bar": "navy"
+            }
+          ]
+        },
+        {
+          "at": "@they -0.2",
+          "type": "poster",
+          "bg": "navy",
+          "layout": "split",
+          "tab": "III · THE GUARD",
+          "art": [
+            {
+              "kind": "figure",
+              "x": 800,
+              "y": 1335,
+              "s": 0.95,
+              "color": "cream"
+            }
+          ],
+          "words": [
+            {
+              "text": "They did not",
+              "at": "@not",
+              "x": 540,
+              "y": 400,
+              "size": 140,
+              "color": "cream"
+            },
+            {
+              "text": "Touch it",
+              "at": "@touch",
+              "x": 540,
+              "y": 650,
+              "size": 230,
+              "bar": "red"
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@touch",
+          "file": "stamp",
+          "vol": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "vo": "Some of them starved to death while guarding it. And the man who built the collection, Nikolai Vavilov, was not there to see it. He had been arrested in 1940, accused of spying, and he died in a Soviet prison in 1943.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "poster",
+          "bg": "navy",
+          "layout": "diag",
+          "snow": true,
+          "tab": "IV · THE FOUNDER",
+          "art": [
+            {
+              "kind": "figure",
+              "x": 540,
+              "y": 1330,
+              "s": 1.1,
+              "pose": "slump",
+              "color": "cream"
+            }
+          ],
+          "words": [
+            {
+              "text": "Starved",
+              "at": "@starved",
+              "x": 540,
+              "y": 500,
+              "size": 270,
+              "color": "red"
+            },
+            {
+              "text": "while guarding it",
+              "at": "@guarding",
+              "x": 540,
+              "y": 650,
+              "size": 100,
+              "color": "cream"
+            }
+          ]
+        },
+        {
+          "at": "@and -0.1",
+          "type": "poster",
+          "bg": "cream",
+          "layout": "frame",
+          "tab": "IV · THE FOUNDER",
+          "art": [
+            {
+              "kind": "bust",
+              "x": 540,
+              "y": 1190,
+              "s": 1,
+              "text": "N. Vavilov"
+            }
+          ],
+          "words": [
+            {
+              "text": "The man who",
+              "at": "@man",
+              "x": 540,
+              "y": 330,
+              "size": 110,
+              "color": "navy"
+            },
+            {
+              "text": "built it",
+              "at": "@built",
+              "x": 540,
+              "y": 570,
+              "size": 180,
+              "bar": "red"
+            }
+          ]
+        },
+        {
+          "at": "@he -0.1",
+          "type": "poster",
+          "bg": "red",
+          "layout": "plain",
+          "tab": "IV · THE FOUNDER",
+          "art": [
+            {
+              "kind": "bars",
+              "color": "navy"
+            }
+          ],
+          "words": [
+            {
+              "text": "Arrested",
+              "at": "@arrested",
+              "x": 540,
+              "y": 760,
+              "size": 230,
+              "bar": "cream",
+              "color": "navy"
+            },
+            {
+              "text": "1940",
+              "at": "@1940",
+              "x": 540,
+              "y": 1010,
+              "size": 200,
+              "bar": "navy"
+            }
+          ]
+        },
+        {
+          "at": "@and#2 -0.1",
+          "type": "poster",
+          "bg": "navy",
+          "layout": "split",
+          "tab": "IV · THE FOUNDER",
+          "art": [
+            {
+              "kind": "bars",
+              "color": "cream"
+            }
+          ],
+          "words": [
+            {
+              "text": "Died in prison",
+              "at": "@prison",
+              "x": 540,
+              "y": 700,
+              "size": 150,
+              "bar": "red"
+            },
+            {
+              "text": "1943",
+              "at": "@1943",
+              "x": 540,
+              "y": 990,
+              "size": 260,
+              "color": "cream",
+              "bar": "navy"
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@starved",
+          "file": "fail-thud",
+          "vol": 0.45
+        },
+        {
+          "at": "@arrested",
+          "file": "stamp",
+          "vol": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "vo": "In 1944, the siege ended. The collection survived, and it still exists in Saint Petersburg today. Some people starved so that seeds could live. Follow for the next dark true story.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "poster",
+          "bg": "cream",
+          "layout": "burst",
+          "tab": "V · THE SEEDS",
+          "art": [
+            {
+              "kind": "skyline",
+              "x": 0,
+              "y": 1360,
+              "color": "navy"
+            }
+          ],
+          "words": [
+            {
+              "text": "1944",
+              "at": "@1944",
+              "x": 540,
+              "y": 640,
+              "size": 340,
+              "color": "red"
+            },
+            {
+              "text": "Siege ended",
+              "at": "@ended",
+              "x": 540,
+              "y": 800,
+              "size": 140,
+              "bar": "navy"
+            }
+          ]
+        },
+        {
+          "at": "@the#2 -0.1",
+          "type": "poster",
+          "bg": "navy",
+          "layout": "frame",
+          "tab": "V · THE SEEDS",
+          "art": [
+            {
+              "kind": "wheat",
+              "x": 270,
+              "y": 1230,
+              "s": 1,
+              "rot": -6,
+              "at": "@collection"
+            },
+            {
+              "kind": "wheat",
+              "x": 810,
+              "y": 1230,
+              "s": 1,
+              "rot": 6,
+              "at": "@collection"
+            }
+          ],
+          "words": [
+            {
+              "text": "The collection",
+              "at": "@collection",
+              "x": 540,
+              "y": 440,
+              "size": 130,
+              "color": "cream"
+            },
+            {
+              "text": "Survived",
+              "at": "@survived",
+              "x": 540,
+              "y": 665,
+              "size": 230,
+              "bar": "red"
+            }
+          ]
+        },
+        {
+          "at": "@some -0.1",
+          "type": "poster",
+          "bg": "red",
+          "layout": "diag",
+          "tab": "V · THE SEEDS",
+          "art": [
+            {
+              "kind": "sprout",
+              "x": 540,
+              "y": 1300,
+              "s": 1.5,
+              "at": "@seeds"
+            }
+          ],
+          "words": [
+            {
+              "text": "Starved so seeds",
+              "at": "@starved",
+              "x": 540,
+              "y": 350,
+              "size": 120,
+              "color": "cream"
+            },
+            {
+              "text": "could live",
+              "at": "@live",
+              "x": 540,
+              "y": 500,
+              "size": 190,
+              "bar": "navy"
+            }
+          ]
+        },
+        {
+          "at": "@follow",
+          "type": "poster",
+          "bg": "navy",
+          "layout": "burst",
+          "cta": true
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@survived",
+          "file": "gold-ting",
+          "vol": 0.4
+        },
+        {
+          "at": "@follow",
+          "file": "whoosh",
+          "vol": 0.3
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "title": "The Scientists Who Starved Rather Than Eat the Seeds (True Story)",
+    "description": "During the Siege of Leningrad, scientists guarded one of the world's largest seed collections and refused to eat it while the city starved. A true story of sacrifice, and of the man who built the collection.",
+    "hashtags": [
+      "#darkhistory",
+      "#truestory",
+      "#worldwar2",
+      "#history",
+      "#animatedhistory",
+      "#shorts"
+    ],
+    "sources": [
+      {
+        "claim": "The Siege of Leningrad lasted from September 1941 to 1944 and the city was starving",
+        "source": "Hyperallergic, 'Seeds of the Earth: the Vavilov Institute' (Sept 1941 - Jan 1944); Wikipedia, 'Nikolai Vavilov' (end of siege 'spring of 1944')",
+        "verified": true,
+        "note": "Sources give slightly different end dates; narration says only '1944'."
+      },
+      {
+        "claim": "The Vavilov institute held hundreds of thousands of seed samples, one of the largest collections in the world",
+        "source": "Wikipedia, 'Nikolai Vavilov' (250,000, 'the world's largest seedbank' at the time); Hyperallergic (about 325,250 samples today); Gulf News (345,000 varieties); Russia Beyond (370,000 seeds)",
+        "verified": true,
+        "note": "Counts vary by source and date, so narration says 'hundreds of thousands'. 'One of the largest' is hedged; Wikipedia says 'the largest' at the time."
+      },
+      {
+        "claim": "The staff barricaded themselves in with the collection and took turns guarding it",
+        "source": "Wikipedia, 'Nikolai Vavilov' (took shifts protecting the seeds); Russia Beyond ('barricaded themselves inside their vaults'); Atlas Obscura (rotating guard shifts, via search summary)",
+        "verified": true
+      },
+      {
+        "claim": "The staff did not eat the grain, which could have saved them",
+        "source": "Wikipedia, 'Nikolai Vavilov' ('refused to eat its contents'); Hyperallergic ('did not eat the grains that could have saved them'); Gulf News (died 'despite having access to the grain')",
+        "verified": true
+      },
+      {
+        "claim": "Some of the scientists starved to death while guarding the collection",
+        "source": "Wikipedia, 'Nikolai Vavilov' ('a number of them had died of starvation'); Hyperallergic (nine); Gulf News (28 employees died of hunger); Russia Beyond (a dozen)",
+        "verified": true,
+        "note": "The count is disputed (9, a dozen, 28), so NO number is used in the narration. Do not add one."
+      },
+      {
+        "claim": "Nikolai Vavilov built the collection, was arrested in 1940 accused of spying, and died in prison in 1943",
+        "source": "Wikipedia, 'Nikolai Vavilov' (arrested by the NKVD August 1940, accused of spying for the British and ruining Soviet agriculture; died in prison in Saratov 26 January 1943); Hyperallergic (arrested 6 August 1940, died in prison 1943)",
+        "verified": true,
+        "note": "Cause of death is disputed (starvation, pneumonia, heart failure); the narration gives none."
+      },
+      {
+        "claim": "The collection survived the siege and the institute still exists in Saint Petersburg",
+        "source": "Hyperallergic ('the institute survives in Saint Petersburg'); Gulf News (the institute's collection of 345,000 varieties); Wikipedia, 'Nikolai Vavilov'",
+        "verified": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+node_modules
+dist
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+
+# Secrets: never commit. Copy .env.example to .env and fill it in.
+.env
+.env.*
+!.env.example
+
+# Render output (videos, publish text)
+/out
+
+# Generated audio: ElevenLabs output and the local BGM synth. Regenerate it with the npm scripts;
+# see docs/audio-and-assets.md for why these are not committed.
+/public/audio/*
+!/public/audio/.gitkeep
+/public/episodes/*/vo-*.mp3
+/public/episodes/*/vo-*.json
+/public/episodes/*/timings.json
+
+# Third-party agent skills installed by Remotion's starter template (reinstallable; they carry their own licences)
+/.agents
+/.claude/skills/remotion-*
+/skills-lock.json

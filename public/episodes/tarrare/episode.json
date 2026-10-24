@@ -1,0 +1,828 @@
+{
+  "id": "tarrare",
+  "title": "The Soldier Who Could Never Be Full",
+  "keywords": [
+    "Tarrare",
+    "1790s",
+    "hunger",
+    "fifteen",
+    "begged",
+    "cure",
+    "secret",
+    "weapon",
+    "dark",
+    "failure",
+    "golden",
+    "fork",
+    "cursed",
+    "sick",
+    "twenty-six",
+    "wide"
+  ],
+  "displayReplace": {
+    "seventeen-nineties": "1790s"
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "vo": "In seventeen-nineties France, one soldier could eat a live cat. And the army turned his stomach into a secret weapon.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "globe",
+          "label": "FRANCE · 1790s"
+        },
+        {
+          "at": "@eat -0.1",
+          "type": "scene",
+          "backdrop": "barracks",
+          "push": [
+            1,
+            1.06
+          ],
+          "people": [
+            {
+              "x": 560,
+              "y": 1330,
+              "s": 0.95,
+              "hat": "shako",
+              "accent": "red"
+            }
+          ],
+          "marks": [
+            {
+              "kind": "cat",
+              "y": 1370,
+              "dur": 36
+            }
+          ]
+        },
+        {
+          "at": "@and",
+          "type": "scene",
+          "backdrop": "ground",
+          "tint": "red",
+          "moon": true,
+          "groundTint": "#2a0c18",
+          "push": [
+            1,
+            1.1
+          ],
+          "people": [
+            {
+              "x": 540,
+              "y": 1320,
+              "s": 1.15,
+              "hat": "shako",
+              "accent": "red",
+              "bellyRamp": [
+                "@stomach",
+                "@secret"
+              ]
+            }
+          ],
+          "stamps": [
+            {
+              "at": "@secret",
+              "text": "SECRET WEAPON",
+              "size": 60
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": 0,
+          "file": "bass-hit",
+          "vol": 0.45
+        },
+        {
+          "at": "@secret",
+          "file": "stamp",
+          "vol": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "vo": "His name was Tarrare. A young man with a mouth stretched wide, and a hunger that no meal could fix. Doctors reportedly fed him a feast meant for fifteen men. He finished it... and still begged for more.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "idcard",
+          "name": "Tarrare",
+          "sub": "SOLDIER · FRANCE",
+          "hat": "shako",
+          "label": "FRANCE · 1790s"
+        },
+        {
+          "at": "@a -0.1",
+          "type": "idcard",
+          "name": "Tarrare",
+          "sub": "SOLDIER · FRANCE",
+          "hat": "shako",
+          "wide": true,
+          "zoom": true
+        },
+        {
+          "at": "@and",
+          "type": "scene",
+          "backdrop": "ground",
+          "tint": "warm",
+          "push": [
+            1,
+            1.08
+          ],
+          "origin": [
+            540,
+            900
+          ],
+          "people": [
+            {
+              "x": 540,
+              "y": 1320,
+              "s": 1.05,
+              "hat": "shako",
+              "belly": 1
+            }
+          ],
+          "marks": [
+            {
+              "kind": "gauge",
+              "at": "@hunger",
+              "label": "HUNGER",
+              "to": "@fix"
+            }
+          ]
+        },
+        {
+          "at": "@doctors -0.1",
+          "type": "scene",
+          "backdrop": "table",
+          "push": [
+            1,
+            1.07
+          ],
+          "people": [
+            {
+              "x": 380,
+              "s": 0.8,
+              "hat": "shako",
+              "belly": 0.7
+            },
+            {
+              "x": 720,
+              "s": 0.8,
+              "hat": "tricorn",
+              "flip": true
+            }
+          ],
+          "platesIn": [
+            "@doctors +0.1",
+            "@fifteen -0.6"
+          ],
+          "chips": [
+            {
+              "at": "@fifteen",
+              "text": "A FEAST FOR 15 MEN",
+              "size": 40,
+              "color": "gold"
+            }
+          ]
+        },
+        {
+          "at": "@he -0.1",
+          "type": "scene",
+          "backdrop": "table",
+          "push": [
+            1,
+            1.07
+          ],
+          "people": [
+            {
+              "x": 380,
+              "s": 0.8,
+              "hat": "shako",
+              "belly": 0.7,
+              "arm": "out"
+            },
+            {
+              "x": 720,
+              "s": 0.8,
+              "hat": "tricorn",
+              "flip": true
+            }
+          ],
+          "platesOut": [
+            "@finished",
+            "@still -0.1"
+          ],
+          "chips": [
+            {
+              "at": "@still",
+              "text": "STILL HUNGRY",
+              "dot": true,
+              "size": 44
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@hunger +0.1",
+          "file": "stomach-growl",
+          "vol": 0.35
+        },
+        {
+          "at": "@reportedly",
+          "file": "plate-clink",
+          "vol": 0.35
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "vo": "Then a surgeon named Pierre Percy had a dark idea. If Tarrare could swallow anything, he could carry a secret. A wooden box. A letter inside. Deliver it to a French colonel, trapped behind Prussian lines.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "idcard",
+          "name": "Pierre Percy",
+          "sub": "MILITARY SURGEON",
+          "hat": "tricorn"
+        },
+        {
+          "at": "@dark -0.3",
+          "type": "scene",
+          "backdrop": "ground",
+          "tint": "warm",
+          "push": [
+            1,
+            1.1
+          ],
+          "origin": [
+            540,
+            700
+          ],
+          "people": [
+            {
+              "x": 540,
+              "y": 1320,
+              "s": 1.05,
+              "hat": "tricorn"
+            }
+          ],
+          "marks": [
+            {
+              "kind": "bulb",
+              "at": "@dark",
+              "x": 540,
+              "y": 560
+            },
+            {
+              "kind": "!",
+              "at": "@idea",
+              "x": 700,
+              "y": 720
+            }
+          ]
+        },
+        {
+          "at": "@if",
+          "type": "scene",
+          "backdrop": "ground",
+          "push": [
+            1,
+            1.07
+          ],
+          "people": [
+            {
+              "x": 300,
+              "y": 1320,
+              "s": 0.95,
+              "hat": "tricorn",
+              "arm": "up"
+            },
+            {
+              "x": 780,
+              "y": 1320,
+              "s": 0.95,
+              "hat": "shako",
+              "belly": 0.7,
+              "flip": true
+            }
+          ],
+          "chips": [
+            {
+              "at": "@swallow",
+              "text": "SWALLOW ANYTHING",
+              "y": 560
+            },
+            {
+              "at": "@carry",
+              "text": "CARRY A SECRET",
+              "y": 670,
+              "dot": "gold",
+              "color": "gold"
+            }
+          ]
+        },
+        {
+          "at": "@wooden -0.1",
+          "type": "object",
+          "kind": "box",
+          "cues": {
+            "letterIn": "@box",
+            "lid": "@letter +0.1",
+            "seal": "@inside +0.2"
+          },
+          "chips": [
+            {
+              "at": "@wooden",
+              "text": "A WOODEN BOX",
+              "y": 330
+            },
+            {
+              "at": "@letter",
+              "text": "A LETTER INSIDE",
+              "y": 430,
+              "color": "gold"
+            }
+          ]
+        },
+        {
+          "at": "@deliver",
+          "type": "map",
+          "draw": [
+            "@deliver +0.4",
+            "@lines +0.3"
+          ],
+          "pin": {
+            "at": "@colonel +0.5",
+            "label": "COLONEL"
+          },
+          "location": {
+            "at": "@behind",
+            "text": "BEHIND PRUSSIAN LINES"
+          }
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@dark",
+          "file": "gold-ting",
+          "vol": 0.3
+        },
+        {
+          "at": "@inside +0.1",
+          "file": "stamp",
+          "vol": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "vo": "But he never made it. Prussian soldiers caught him, beat him, and threatened to hang him. The mission was a total failure. He came back empty-handed, and begged the doctors to cure him. They couldn't. When he died at just twenty-six, the autopsy found a throat unnaturally wide... and a stomach far bigger than normal. Some say he even swallowed a golden fork before the end.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "map",
+          "stopAt": 0.66
+        },
+        {
+          "at": "@prussian",
+          "type": "scene",
+          "backdrop": "field",
+          "push": [
+            1,
+            1.08
+          ],
+          "people": [
+            {
+              "x": 150,
+              "y": 1340,
+              "s": 0.85,
+              "hat": "shako",
+              "accent": "red",
+              "arm": "out",
+              "enter": {
+                "dx": 220,
+                "delay": 4,
+                "dur": 36
+              }
+            },
+            {
+              "x": 300,
+              "y": 1340,
+              "s": 0.85,
+              "hat": "shako",
+              "accent": "red",
+              "arm": "out",
+              "enter": {
+                "dx": 220,
+                "delay": 8,
+                "dur": 36
+              }
+            },
+            {
+              "x": 780,
+              "y": 1340,
+              "s": 0.85,
+              "hat": "shako",
+              "accent": "red",
+              "arm": "out",
+              "flip": true,
+              "enter": {
+                "dx": -220,
+                "delay": 12,
+                "dur": 36
+              }
+            },
+            {
+              "x": 930,
+              "y": 1340,
+              "s": 0.85,
+              "hat": "shako",
+              "accent": "red",
+              "arm": "out",
+              "flip": true,
+              "enter": {
+                "dx": -220,
+                "delay": 16,
+                "dur": 36
+              }
+            },
+            {
+              "x": 640,
+              "y": 1340,
+              "s": 0.85,
+              "hat": "shako",
+              "accent": "red",
+              "arm": "out",
+              "flip": true,
+              "enter": {
+                "dx": -220,
+                "delay": 20,
+                "dur": 36
+              }
+            },
+            {
+              "x": 470,
+              "y": 1360,
+              "s": 1,
+              "belly": 0.4
+            }
+          ],
+          "marks": [
+            {
+              "kind": "!",
+              "at": "@him",
+              "x": 470,
+              "y": 850,
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "at": "@the",
+          "type": "paper",
+          "lines": 7,
+          "stamp": {
+            "at": "@total",
+            "text": "MISSION FAILED",
+            "size": 70,
+            "rot": -10
+          }
+        },
+        {
+          "at": "@he#2",
+          "type": "scene",
+          "backdrop": "room",
+          "tint": "warm",
+          "push": [
+            1,
+            1.08
+          ],
+          "people": [
+            {
+              "x": 330,
+              "y": 1250,
+              "s": 0.75,
+              "belly": 0.5,
+              "arm": "out"
+            },
+            {
+              "x": 800,
+              "y": 1330,
+              "s": 0.9,
+              "hat": "tricorn",
+              "flip": true
+            }
+          ],
+          "chips": [
+            {
+              "at": "@begged",
+              "text": "“CURE ME.”",
+              "x": 440,
+              "y": 600,
+              "size": 40
+            },
+            {
+              "at": "@couldnt",
+              "text": "THEY COULDN'T",
+              "x": 440,
+              "y": 700,
+              "dot": true,
+              "color": "red",
+              "size": 36
+            }
+          ]
+        },
+        {
+          "at": "@when",
+          "type": "sketch",
+          "title": "Autopsy",
+          "strokes": [
+            {
+              "d": "M-100 -380 C-110 -250 -170 -200 -140 -90",
+              "from": "@autopsy",
+              "to": "@wide"
+            },
+            {
+              "d": "M100 -380 C110 -250 170 -200 140 -90",
+              "from": "@autopsy",
+              "to": "@wide"
+            },
+            {
+              "d": "M-140 -90 C-330 -40 -330 300 -120 380 C140 450 320 320 250 90 C220 -20 180 -60 140 -90",
+              "from": "@stomach",
+              "to": "@normal"
+            }
+          ],
+          "ghosts": [
+            {
+              "d": "M-120 20 C-190 60 -170 200 -60 220 C40 230 120 150 90 60 C80 30 60 20 40 20",
+              "at": "@stomach"
+            }
+          ],
+          "labels": [
+            {
+              "at": "@wide",
+              "x": 150,
+              "y": -268,
+              "text": "too wide",
+              "underline": [
+                150,
+                250
+              ]
+            },
+            {
+              "at": "@bigger",
+              "x": -330,
+              "y": 470,
+              "text": "far bigger than normal"
+            }
+          ],
+          "chips": [
+            {
+              "at": "@twenty-six -0.3",
+              "text": "DIED · AGE 26",
+              "dot": true,
+              "x": 540,
+              "y": 230,
+              "size": 44
+            }
+          ]
+        },
+        {
+          "at": "@some",
+          "type": "object",
+          "kind": "fork",
+          "cues": {
+            "in": "@some +0.2"
+          },
+          "chips": [
+            {
+              "at": "@golden",
+              "text": "REPORTEDLY",
+              "y": 340,
+              "size": 44,
+              "color": "gold"
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@but +0.2",
+          "file": "fail-thud",
+          "vol": 0.5
+        },
+        {
+          "at": "@total",
+          "file": "stamp",
+          "vol": 0.45
+        },
+        {
+          "at": "@golden -0.1",
+          "file": "gold-ting",
+          "vol": 0.45
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "vo": "Was he cursed? Or just very sick? Historians still argue. But one thing is clear: the army that used his hunger as a weapon never gave him the one thing he wanted. A cure. Follow for the next dark true story.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "scene",
+          "backdrop": "ground",
+          "tint": "warm",
+          "push": [
+            1,
+            1.08
+          ],
+          "origin": [
+            540,
+            900
+          ],
+          "people": [
+            {
+              "x": 540,
+              "y": 1330,
+              "s": 1,
+              "belly": 0.5
+            }
+          ],
+          "chips": [
+            {
+              "at": "@cursed",
+              "text": "CURSED?",
+              "x": 290,
+              "y": 560,
+              "dot": true,
+              "color": "red",
+              "size": 44
+            },
+            {
+              "at": "@sick",
+              "text": "SICK?",
+              "x": 790,
+              "y": 700,
+              "dot": "gold",
+              "color": "gold",
+              "size": 44
+            }
+          ]
+        },
+        {
+          "at": "@historians",
+          "type": "scene",
+          "backdrop": "tiers",
+          "rows": 3,
+          "baseY": 1060,
+          "push": [
+            1,
+            1.06
+          ],
+          "marks": [
+            {
+              "kind": "!",
+              "at": "@still -0.1",
+              "x": 250,
+              "y": 880
+            },
+            {
+              "kind": "q",
+              "at": "@still +0.1",
+              "x": 560,
+              "y": 820
+            },
+            {
+              "kind": "!",
+              "at": "@argue +0.1",
+              "x": 840,
+              "y": 900
+            }
+          ]
+        },
+        {
+          "at": "@but",
+          "type": "scene",
+          "backdrop": "tiers",
+          "rows": 3,
+          "hat": "shako",
+          "accent": "red",
+          "baseY": 1080,
+          "moon": true,
+          "push": [
+            1,
+            1.07
+          ],
+          "chips": [
+            {
+              "at": "@hunger",
+              "text": "HIS HUNGER = A WEAPON",
+              "y": 500,
+              "dot": true,
+              "color": "cream",
+              "size": 38
+            }
+          ]
+        },
+        {
+          "at": "@weapon -0.1",
+          "type": "scene",
+          "backdrop": "hospital",
+          "push": [
+            1,
+            1.08
+          ],
+          "people": [
+            {
+              "x": 420,
+              "s": 0.8,
+              "belly": 0.4,
+              "enter": {
+                "dx": 480,
+                "dur": 110,
+                "walk": true
+              }
+            }
+          ],
+          "chips": [
+            {
+              "at": "@one#2",
+              "text": "THE ONE THING HE WANTED",
+              "y": 420,
+              "size": 34
+            },
+            {
+              "at": "@cure -0.2",
+              "text": "A CURE",
+              "y": 540,
+              "dot": "gold",
+              "color": "gold",
+              "size": 56
+            }
+          ]
+        },
+        {
+          "at": "@follow",
+          "type": "cta"
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@weapon",
+          "file": "footsteps",
+          "vol": 0.22
+        },
+        {
+          "at": "@follow",
+          "file": "whoosh",
+          "vol": 0.3
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "title": "The Soldier Who Could Never Be Full (True Story)",
+    "description": "In 1790s France, a soldier named Tarrare could eat almost anything, and the army tried to turn that into a weapon. A true, little-known story from military history.",
+    "hashtags": [
+      "#darkhistory",
+      "#truestory",
+      "#history",
+      "#creepyhistory",
+      "#animatedhistory",
+      "#shorts"
+    ],
+    "sources": [
+      {
+        "claim": "Tarrare's extreme appetite: he reportedly ate live animals including a live cat, and a meal prepared for 15 labourers at the hospital",
+        "source": "Wikipedia, 'Tarrare' (draws on Percy's 1804 Memoire sur la polyphagie and 19th-century compilations: Lord 1839, Good 1864); Mental Floss, 'Tarrare, the Greatest Glutton of All Time' (via search)",
+        "verified": true,
+        "note": "Percy's 1804 memoir is the primary source; everything repeated today derives from it. Narration says 'reportedly' for the feast. The abnormally wide mouth is also documented."
+      },
+      {
+        "claim": "He swallowed a wooden box holding a document, as a courier to a French colonel held by the Prussians, and was captured, whipped and threatened with hanging (noose at a gallows) before being released",
+        "source": "Wikipedia, 'Tarrare'; Amusing Planet, 'Tarrare: The Man Who Ate Too Much' and The Line-Up (via search)",
+        "verified": true,
+        "note": "ATTRIBUTION: Wikipedia (following Percy) says the courier idea was proposed by Dr Courville, working with Percy and General de Beauharnais; some retellings credit Percy. The recorded narration says 'a surgeon named Pierre Percy had a dark idea', which sources do not support cleanly. The 'secret message' was a dummy note, and whether the box was recovered is disputed."
+      },
+      {
+        "claim": "He asked Percy for a cure and treatments failed; he died of tuberculosis at Versailles in 1798, aged about 26; autopsy: abnormally wide gullet, enormous stomach filling most of the abdomen",
+        "source": "Wikipedia, 'Tarrare'; Amusing Planet and Bored Panda (via search)",
+        "verified": true,
+        "note": "AGE: his birth date is unknown and 26 is a doctors' estimate (infobox says 25-26). The recorded narration says 'just twenty-six' as fact; should be 'about twenty-six'. 'Begged' is slightly stronger than the sources ('he told Percy he would try any cure')."
+      },
+      {
+        "claim": "The golden fork: Tarrare himself claimed he had swallowed a golden fork; none was found at the autopsy",
+        "source": "Wikipedia, 'Tarrare' ('presented as his own belief'; 'No fork was found at autopsy')",
+        "verified": true,
+        "note": "Narration ('Some say he even swallowed a golden fork') is acceptably hedged. Hook line 'the army turned his stomach into a secret weapon' is loose: the army used him as a courier, not a weapon."
+      }
+    ]
+  }
+}

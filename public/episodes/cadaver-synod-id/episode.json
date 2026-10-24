@@ -1,0 +1,112 @@
+{
+  "id": "cadaver-synod-id",
+  "title": "Paus yang Mengadili Jenazah",
+  "lang": "id",
+  "look": "manuscript",
+  "brandText": {
+    "tagline": "Kisah nyata sejarah, satu bab demi satu bab.",
+    "ctaButton": "Ikuti",
+    "ctaQuestion": "Cerita gelap apa selanjutnya?"
+  },
+  "keywords": ["stefanus", "mengadilinya", "bersalah", "ditangkap", "dibatalkan", "dilarang", "dilebih-lebihkan", "nyata", "formosus", "jari", "dicekik"],
+  "displayReplace": {},
+  "scenes": [
+    {
+      "id": "s1",
+      "vo": "Tahun delapan ratus sembilan puluh tujuh, Paus Stefanus Keenam menggali jenazah seorang paus. Lalu dia mengadilinya.",
+      "shots": [
+        {"at": 0, "type": "folio", "chapter": "I · EKSHUMASI", "bg": "plain", "art": [{"kind": "initial", "letter": "T", "x": 540, "y": 640, "s": 1.25}], "banners": [{"at": 0, "text": "ROMA · 897 M", "y": 1120, "size": 56}]},
+        {"at": "@stefanus -0.1", "type": "folio", "chapter": "I · EKSHUMASI", "bg": "sky",
+         "art": [{"kind": "tomb", "x": 600, "y": 1230, "s": 0.95}, {"kind": "cleric", "x": 210, "y": 1240, "s": 0.95, "robe": "red", "mitre": true, "arm": "point"}, {"kind": "cleric", "x": 880, "y": 1250, "s": 0.6, "robe": "brown", "hold": "shovel", "arm": "hold", "flip": true}],
+         "banners": [{"at": "@stefanus", "text": "PAUS STEFANUS VI", "y": 300, "size": 50}]},
+        {"at": "@lalu", "type": "folio", "chapter": "I · EKSHUMASI", "bg": "arcade",
+         "art": [{"kind": "throne", "x": 540, "y": 1240, "s": 1.05}, {"kind": "cleric", "x": 540, "y": 1204, "s": 1.0, "robe": "white", "mitre": true, "dead": true, "seated": true, "tilt": -4}, {"kind": "cleric", "x": 190, "y": 1240, "s": 0.9, "robe": "blue", "arm": "point"}, {"kind": "cleric", "x": 890, "y": 1240, "s": 0.9, "robe": "plum", "arm": "point", "flip": true}],
+         "stamps": [{"at": "@mengadilinya", "text": "DIADILI", "y": 380, "size": 66}]}
+      ],
+      "sfx": [{"at": 0, "file": "bass-hit", "vol": 0.45}, {"at": "@mengadilinya", "file": "stamp", "vol": 0.4}]
+    },
+    {
+      "id": "s2",
+      "vo": "Jenazah itu adalah Paus Formosus. Para musuhnya menuduh dia melanggar hukum gereja untuk menjadi paus. Maka tubuhnya didudukkan di atas takhta di ruang sidang, dan seorang diakon ditunjuk untuk berbicara mewakili sang mati.",
+      "shots": [
+        {"at": 0, "type": "folio", "chapter": "II · TUDUHAN", "bg": "plain", "art": [{"kind": "medallion", "x": 540, "y": 700, "s": 1.15, "robe": "white", "name": "FORMOSUS"}]},
+        {"at": "@musuhnya -0.1", "type": "folio", "chapter": "II · TUDUHAN", "bg": "arcade",
+         "art": [{"kind": "doc", "x": 540, "y": 700, "w": 540, "h": 640, "title": "Hukum Gereja", "lines": 6, "redLines": [2, 3]}, {"kind": "cleric", "x": 170, "y": 1240, "s": 0.78, "robe": "red", "arm": "point"}, {"kind": "cleric", "x": 340, "y": 1240, "s": 0.78, "robe": "blue", "arm": "point"}, {"kind": "cleric", "x": 900, "y": 1240, "s": 0.78, "robe": "plum", "arm": "point", "flip": true}],
+         "stamps": [{"at": "@melanggar", "text": "MELANGGAR HUKUM GEREJA", "y": 740, "size": 40}]},
+        {"at": "@maka", "type": "folio", "chapter": "II · TUDUHAN", "bg": "arcade",
+         "art": [{"kind": "throne", "x": 770, "y": 1240, "s": 0.85}, {"kind": "cleric", "x": 770, "y": 1211, "s": 0.8, "robe": "white", "mitre": true, "dead": true, "seated": true, "tilt": -4}, {"kind": "cleric", "x": 290, "y": 1240, "s": 1.0, "robe": "green", "arm": "raise", "hold": "scroll"}],
+         "banners": [{"at": "@diakon", "text": "DIAKON BERBICARA UNTUK SANG MATI", "y": 300, "size": 34}]}
+      ],
+      "sfx": [{"at": "@melanggar", "file": "stamp", "vol": 0.35}]
+    },
+    {
+      "id": "s3",
+      "vo": "Putusannya: bersalah. Konon, tiga jari yang biasa dipakai untuk memberkati dipotong dari tangan kanannya. Lalu jenazahnya dibuang ke Sungai Tiber.",
+      "shots": [
+        {"at": 0, "type": "folio", "chapter": "III · PUTUSAN", "bg": "plain",
+         "art": [{"kind": "doc", "x": 540, "y": 700, "w": 640, "h": 800, "title": "Putusan", "lines": 7, "redLines": [3]}, {"kind": "seal", "x": 540, "y": 1180, "s": 1}],
+         "stamps": [{"at": "@bersalah", "text": "BERSALAH", "y": 760, "size": 110, "rot": -10}]},
+        {"at": "@konon -0.1", "type": "folio", "chapter": "III · PUTUSAN", "bg": "plain",
+         "art": [{"kind": "hand", "x": 540, "y": 640, "s": 1.5, "from": "@konon", "to": "@memberkati", "cut": "@dipotong"}],
+         "banners": [{"at": "@memberkati", "text": "TIGA JARI PEMBERKAT", "y": 1260, "size": 40}]},
+        {"at": "@lalu", "type": "folio", "chapter": "III · PUTUSAN", "bg": "sky",
+         "art": [{"kind": "bridge", "y": 690}, {"kind": "waves", "y": 900}, {"kind": "bundle", "at": "@dibuang", "x": 480, "y": 840}],
+         "banners": [{"at": "@tiber", "text": "KE SUNGAI TIBER", "y": 300, "size": 52}]}
+      ],
+      "sfx": [{"at": "@bersalah", "file": "stamp", "vol": 0.45}]
+    },
+    {
+      "id": "s4",
+      "vo": "Tapi reaksinya datang cepat. Dalam hitungan bulan, Stefanus ditangkap, lalu dicekik di penjara. Putusan itu dibatalkan, Formosus dimakamkan kembali di Basilika Santo Petrus, dan pengadilan terhadap paus yang sudah wafat dilarang. Bertahun-tahun kemudian, Paus Sergius Ketiga menyetujui kembali putusan itu.",
+      "shots": [
+        {"at": 0, "type": "folio", "chapter": "IV · PEMBALIKAN", "bg": "sky", "tone": "blood", "art": [{"kind": "crowd"}], "banners": [{"at": "@reaksinya", "text": "REAKSI KERAS", "y": 300, "size": 56, "color": "red"}]},
+        {"at": "@dalam -0.1", "type": "folio", "chapter": "IV · PEMBALIKAN", "bg": "cell",
+         "art": [{"kind": "cleric", "x": 540, "y": 1250, "s": 1.1, "robe": "red", "mitre": true}, {"kind": "bars"}],
+         "stamps": [{"at": "@ditangkap", "text": "DITANGKAP", "y": 420, "size": 74, "color": "cream"}],
+         "banners": [{"at": "@dicekik", "text": "DICEKIK DI PENJARA", "y": 1290, "size": 42, "color": "red"}]},
+        {"at": "@putusan -0.2", "type": "folio", "chapter": "IV · PEMBALIKAN", "bg": "sky",
+         "art": [{"kind": "church", "x": 540, "y": 1180, "s": 0.85}, {"kind": "bier", "x": 540, "y": 1300, "s": 0.8}],
+         "stamps": [{"at": "@dibatalkan", "text": "DIBATALKAN", "y": 380, "size": 64, "color": "cream"}],
+         "banners": [{"at": "@dimakamkan", "text": "DIMAKAMKAN DI SANTO PETRUS", "y": 1310, "size": 36}]},
+        {"at": "@pengadilan -0.1", "type": "folio", "chapter": "IV · PEMBALIKAN", "bg": "plain",
+         "art": [{"kind": "coffinban", "x": 540, "y": 690, "s": 0.9}],
+         "stamps": [{"at": "@dilarang", "text": "SIDANG JENAZAH DILARANG", "y": 1180, "size": 38}]},
+        {"at": "@bertahun-tahun -0.1", "type": "folio", "chapter": "IV · PEMBALIKAN", "bg": "plain",
+         "art": [{"kind": "medallion", "x": 540, "y": 700, "s": 1.15, "robe": "plum", "name": "SERGIUS III"}],
+         "banners": [{"at": "@bertahun-tahun", "text": "BERTAHUN-TAHUN KEMUDIAN", "y": 290, "size": 40, "color": "red"}]},
+        {"at": "@menyetujui -0.3", "type": "folio", "chapter": "IV · PEMBALIKAN", "bg": "plain",
+         "art": [{"kind": "doc", "x": 540, "y": 700, "w": 640, "h": 800, "title": "Putusan", "lines": 7, "redLines": [3]}, {"kind": "seal", "x": 540, "y": 1180, "s": 1}],
+         "stamps": [{"at": "@menyetujui", "text": "PUTUSAN DIPULIHKAN", "y": 760, "size": 50, "rot": -8}]}
+      ],
+      "sfx": [{"at": "@ditangkap", "file": "fail-thud", "vol": 0.4}, {"at": "@dibatalkan", "file": "stamp", "vol": 0.4}, {"at": "@menyetujui", "file": "stamp", "vol": 0.4}]
+    },
+    {
+      "id": "s5",
+      "vo": "Catatan paling terkenal ditulis puluhan tahun kemudian, jadi beberapa detailnya mungkin dilebih-lebihkan. Tapi pengadilan itu sendiri adalah sejarah nyata. Ikuti untuk kisah nyata gelap berikutnya.",
+      "shots": [
+        {"at": 0, "type": "folio", "chapter": "V · CATATAN", "bg": "arcade",
+         "art": [{"kind": "book", "x": 600, "y": 1040, "s": 1.1}, {"kind": "cleric", "x": 200, "y": 1240, "s": 0.85, "robe": "brown", "arm": "hold", "hold": "quill"}],
+         "banners": [{"at": "@puluhan", "text": "DITULIS PULUHAN TAHUN KEMUDIAN", "y": 300, "size": 36}, {"at": "@dilebih-lebihkan", "text": "DETAIL MUNGKIN DILEBIHKAN", "y": 1290, "size": 36, "color": "red"}]},
+        {"at": "@tapi", "type": "folio", "chapter": "V · CATATAN", "bg": "plain",
+         "art": [{"kind": "books", "x": 540, "y": 1200, "s": 1.05}, {"kind": "seal", "x": 540, "y": 520, "s": 1.2}],
+         "stamps": [{"at": "@nyata", "text": "SEJARAH NYATA", "y": 700, "size": 70, "color": "gold"}]},
+        {"at": "@ikuti", "type": "folio", "cta": true, "bg": "plain", "art": [{"kind": "initial", "letter": "D", "x": 540, "y": 560, "s": 1.1}]}
+      ],
+      "sfx": [{"at": "@ikuti", "file": "whoosh", "vol": 0.3}]
+    }
+  ],
+  "meta": {
+    "title": "Paus yang Mengadili Jenazah (Kisah Nyata)",
+    "description": "Tahun 897, seorang paus menggali jenazah seorang paus dan mengadilinya. Apa yang terjadi sesudahnya, dan bagaimana putusan itu dibatalkan, dipulihkan, lalu diperdebatkan bertahun-tahun.",
+    "hashtags": ["#sejarahgelap", "#kisahnyata", "#sejarah", "#abadpertengahan", "#animasisejarah", "#shorts"],
+    "sources": [
+      {"claim": "Awal 897, Paus Stefanus VI menggali jenazah Formosus dan mengadilinya dalam sebuah sinode di Roma", "source": "Wikipedia, 'Cadaver Synod'; National Geographic, 'Vatican dead pope on trial'; Catholic Encyclopedia, 'Pope Formosus'", "verified": true, "note": "Tanggalnya 'kemungkinan Januari 897'; narasi hanya menyebut '897'."},
+      {"claim": "Tuduhan: melanggar hukum gereja untuk menjadi paus; jenazah didudukkan di takhta; seorang diakon ditunjuk berbicara untuknya", "source": "Wikipedia, 'Cadaver Synod'; National Geographic; Catholic Encyclopedia (takhta)", "verified": true},
+      {"claim": "Putusan bersalah; tiga jari tangan kanan dipotong; jenazah dibuang ke Sungai Tiber", "source": "Wikipedia, 'Cadaver Synod'; National Geographic; Catholic Encyclopedia", "verified": true, "note": "Narasi memakai 'Konon'. Bagian Tiber bertanda [citation needed] di Wikipedia, tetapi ketiga sumber melaporkannya. Kisah nelayan yang menemukan jenazah adalah legenda dan tidak dipakai."},
+      {"claim": "Stefanus VI ditangkap dan dicekik di penjara dalam hitungan bulan (Juli/Agustus 897)", "source": "Wikipedia, 'Cadaver Synod'; National Geographic", "verified": true, "note": "Narasi hanya menyebut 'dalam hitungan bulan', tanpa tanggal."},
+      {"claim": "Putusan dibatalkan, Formosus dimakamkan kembali di Basilika Santo Petrus, pengadilan terhadap jenazah paus dilarang", "source": "Wikipedia, 'Cadaver Synod' (Theodore II 897, John IX 898); National Geographic (John IX); Catholic Encyclopedia", "verified": true, "note": "Sumber berbeda soal paus dan tahunnya, jadi narasi tidak menyebut nama maupun tanggal."},
+      {"claim": "Bertahun-tahun kemudian Paus Sergius III menyetujui kembali putusan itu (dan mewajibkan penahbisan ulang klerus yang ditahbiskan Formosus)", "source": "Wikipedia, 'Pope Formosus'; Catholic Encyclopedia, 'Pope Formosus'", "verified": true, "note": "Narasi tidak menyebut tahun (masa kepausan Sergius III dimulai 904)."},
+      {"claim": "Catatan paling terkenal (Liutprand dari Cremona) ditulis puluhan tahun kemudian dan dinilai berpihak, sehingga sebagian detail mungkin dilebih-lebihkan", "source": "Encyclopedia.com, 'Liutprand of Cremona' (Antapodosis ditulis 955-962; 'drastic distortions'); Wikipedia, 'Pope Formosus'; Medievalists.net, 'The Cadaver Synod'", "verified": true, "note": "Narasi memakai 'paling terkenal', bukan 'satu-satunya': ada catatan lain yang lebih singkat dan lebih awal."}
+    ]
+  }
+}

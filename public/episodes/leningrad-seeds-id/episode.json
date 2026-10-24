@@ -1,0 +1,146 @@
+{
+  "id": "leningrad-seeds-id",
+  "title": "Ilmuwan yang Menolak Makan",
+  "lang": "id",
+  "look": "poster",
+  "brandText": {
+    "tagline": "Kisah nyata sejarah, satu bab demi satu bab.",
+    "ctaButton": "Ikuti",
+    "ctaQuestion": "Cerita gelap apa selanjutnya?"
+  },
+  "keywords": ["leningrad", "kelaparan", "menolak", "terputus", "biji", "mengurung", "menyentuhnya", "vavilov", "ditangkap", "penjara", "selamat", "hidup", "memata-matai"],
+  "displayReplace": {},
+  "scenes": [
+    {
+      "id": "s1",
+      "vo": "Tahun seribu sembilan ratus empat puluh satu, kota Leningrad kelaparan. Di dalam satu gedung, para ilmuwan menjaga gudang biji-bijian, dan menolak memakannya.",
+      "shots": [
+        {"at": 0, "type": "poster", "bg": "navy", "layout": "burst", "snow": true, "tab": "I · KOTA",
+         "art": [{"kind": "beams"}, {"kind": "skyline", "x": 0, "y": 1360, "color": "cream"}],
+         "words": [
+           {"text": "1941", "at": 0, "x": 540, "y": 640, "size": 340, "color": "red"},
+           {"text": "Leningrad", "at": "@leningrad", "x": 540, "y": 800, "size": 150, "color": "cream"},
+           {"text": "KELAPARAN", "at": "@kelaparan", "x": 540, "y": 960, "size": 120, "color": "cream", "bar": "red"}]},
+        {"at": "@di -0.1", "type": "poster", "bg": "cream", "layout": "diag", "tab": "I · KOTA",
+         "art": [{"kind": "crate", "x": 540, "y": 1010, "s": 1.25, "text": "BIJI"}, {"kind": "wheat", "x": 380, "y": 700, "s": 0.8, "rot": -8, "at": "@gudang"}, {"kind": "wheat", "x": 700, "y": 700, "s": 0.8, "rot": 8, "at": "@gudang"}],
+         "words": [
+           {"text": "Gudang biji-bijian", "at": "@gudang", "x": 540, "y": 330, "size": 100, "color": "navy"},
+           {"text": "MENOLAK", "at": "@menolak", "x": 540, "y": 1240, "size": 140, "bar": "red"},
+           {"text": "memakannya", "at": "@memakannya", "x": 540, "y": 1360, "size": 90, "color": "navy"}]}
+      ],
+      "sfx": [{"at": 0, "file": "bass-hit", "vol": 0.45}, {"at": "@menolak", "file": "stamp", "vol": 0.4}]
+    },
+    {
+      "id": "s2",
+      "vo": "Kota itu terputus oleh pengepungan. Tapi institut ini menyimpan ratusan ribu sampel biji, salah satu koleksi terbesar di dunia. Bagi para ilmuwan, koleksi itu terlalu penting untuk hilang.",
+      "shots": [
+        {"at": 0, "type": "poster", "bg": "red", "layout": "split", "tab": "II · KOLEKSI",
+         "art": [{"kind": "beams", "color": "cream"}, {"kind": "skyline", "x": 0, "y": 1360, "color": "navy"}],
+         "words": [
+           {"text": "Terputus", "at": "@terputus", "x": 540, "y": 640, "size": 240, "color": "navy"},
+           {"text": "oleh pengepungan", "at": "@pengepungan", "x": 540, "y": 800, "size": 110, "bar": "navy"}]},
+        {"at": "@tapi -0.1", "type": "poster", "bg": "cream", "layout": "frame", "tab": "II · KOLEKSI",
+         "art": [
+           {"kind": "wheat", "x": 190, "y": 1180, "s": 0.9, "rot": -12, "at": "@institut"},
+           {"kind": "wheat", "x": 365, "y": 1180, "s": 0.9, "rot": -5, "at": "@ratusan"},
+           {"kind": "wheat", "x": 540, "y": 1180, "s": 0.9, "at": "@ribu"},
+           {"kind": "wheat", "x": 715, "y": 1180, "s": 0.9, "rot": 5, "at": "@sampel"},
+           {"kind": "wheat", "x": 890, "y": 1180, "s": 0.9, "rot": 12, "at": "@biji"}],
+         "words": [
+           {"text": "Ratusan ribu", "at": "@ratusan", "x": 540, "y": 400, "size": 150, "color": "navy"},
+           {"text": "sampel biji", "at": "@sampel", "x": 540, "y": 560, "size": 120, "bar": "red"}]},
+        {"at": "@bagi -0.2", "type": "poster", "bg": "navy", "layout": "burst", "tab": "II · KOLEKSI",
+         "art": [{"kind": "star", "x": 540, "y": 560, "s": 1.5, "color": "red"}],
+         "words": [
+           {"text": "Terlalu penting", "at": "@terlalu", "x": 540, "y": 1000, "size": 130, "color": "cream"},
+           {"text": "untuk hilang", "at": "@hilang", "x": 540, "y": 1160, "size": 150, "bar": "red"}]}
+      ],
+      "sfx": []
+    },
+    {
+      "id": "s3",
+      "vo": "Para staf mengurung diri di dalam bersama koleksi itu dan bergantian menjaganya. Biji-bijian di ruangan itu bisa menyelamatkan nyawa mereka. Mereka tidak menyentuhnya.",
+      "shots": [
+        {"at": 0, "type": "poster", "bg": "cream", "layout": "diag", "tab": "III · PENJAGA",
+         "art": [{"kind": "crate", "x": 250, "y": 1180, "s": 0.8, "text": "BIJI"}, {"kind": "figure", "x": 760, "y": 1260, "s": 1.05}, {"kind": "clock", "x": 540, "y": 560, "s": 0.9, "at": "@bergantian"}],
+         "words": [{"text": "Mengurung diri", "at": "@mengurung", "x": 540, "y": 1395, "size": 110, "color": "navy"}]},
+        {"at": "@biji-bijian -0.1", "type": "poster", "bg": "red", "layout": "burst", "tab": "III · PENJAGA",
+         "art": [{"kind": "wheat", "x": 540, "y": 1180, "s": 1.5, "color": "gold"}],
+         "words": [
+           {"text": "Bisa menyelamatkan", "at": "@bisa", "x": 540, "y": 360, "size": 110, "color": "cream"},
+           {"text": "nyawa mereka", "at": "@nyawa", "x": 540, "y": 520, "size": 140, "bar": "navy"}]},
+        {"at": "@mereka#2 -0.2", "type": "poster", "bg": "navy", "layout": "split", "tab": "III · PENJAGA",
+         "art": [{"kind": "figure", "x": 800, "y": 1335, "s": 0.95, "color": "cream"}],
+         "words": [
+           {"text": "Mereka tidak", "at": "@tidak", "x": 540, "y": 400, "size": 140, "color": "cream"},
+           {"text": "menyentuhnya", "at": "@menyentuhnya", "x": 540, "y": 650, "size": 150, "bar": "red"}]}
+      ],
+      "sfx": [{"at": "@menyentuhnya", "file": "stamp", "vol": 0.4}]
+    },
+    {
+      "id": "s4",
+      "vo": "Sebagian dari mereka mati kelaparan saat menjaganya. Dan pria yang membangun koleksi itu, Nikolai Vavilov, tidak ada di sana untuk melihatnya. Dia ditangkap pada tahun seribu sembilan ratus empat puluh, dituduh memata-matai, dan meninggal di penjara Soviet pada tahun seribu sembilan ratus empat puluh tiga.",
+      "shots": [
+        {"at": 0, "type": "poster", "bg": "navy", "layout": "diag", "snow": true, "tab": "IV · SANG PENDIRI",
+         "art": [{"kind": "figure", "x": 540, "y": 1330, "s": 1.1, "pose": "slump", "color": "cream"}],
+         "words": [
+           {"text": "Kelaparan", "at": "@kelaparan", "x": 540, "y": 500, "size": 190, "color": "red"},
+           {"text": "saat menjaganya", "at": "@menjaganya", "x": 540, "y": 650, "size": 100, "color": "cream"}]},
+        {"at": "@dan -0.1", "type": "poster", "bg": "cream", "layout": "frame", "tab": "IV · SANG PENDIRI",
+         "art": [{"kind": "bust", "x": 540, "y": 1190, "s": 1.0, "text": "N. Vavilov"}],
+         "words": [
+           {"text": "Pria yang", "at": "@pria", "x": 540, "y": 330, "size": 110, "color": "navy"},
+           {"text": "membangun", "at": "@membangun", "x": 540, "y": 570, "size": 170, "bar": "red"}]},
+        {"at": "@dia -0.1", "type": "poster", "bg": "red", "layout": "plain", "tab": "IV · SANG PENDIRI",
+         "art": [{"kind": "bars", "color": "navy"}],
+         "words": [
+           {"text": "Ditangkap", "at": "@ditangkap", "x": 540, "y": 760, "size": 200, "bar": "cream", "color": "navy"},
+           {"text": "1940", "at": "@puluh", "x": 540, "y": 1010, "size": 200, "bar": "navy"}]},
+        {"at": "@meninggal -0.1", "type": "poster", "bg": "navy", "layout": "split", "tab": "IV · SANG PENDIRI",
+         "art": [{"kind": "bars", "color": "cream"}],
+         "words": [
+           {"text": "Wafat di penjara", "at": "@penjara", "x": 540, "y": 700, "size": 110, "bar": "red"},
+           {"text": "1943", "at": "@tiga", "x": 540, "y": 990, "size": 260, "color": "cream", "bar": "navy"}]}
+      ],
+      "sfx": [{"at": "@kelaparan", "file": "fail-thud", "vol": 0.45}, {"at": "@ditangkap", "file": "stamp", "vol": 0.4}]
+    },
+    {
+      "id": "s5",
+      "vo": "Tahun seribu sembilan ratus empat puluh empat, pengepungan berakhir. Koleksi itu selamat, dan masih ada di Sankt Peterburg hingga hari ini. Ada orang yang kelaparan agar biji-biji bisa hidup. Ikuti untuk kisah nyata gelap berikutnya.",
+      "shots": [
+        {"at": 0, "type": "poster", "bg": "cream", "layout": "burst", "tab": "V · BENIH",
+         "art": [{"kind": "skyline", "x": 0, "y": 1360, "color": "navy"}],
+         "words": [
+           {"text": "1944", "at": "@sembilan", "x": 540, "y": 640, "size": 340, "color": "red"},
+           {"text": "Pengepungan", "at": "@pengepungan", "x": 540, "y": 790, "size": 120, "color": "navy"},
+           {"text": "berakhir", "at": "@berakhir", "x": 540, "y": 940, "size": 150, "bar": "navy"}]},
+        {"at": "@koleksi -0.1", "type": "poster", "bg": "navy", "layout": "frame", "tab": "V · BENIH",
+         "art": [{"kind": "wheat", "x": 270, "y": 1230, "s": 1.0, "rot": -6, "at": "@koleksi"}, {"kind": "wheat", "x": 810, "y": 1230, "s": 1.0, "rot": 6, "at": "@koleksi"}],
+         "words": [
+           {"text": "Koleksi itu", "at": "@koleksi", "x": 540, "y": 440, "size": 130, "color": "cream"},
+           {"text": "SELAMAT", "at": "@selamat", "x": 540, "y": 665, "size": 230, "bar": "red"}]},
+        {"at": "@ada#2 -0.1", "type": "poster", "bg": "red", "layout": "diag", "tab": "V · BENIH",
+         "art": [{"kind": "sprout", "x": 540, "y": 1300, "s": 1.5, "at": "@biji-biji"}],
+         "words": [
+           {"text": "Kelaparan agar", "at": "@kelaparan", "x": 540, "y": 350, "size": 110, "color": "cream"},
+           {"text": "biji bisa hidup", "at": "@hidup", "x": 540, "y": 520, "size": 120, "bar": "navy"}]},
+        {"at": "@ikuti", "type": "poster", "bg": "navy", "layout": "burst", "cta": true}
+      ],
+      "sfx": [{"at": "@selamat", "file": "gold-ting", "vol": 0.4}, {"at": "@ikuti", "file": "whoosh", "vol": 0.3}]
+    }
+  ],
+  "meta": {
+    "title": "Ilmuwan yang Kelaparan Demi Menjaga Biji (Kisah Nyata)",
+    "description": "Saat pengepungan Leningrad, para ilmuwan menjaga salah satu koleksi biji terbesar di dunia dan menolak memakannya ketika kota kelaparan. Kisah nyata tentang pengorbanan, dan tentang pria yang membangun koleksi itu.",
+    "hashtags": ["#sejarahgelap", "#kisahnyata", "#perangdunia2", "#sejarah", "#animasisejarah", "#shorts"],
+    "sources": [
+      {"claim": "Pengepungan Leningrad berlangsung dari September 1941 hingga 1944 dan kota itu kelaparan", "source": "Hyperallergic, 'Seeds of the Earth: the Vavilov Institute' (Sept 1941 - Jan 1944); Wikipedia, 'Nikolai Vavilov' (pengepungan berakhir 'musim semi 1944')", "verified": true, "note": "Sumber memberi tanggal akhir yang sedikit berbeda; narasi hanya menyebut '1944'."},
+      {"claim": "Institut Vavilov menyimpan ratusan ribu sampel biji, salah satu koleksi terbesar di dunia", "source": "Wikipedia, 'Nikolai Vavilov' (250.000, 'bank biji terbesar di dunia' saat itu); Hyperallergic (sekitar 325.250 sampel kini); Gulf News (345.000 varietas); Russia Beyond (370.000 biji)", "verified": true, "note": "Angkanya berbeda menurut sumber dan masa, jadi narasi memakai 'ratusan ribu'. 'Salah satu yang terbesar' sengaja dilunakkan; Wikipedia menyebut 'yang terbesar' saat itu."},
+      {"claim": "Para staf mengurung diri bersama koleksi dan bergantian menjaganya", "source": "Wikipedia, 'Nikolai Vavilov' (bergiliran melindungi biji); Russia Beyond ('barricaded themselves inside their vaults'); Atlas Obscura (giliran jaga, lewat ringkasan pencarian)", "verified": true},
+      {"claim": "Para staf tidak memakan biji-bijian yang bisa menyelamatkan mereka", "source": "Wikipedia, 'Nikolai Vavilov' ('refused to eat its contents'); Hyperallergic ('did not eat the grains that could have saved them'); Gulf News (meninggal 'meski punya akses ke biji-bijian')", "verified": true},
+      {"claim": "Sebagian ilmuwan mati kelaparan saat menjaga koleksi", "source": "Wikipedia, 'Nikolai Vavilov' ('a number of them had died of starvation'); Hyperallergic (sembilan); Gulf News (28 karyawan meninggal karena lapar); Russia Beyond (selusin)", "verified": true, "note": "Jumlahnya diperselisihkan (9, selusin, 28), jadi TIDAK ADA angka di narasi. Jangan menambahkannya."},
+      {"claim": "Nikolai Vavilov membangun koleksi itu, ditangkap tahun 1940 dengan tuduhan memata-matai, dan meninggal di penjara tahun 1943", "source": "Wikipedia, 'Nikolai Vavilov' (ditangkap NKVD Agustus 1940, dituduh memata-matai untuk Inggris dan merusak pertanian Soviet; meninggal di penjara Saratov 26 Januari 1943); Hyperallergic (ditangkap 6 Agustus 1940, meninggal di penjara 1943)", "verified": true, "note": "Penyebab kematiannya diperdebatkan (kelaparan, pneumonia, gagal jantung); narasi tidak menyebut penyebab."},
+      {"claim": "Koleksi itu selamat dari pengepungan dan institutnya masih ada di Sankt Peterburg", "source": "Hyperallergic ('the institute survives in Saint Petersburg'); Gulf News (koleksi 345.000 varietas); Wikipedia, 'Nikolai Vavilov'", "verified": true}
+    ]
+  }
+}

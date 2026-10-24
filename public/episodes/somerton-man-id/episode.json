@@ -1,0 +1,125 @@
+{
+  "id": "somerton-man-id",
+  "title": "Pria Tanpa Nama",
+  "lang": "id",
+  "look": "casefile",
+  "brandText": {
+    "tagline": "Kisah nyata sejarah, satu bab demi satu bab.",
+    "ctaButton": "Ikuti",
+    "ctaQuestion": "Cerita gelap apa selanjutnya?"
+  },
+  "keywords": ["tamám", "shud", "kode", "terpecahkan", "dna", "webb", "diketahui", "dilepas", "selesai", "nama"],
+  "displayReplace": {},
+  "scenes": [
+    {
+      "id": "s1",
+      "vo": "Tahun seribu sembilan ratus empat puluh delapan, seorang pria berjas dan berdasi ditemukan tewas di pantai di Adelaide. Semua label sudah dilepas dari pakaiannya. Tak seorang pun tahu siapa dia.",
+      "shots": [
+        {"at": 0, "type": "board", "tab": "I · DITEMUKAN",
+         "items": [
+           {"kind": "card", "x": 540, "y": 520, "rot": -2, "s": 1.1, "title": "BERKAS KASUS", "lines": ["1 DES 1948", "PANTAI SOMERTON", "ADELAIDE"]},
+           {"kind": "photo", "subject": "beach", "x": 580, "y": 1030, "rot": 3, "caption": "Pantai Somerton", "at": "@ditemukan"}]},
+        {"at": "@semua -0.1", "type": "board", "tab": "I · DITEMUKAN",
+         "items": [
+           {"kind": "photo", "id": "c", "subject": "clothes", "x": 340, "y": 780, "rot": -4, "s": 1.05, "caption": "jas dan dasi"},
+           {"kind": "card", "id": "t", "x": 780, "y": 1085, "rot": 3, "s": 0.95, "at": "@label", "lines": ["LABEL DILEPAS", "LABEL DILEPAS", "LABEL DILEPAS"]}],
+         "strings": [{"from": "c", "to": "t", "at": "@dilepas"}]},
+        {"at": "@tak -0.1", "type": "board", "tab": "I · DITEMUKAN",
+         "items": [{"kind": "photo", "subject": "unknown", "x": 540, "y": 820, "s": 1.25, "caption": "siapa dia?"}],
+         "stamps": [{"at": "@siapa", "text": "TAK DIKENAL", "y": 1240, "size": 66}]}
+      ],
+      "sfx": [{"at": 0, "file": "bass-hit", "vol": 0.45}, {"at": "@siapa", "file": "stamp", "vol": 0.4}]
+    },
+    {
+      "id": "s2",
+      "vo": "Dia tidak membawa dompet maupun tanda pengenal, dan polisi tak bisa mengetahui identitasnya. Berbulan-bulan kemudian, secarik kertas kecil ditemukan di kantong tersembunyi. Dua kata Persia: Tamám Shud. Artinya selesai.",
+      "shots": [
+        {"at": 0, "type": "board", "tab": "II · POTONGAN KERTAS",
+         "items": [{"kind": "card", "x": 540, "y": 720, "rot": -2, "s": 1.2, "title": "BUKTI", "lines": ["TANPA DOMPET", "TANPA ID", "NAMA: TAK DIKETAHUI"]}]},
+        {"at": "@berbulan-bulan -0.1", "type": "board", "tab": "II · POTONGAN KERTAS",
+         "items": [{"kind": "photo", "subject": "pocket", "x": 540, "y": 820, "rot": -2, "s": 1.3, "caption": "kantong tersembunyi"}]},
+        {"at": "@dua -0.1", "type": "board", "tab": "II · POTONGAN KERTAS",
+         "items": [
+           {"kind": "scrap", "x": 540, "y": 640, "rot": -3, "s": 1.5, "text": "TAMÁM SHUD", "at": "@persia"},
+           {"kind": "card", "x": 540, "y": 1090, "rot": 2, "s": 1.05, "at": "@artinya", "title": "TERJEMAHAN", "lines": ["\"SELESAI\""]}]}
+      ],
+      "sfx": []
+    },
+    {
+      "id": "s3",
+      "vo": "Kertas itu disobek dari sebuah buku puisi Persia, Rubaiyat. Seorang pria menyerahkan eksemplar aslinya kepada polisi. Di dalam sampul belakang ada lima baris huruf samar. Sebagian menyebutnya kode. Sampai kini belum terpecahkan.",
+      "shots": [
+        {"at": 0, "type": "board", "tab": "III · KODE",
+         "items": [
+           {"kind": "photo", "id": "b", "subject": "book", "x": 390, "y": 820, "rot": -4, "s": 1.1, "caption": "Rubaiyat", "at": "@buku"},
+           {"kind": "scrap", "id": "s", "x": 760, "y": 1130, "rot": 5, "s": 0.95, "text": "TAMÁM SHUD", "at": "@kertas"}],
+         "strings": [{"from": "s", "to": "b", "at": "@disobek"}]},
+        {"at": "@pria -0.2", "type": "board", "tab": "III · KODE",
+         "items": [
+           {"kind": "photo", "id": "b", "subject": "book", "x": 400, "y": 860, "rot": -3, "s": 1.15, "caption": "Rubaiyat", "at": 0},
+           {"kind": "scrap", "id": "s", "x": 740, "y": 560, "rot": 6, "s": 0.9, "text": "TAMÁM SHUD", "at": 0}],
+         "strings": [{"from": "s", "to": "b", "at": "@eksemplar"}],
+         "stamps": [{"at": "@eksemplar", "text": "COCOK", "y": 1250, "size": 70, "color": "green"}]},
+        {"at": "@sampul -0.1", "type": "board", "tab": "III · KODE",
+         "items": [
+           {"kind": "photo", "subject": "code", "x": 540, "y": 790, "rot": -2, "s": 1.3, "caption": "sampul belakang"},
+           {"kind": "card", "x": 540, "y": 1230, "rot": 2, "s": 0.9, "at": "@lima", "lines": ["5 BARIS HURUF"]}],
+         "stamps": [{"at": "@terpecahkan", "text": "BELUM TERPECAHKAN", "y": 430, "size": 62}]}
+      ],
+      "sfx": [{"at": "@eksemplar", "file": "stamp", "vol": 0.35}, {"at": "@terpecahkan", "file": "stamp", "vol": 0.45}]
+    },
+    {
+      "id": "s4",
+      "vo": "Lalu pada tahun dua ribu dua puluh dua, setelah tujuh puluh empat tahun, seorang profesor mengumumkan sebuah nama. Memakai DNA dari rambut pria itu, dia menyebut jenazah tersebut adalah Carl Webb, kelahiran Melbourne. Polisi mengatakan belum bisa memastikannya. Dan bagaimana dia meninggal masih belum diketahui.",
+      "shots": [
+        {"at": 0, "type": "board", "tab": "IV · NAMA",
+         "items": [{"kind": "clipping", "x": 540, "y": 800, "rot": -2, "s": 1.15, "headline": "NAMA SETELAH 74 TAHUN?"}]},
+        {"at": "@memakai -0.1", "type": "board", "tab": "IV · NAMA",
+         "items": [
+           {"kind": "photo", "id": "d", "subject": "dna", "x": 340, "y": 790, "rot": -4, "s": 1.05, "caption": "DNA dari rambut"},
+           {"kind": "card", "id": "m", "x": 780, "y": 1120, "rot": 3, "s": 0.95, "at": "@rambut", "title": "METODE", "lines": ["DNA DARI RAMBUT"]}],
+         "strings": [{"from": "d", "to": "m", "at": "@rambut"}]},
+        {"at": "@carl -0.2", "type": "board", "tab": "IV · NAMA",
+         "items": [{"kind": "card", "x": 540, "y": 720, "rot": -2, "s": 1.2, "title": "NAMA YANG DIKLAIM", "lines": ["CARL WEBB", "LAHIR DI MELBOURNE, 1905"]}],
+         "stamps": [{"at": "@memastikannya", "text": "BELUM TERKONFIRMASI", "y": 1090, "size": 56}]},
+        {"at": "@dan -0.1", "type": "board", "tab": "IV · NAMA",
+         "items": [{"kind": "card", "x": 540, "y": 760, "rot": 2, "s": 1.2, "title": "PENYEBAB KEMATIAN", "lines": ["TAK PERNAH DITETAPKAN"]}],
+         "stamps": [{"at": "@diketahui", "text": "TAK DIKETAHUI", "y": 1130, "size": 78}]}
+      ],
+      "sfx": [{"at": "@memastikannya", "file": "stamp", "vol": 0.4}, {"at": "@diketahui", "file": "stamp", "vol": 0.4}]
+    },
+    {
+      "id": "s5",
+      "vo": "Jadi, apakah misteri ini terpecahkan? Belum benar-benar. Sebuah nama tidak menjelaskan bagaimana dia meninggal, apa arti kode itu, atau mengapa nomor telepon seorang perempuan tertulis di buku itu. Ikuti untuk kisah nyata gelap berikutnya.",
+      "shots": [
+        {"at": 0, "type": "board", "tab": "V · PERTANYAAN",
+         "items": [{"kind": "photo", "subject": "unknown", "x": 540, "y": 780, "rot": -2, "s": 1.25, "caption": "?"}],
+         "stamps": [{"at": "@benar-benar", "text": "KASUS TERBUKA", "y": 1230, "size": 70}]},
+        {"at": "@nama -0.1", "type": "board", "tab": "V · PERTANYAAN",
+         "items": [
+           {"kind": "photo", "id": "c", "subject": "unknown", "x": 540, "y": 620, "rot": 0, "s": 0.75, "caption": "?"},
+           {"kind": "card", "id": "d1", "x": 290, "y": 1030, "rot": -3, "s": 0.8, "at": "@bagaimana", "title": "PENYEBAB KEMATIAN", "lines": ["?"]},
+           {"kind": "card", "id": "d2", "x": 790, "y": 1030, "rot": 3, "s": 0.8, "at": "@kode", "title": "ARTI KODE", "lines": ["?"]},
+           {"kind": "card", "id": "d3", "x": 540, "y": 1250, "rot": -1, "s": 0.8, "at": "@perempuan", "title": "NOMOR TELEPON", "lines": ["?"]}],
+         "strings": [{"from": "c", "to": "d1", "at": "@bagaimana"}, {"from": "c", "to": "d2", "at": "@kode"}, {"from": "c", "to": "d3", "at": "@perempuan"}]},
+        {"at": "@ikuti", "type": "board", "cta": true, "items": []}
+      ],
+      "sfx": [{"at": "@benar-benar", "file": "stamp", "vol": 0.35}, {"at": "@ikuti", "file": "whoosh", "vol": 0.3}]
+    }
+  ],
+  "meta": {
+    "title": "Pria yang Ditemukan Tewas Tanpa Nama (Kisah Nyata)",
+    "description": "Tahun 1948, seorang pria ditemukan tewas di sebuah pantai di Australia dengan semua label dilepas dari pakaiannya. Secarik puisi, sebuah kode yang belum terpecahkan, dan nama yang diumumkan 74 tahun kemudian tetapi belum bisa dikonfirmasi polisi.",
+    "hashtags": ["#sejarahgelap", "#kisahnyata", "#misteri", "#kriminal", "#animasisejarah", "#shorts"],
+    "sources": [
+      {"claim": "Pria itu ditemukan tewas pada 1 Desember 1948 di pantai Somerton Park, Adelaide", "source": "Wikipedia, 'Taman Shud Case'; Canberra Times (2022); ABC News (2021)", "verified": true},
+      {"claim": "Ia berjas/berjaket dan berdasi; label pakaiannya dilepas; tanpa dompet atau tanda pengenal", "source": "Wikipedia, 'Taman Shud Case'; ABC News, 'Tamam Shud and the five other clues' (2021)", "verified": true, "note": "ABC menyebut 'jas cokelat'; Wikipedia menyebut jaket, celana, dan dasi. Narasi memakai 'berjas dan berdasi'."},
+      {"claim": "Secarik kertas bertuliskan 'Tamám Shud' ditemukan berbulan-bulan kemudian di kantong tersembunyi; artinya 'selesai'/'berakhir'", "source": "Wikipedia, 'Taman Shud Case'; ABC News (2021); wiki Universitas Adelaide tentang kasus Taman Shud", "verified": true, "note": "Sumber berbeda soal kantong mana (kantong kecil di dalam kantong celana atau pinggang celana) dan waktunya terhadap sidang; narasi hanya menyebut 'berbulan-bulan kemudian' dan 'kantong tersembunyi'."},
+      {"claim": "Kertas itu dari buku Rubaiyat; seorang pria menyerahkan eksemplar yang cocok kepada polisi; lima baris huruf samar di dalam sampul belakang; belum terpecahkan", "source": "Wikipedia, 'Taman Shud Case'; ABC News (2021)", "verified": true, "note": "ABC menyebut 'serangkaian huruf' dan menyatakan upaya memecahkannya, atau membuktikan itu kode, belum berhasil; Wikipedia menghitung lima baris. Narasi: 'Sebagian menyebutnya kode'. Huruf aslinya sengaja tidak ditampilkan."},
+      {"claim": "Juli 2022 Prof. Derek Abbott mengumumkan pria itu Carl 'Charles' Webb, lahir di Melbourne (1905), dengan DNA dari rambut", "source": "Canberra Times (27 Jul 2022); ABC News (2 Agu 2022); Wikipedia, 'Taman Shud Case'", "verified": true, "note": "Sumber berbeda soal asal rambut (rambut yang menempel di cetakan gipsum vs. rambut yang diambil dari jenazah); narasi hanya menyebut 'DNA dari rambut pria itu'. Profesi Webb disebut insinyur listrik di sebagian sumber dan pembuat instrumen di akta nikahnya, jadi tidak disebut."},
+      {"claim": "Polisi belum bisa memastikan identifikasi itu; koroner yang akan menentukan", "source": "ABC News (2 Agu 2022); Wikipedia, 'Taman Shud Case'; laporan ABC lewat yourlifechoices.com.au", "verified": true, "note": "CEK ULANG SEBELUM DIUNGGAH: statusnya bisa berubah. Laporan terbaru yang ditemukan menyebut Kepolisian SA belum menyerahkan temuan ke koroner. Narasi memakai kala lampau ('Polisi mengatakan belum bisa memastikannya')."},
+      {"claim": "Penyebab kematiannya tidak pernah ditetapkan", "source": "Wikipedia, 'Taman Shud Case' (inkues 1949: kemungkinan racun, penyebab tidak ditetapkan); Canberra Times (2022: 'tetap tidak diketahui')", "verified": true},
+      {"claim": "Nomor telepon seorang perempuan tertulis di buku itu (Jessica 'Jo' Thomson)", "source": "ABC News (2021); Wikipedia, 'Taman Shud Case'", "verified": true, "note": "Jangan sebut ia perawat: sumber bertentangan (Wikipedia menyebut perawat; wiki Universitas Adelaide menyebut tidak ada bukti ia perawat pada 1948)."}
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "Dark Tales",
+  "watermark": "Dark Tales",
+  "tagline": "True stories of history, one chapter at a time.",
+  "cta": {
+    "button": "Follow",
+    "question": "Which story should I animate next?"
+  },
+  "colors": {
+    "navy0": "#040816",
+    "navy1": "#0a1530",
+    "navy2": "#12285a",
+    "navy3": "#1d3c7a",
+    "gold": "#e8b04b",
+    "goldSoft": "#f2d18a",
+    "cream": "#f3ead7",
+    "brick": "#6e2a35",
+    "brick2": "#a23a45",
+    "ink": "#03050c",
+    "rim": "#9fb7e6",
+    "red": "#d1343f",
+    "moon": "#e9efff"
+  },
+  "fonts": {
+    "serif": "Georgia, 'Times New Roman', serif",
+    "sans": "'Segoe UI', Arial, sans-serif"
+  },
+  "subtitles": {
+    "fontSize": 60,
+    "maxWords": 4,
+    "top": 1440,
+    "dimOpacity": 0.38
+  },
+  "audio": {
+    "bgmFile": "audio/bgm-local.wav",
+    "bgmVolume": 0.2,
+    "voTail": 0.4,
+    "sfxMinGap": 1.2,
+    "sfxMaxVolume": 0.5,
+    "sfxDefaultVolume": 0.35
+  },
+  "limits": {
+    "maxSeconds": 75,
+    "minShotSeconds": 1.0
+  },
+  "voice": {
+    "voiceId": "pNInz6obpgDQGcFmaJgB",
+    "modelId": "eleven_multilingual_v2",
+    "stability": 0.45,
+    "similarity": 0.8,
+    "style": 0.35
+  }
+}
