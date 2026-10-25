@@ -9,7 +9,7 @@ An episode is one JSON file, `public/episodes/<id>/episode.json`. The authoritat
 |---|---|---|
 | `id` | yes | Must equal the folder name. Lowercase letters, numbers and dashes. |
 | `title` | yes | Working title. |
-| `look` | no | `night` (default), `manuscript`, `casefile` or `poster`. Decides which shot types are allowed. |
+| `look` | no | `night` (default), `manuscript`, `casefile`, `poster` or `collage`. Decides which shot types are allowed. |
 | `lang` | no | Narration language code (`"en"`, `"id"`, ...). Selects `ELEVENLABS_VOICE_ID_<LANG>`. See [localization.md](localization.md). |
 | `brandText` | no | Overrides `name`, `watermark`, `tagline`, `ctaButton`, `ctaQuestion` from `brand.json`. |
 | `voice` | no | `{"voiceId": "..."}` pins the narrator for this episode. |
@@ -133,6 +133,10 @@ A cork board seen straight on; items are pinned in at their `at` cue (or in sequ
 - `art` kinds: `skyline`, `beams` (searchlights), `wheat`, `crate` (`text`), `figure` (`pose` stand/slump), `clock`, `bust` (`text` label), `bars` (prison), `sprout`, `star`. All take `x`, `y`, `s`, `color`.
 - `"cta": true` draws the closing poster from brand.json, cued on "Follow".
 - Colour contrast: on a `split` layout the left side is the decor colour, so choose text colours that read on both halves (navy works on cream and cream on red/navy).
+
+### `collage`: collage look (use only when `"look": "collage"`)
+
+Archival images cut out with torn edges, ransom-note headlines, hand-drawn markers, stop-motion movement. Images must be registered with `npm run assets` and referenced by id (`{"kind": "image", "src": "my-id"}`). The full item reference, the licensing rules and examples are in [collage-look.md](collage-look.md).
 
 ## Recipes by beat
 

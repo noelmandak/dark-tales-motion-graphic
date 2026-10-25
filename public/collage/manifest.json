@@ -1,0 +1,97 @@
+{
+  "images": {
+    "laurens-formosus-stephen": {
+      "file": "laurens-formosus-stephen.jpg",
+      "title": "Pope Formosus and Stephen VI (The Cadaver Synod)",
+      "creator": "Jean-Paul Laurens",
+      "date": "1870",
+      "license": "Public domain",
+      "attributionRequired": false,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jean_Paul_Laurens_Le_Pape_Formose_et_Etienne_VI_1870.jpg",
+      "credit": "Pope Formosus and Stephen VI (The Cadaver Synod), Jean-Paul Laurens, 1870 (Public domain), via Wikimedia Commons",
+      "width": 1400,
+      "height": 930,
+      "retrieved": "2026-10-25"
+    },
+    "holbein-the-pope": {
+      "file": "holbein-the-pope.jpg",
+      "title": "The Pope, from The Dance of Death",
+      "creator": "Hans Holbein the Younger (cut by Hans Lützelburger); The Metropolitan Museum of Art",
+      "date": "c. 1526, published 1538",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "attributionRequired": false,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Pope,_from_The_Dance_of_Death_MET_MM89756.jpg",
+      "credit": "The Pope, from The Dance of Death, Hans Holbein the Younger (cut by Hans Lützelburger); The Metropolitan Museum of Art, c. 1526, published 1538 (CC0), via Wikimedia Commons",
+      "width": 1400,
+      "height": 1731,
+      "retrieved": "2026-10-25"
+    },
+    "piranesi-lateran": {
+      "file": "piranesi-lateran.jpg",
+      "title": "Facade of S. Giovanni in Laterano",
+      "creator": "Giovanni Battista Piranesi",
+      "date": "1775",
+      "license": "Public domain",
+      "attributionRequired": false,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giovanni_Battista_Piranesi,_Facaden_af_S_Giovanni_in_Laterano,_1775,_KKSgb9860-122,_Statens_Museum_for_Kunst.jpg",
+      "credit": "Facade of S. Giovanni in Laterano, Giovanni Battista Piranesi, 1775 (Public domain), via Wikimedia Commons",
+      "width": 1400,
+      "height": 953,
+      "retrieved": "2026-10-25"
+    },
+    "piranesi-sant-angelo": {
+      "file": "piranesi-sant-angelo.jpg",
+      "title": "Veduta del Ponte e Castello Sant'Angelo, from Vedute di Roma",
+      "creator": "Giovanni Battista Piranesi; Rijksmuseum",
+      "date": "c. 1748-1778",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "attributionRequired": false,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Engelenbrug_en_Engelenburcht_te_Rome_Veduta_del_Ponte_e_Castello_Sant%27Angelo_(titel_op_object)_Gezichten_op_Rome_(serietitel)_Vedute_di_Roma_disegnate_ed_incise_da_Giambattista_Piranesi_architetto_Ve(nez)iano_(serieti,_RP-P-1941-566.jpg",
+      "credit": "Veduta del Ponte e Castello Sant'Angelo, from Vedute di Roma, Giovanni Battista Piranesi; Rijksmuseum, c. 1748-1778 (CC0), via Wikimedia Commons",
+      "width": 1400,
+      "height": 919,
+      "retrieved": "2026-10-25"
+    },
+    "piranesi-st-peters-interior": {
+      "file": "piranesi-st-peters-interior.jpg",
+      "title": "Veduta interna della Basilica di S. Pietro in Vaticano",
+      "creator": "Giovanni Battista Piranesi; Library of Congress",
+      "date": "1750",
+      "license": "Public domain",
+      "attributionRequired": false,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Veduta_interna_della_Basilica_di_S._Pietro_in_Vaticano_-_Piranesi_fecit._LCCN97511245.jpg",
+      "credit": "Veduta interna della Basilica di S. Pietro in Vaticano, Giovanni Battista Piranesi; Library of Congress, 1750 (Public domain), via Wikimedia Commons",
+      "width": 1400,
+      "height": 1014,
+      "retrieved": "2026-10-25"
+    },
+    "morin-memento-mori": {
+      "file": "morin-memento-mori.jpg",
+      "title": "Memento Mori",
+      "creator": "Jean Morin",
+      "date": "first half of the 17th century",
+      "license": "Public domain",
+      "attributionRequired": false,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jean_Morin_-_Memento_Mori_-_WGA16234.jpg",
+      "credit": "Memento Mori, Jean Morin, first half of the 17th century (Public domain), via Wikimedia Commons",
+      "width": 1400,
+      "height": 1283,
+      "retrieved": "2026-10-25"
+    },
+    "holbein-the-abbot": {
+      "file": "holbein-the-abbot.jpg",
+      "title": "The Abbot, from The Dance of Death, by Hans Holbein the Younger",
+      "creator": "Hans Holbein the Younger",
+      "date": "c. 1523–25. Published 1538.",
+      "license": "Public domain",
+      "attributionRequired": false,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Abbot,_from_The_Dance_of_Death,_by_Hans_Holbein_the_Younger.jpg",
+      "credit": "The Abbot, from The Dance of Death, by Hans Holbein the Younger, Hans Holbein the Younger (Public domain), via Wikimedia Commons",
+      "width": 1400,
+      "height": 1845,
+      "retrieved": "2026-10-25"
+    }
+  }
+}

@@ -5,7 +5,7 @@
 | In the repo | Not in the repo (git-ignored) |
 |---|---|
 | Episode scripts (`public/episodes/*/episode.json`) | Voice-overs: `public/episodes/<id>/vo-<scene>.mp3` and `.json` |
-| All visuals (vector code) | `public/episodes/<id>/timings.json` (derived from the voice-over) |
+| All visuals (vector code) and a few public-domain images in `public/collage/` | `public/episodes/<id>/timings.json` (derived from the voice-over) |
 | Generators for audio (`scripts/`) | Sound effects and music: `public/audio/*` |
 | | Rendered videos: `out/` |
 

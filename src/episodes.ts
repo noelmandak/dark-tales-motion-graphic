@@ -8,4 +8,5 @@ export const EPISODE_IDS: string[] = [
   "cadaver-synod-id",
   "somerton-man-id",
   "leningrad-seeds-id",
+  "cadaver-synod-collage",
 ];

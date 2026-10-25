@@ -41,6 +41,7 @@ read colours and fonts from `brand.json`, and keep the 1080x1920 canvas's bottom
 
 - **True stories only**, with a source per claim (`meta.sources`). Mark `verified: true` only if you actually read the source. Hedge contested details in the narration.
 - **Handle violence by implication**, not depiction. Avoid dwelling on suicide methods, abuse, or recent mass-casualty events, and do not name private individuals.
+- **Images only through the tool:** use `npm run assets -- add` (public domain / CC0 from Wikimedia Commons, with provenance). Do not commit images from anywhere else.
 - **No third-party media:** no real photographs, clips, music or recorded voices unless you hold the licence and credit it. Take inspiration from other work, never copy it.
 - **Original text:** write narration in your own words; do not copy it from articles or videos.
 

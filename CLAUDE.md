@@ -13,7 +13,7 @@ This repo makes **Dark Tales** videos: animated, faceless "dark true story" shor
 - Secrets: `.env` (see `.env.example`). Never print, log or commit API keys. `voice` spends ElevenLabs credits, so ask first.
 
 ## Looks
-Each episode sets `"look"` in its JSON: `night` (default), `manuscript` (folio shots), `casefile` (board shots) or `poster` (poster shots). Alternate them between episodes; see the skill.
+Each episode sets `"look"` in its JSON: `night` (default), `manuscript` (folio shots), `casefile` (board shots) or `poster` (poster shots) or `collage` (collage shots; images only via `npm run assets`, see `docs/collage-look.md`). Alternate them between episodes; see the skill.
 
 ## Rules that matter
 - Facts first: every claim needs a source you actually read; keep `meta.sources[].verified` honest.

@@ -11,6 +11,7 @@ import {readFile, writeFile, mkdir, access} from "node:fs/promises";
 import {spawn} from "node:child_process";
 import path from "node:path";
 import {fileURLToPath} from "node:url";
+import {imageIds} from "./collage-assets.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const BRAND = JSON.parse(await readFile(path.join(ROOT, "src/brand/brand.json"), "utf8"));
@@ -132,7 +133,7 @@ async function check(id, quiet = false) {
   if (!timings) errors.push(`no timings.json — run: npm run ep -- voice ${id} (or draft for a free preview)`);
   if (timings?.estimated) warns.push("timings are ESTIMATED (draft). Cues are approximate and audio is missing; run voice before rendering.");
 
-  const shotTypes = new Set(["scene", "globe", "idcard", "map", "paper", "sketch", "object", "cta", "folio", "board", "poster"]);
+  const shotTypes = new Set(["scene", "globe", "idcard", "map", "paper", "sketch", "object", "cta", "folio", "board", "poster", "collage"]);
   let totalFrames = 0;
   const sfxAll = [];
 
@@ -181,6 +182,11 @@ async function check(id, quiet = false) {
   }
   if (totalFrames / 30 > BRAND.limits.maxSeconds) warns.push(`episode is ${(totalFrames / 30).toFixed(1)}s, over the ${BRAND.limits.maxSeconds}s target — consider trimming the script`);
 
+  // image provenance (collage look)
+  const imgs = await imageProblems(ep);
+  errors.push(...imgs.errors);
+  warns.push(...imgs.warns);
+
   // publishing hygiene
   const m = ep.meta ?? {};
   if (!m.title || !m.description || !m.hashtags?.length) errors.push("meta.title, meta.description and meta.hashtags are required");
@@ -197,9 +203,42 @@ async function check(id, quiet = false) {
 }
 
 /* ---------- lint (structure only: no audio, timings or API key required) ---------- */
-const SHOT_TYPES = ["scene", "globe", "idcard", "map", "paper", "sketch", "object", "cta", "folio", "board", "poster"];
-const LOOKS = ["night", "manuscript", "casefile", "poster"];
-const LOOK_SHOT = {night: ["scene", "globe", "idcard", "map", "paper", "sketch", "object", "cta"], manuscript: ["folio"], casefile: ["board"], poster: ["poster"]};
+const SHOT_TYPES = ["scene", "globe", "idcard", "map", "paper", "sketch", "object", "cta", "folio", "board", "poster", "collage"];
+const LOOKS = ["night", "manuscript", "casefile", "poster", "collage"];
+const LOOK_SHOT = {night: ["scene", "globe", "idcard", "map", "paper", "sketch", "object", "cta"], manuscript: ["folio"], casefile: ["board"], poster: ["poster"], collage: ["collage"]};
+
+/** Every collage image an episode uses must be in the manifest, on disk, and public domain/CC0 (or flagged for credit). */
+async function imageProblems(ep) {
+  const errors = [];
+  const warns = [];
+  let manifest = {images: {}};
+  try {
+    manifest = await readJson(path.join(ROOT, "public", "collage", "manifest.json"));
+  } catch {
+    // no manifest yet
+  }
+  for (const id of imageIds(ep)) {
+    const img = manifest.images[id];
+    if (!img) {
+      errors.push(`image "${id}" is not in public/collage/manifest.json (add it with: npm run assets -- add "File:..." ${id})`);
+      continue;
+    }
+    if (!(await exists(path.join(ROOT, "public", "collage", img.file)))) errors.push(`image "${id}": file public/collage/${img.file} is missing`);
+    if (!img.license || !img.sourceUrl) errors.push(`image "${id}": manifest entry has no licence or source URL`);
+    if (img.attributionRequired) warns.push(`image "${id}" requires attribution (${img.license}); the credit goes into publish.txt: keep it in your video description`);
+  }
+  return {errors, warns, manifest};
+}
+
+/** publish.txt body, including image credits when the episode uses collage images. */
+async function publishBody(ep, withNotes) {
+  const m = ep.meta;
+  const {manifest} = await imageProblems(ep);
+  const ids = imageIds(ep);
+  const lines = [m.title, "", m.description, "", m.hashtags.join(" "), "", "SOURCES", ...m.sources.map((s) => `- ${s.claim} — ${s.source}${s.verified ? "" : "  [UNVERIFIED]"}${withNotes && s.note ? "  (note: " + s.note + ")" : ""}`)];
+  if (ids.length) lines.push("", "IMAGE CREDITS", ...ids.map((id) => `- ${manifest.images[id]?.credit ?? "(missing from manifest: " + id + ")"}`));
+  return lines.join("\n");
+}
 
 async function lintOne(id) {
   const errors = [];
@@ -250,6 +289,9 @@ async function lintOne(id) {
     if (sc === ep.scenes[ep.scenes.length - 1] && !last.cta && last.type !== "cta") warns.push(`${tag} the last shot of the episode is usually a closing card (cta)`);
     for (const c of sc.sfx ?? []) cueOk(c.at, `sfx ${c.file}`);
   }
+  const img = await imageProblems(ep);
+  errors.push(...img.errors);
+  warns.push(...img.warns);
   const m = ep.meta ?? {};
   if (!m.title || !m.description || !m.hashtags?.length) errors.push("meta.title, meta.description and meta.hashtags are required");
   if (!m.sources?.length) errors.push("meta.sources is empty: every factual claim needs a source");
@@ -287,12 +329,7 @@ async function render(id, extraArgs) {
     const p = spawn("npx", ["remotion", "render", "src/index.ts", `DarkTales-${id}`, file, "--crf=18", ...extra], {cwd: ROOT, stdio: "inherit", shell: true});
     p.on("exit", (c) => (c === 0 ? resolve() : reject(new Error(`render exited with ${c}`))));
   });
-  const m = ep.meta;
-  const publish = [
-    m.title, "", m.description, "", m.hashtags.join(" "), "", "SOURCES",
-    ...m.sources.map((s) => `- ${s.claim} — ${s.source}${s.verified ? "" : "  [UNVERIFIED]"}`),
-  ].join("\n");
-  await writeFile(path.join(out, "publish.txt"), publish);
+  await writeFile(path.join(out, "publish.txt"), await publishBody(ep, false));
   console.log(`\nVideo:   ${file}\nPublish: ${path.join(out, "publish.txt")}`);
 }
 
@@ -301,9 +338,7 @@ async function publishText(id) {
   const {ep} = await check(id, true);
   const out = path.join(ROOT, "out", id);
   await mkdir(out, {recursive: true});
-  const m = ep.meta;
-  const publish = [m.title, "", m.description, "", m.hashtags.join(" "), "", "SOURCES", ...m.sources.map((s) => `- ${s.claim} — ${s.source}${s.verified ? "" : "  [UNVERIFIED]"}${s.note ? "  (note: " + s.note + ")" : ""}`)].join("\n");
-  await writeFile(path.join(out, "publish.txt"), publish);
+  await writeFile(path.join(out, "publish.txt"), await publishBody(ep, true));
   console.log("rewrote " + path.join(out, "publish.txt"));
 }
 

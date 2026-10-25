@@ -12,6 +12,7 @@ const PAD_NIGHT = 4; // crossfade overlap frames on each side of a shot
 const PAD_MANUSCRIPT = 7; // folios slide over a longer overlap
 const PAD_CASEFILE = 3; // hard cuts (with a camera flash inside the shot)
 const PAD_POSTER = 5; // diagonal print wipe
+const PAD_COLLAGE = 5; // torn-paper reveal
 
 type WrapProps = {duration: number; pad: number; first: boolean; last: boolean; children: React.ReactNode};
 
@@ -54,6 +55,23 @@ const ShotWipe: React.FC<WrapProps> = ({duration, pad, first, children}) => {
   const t = first ? 1 : interpolate(f, [0, pad * 2], [0, 1], clamp);
   const x = t * 145;
   const clip = first || t >= 1 ? undefined : `polygon(0 0, ${x}% 0, ${x - 40}% 100%, 0 100%)`;
+  const fade = first ? interpolate(f, [0, 6], [0, 1], clamp) : 1;
+  return (
+    <ShotCtx.Provider value={{duration}}>
+      <AbsoluteFill style={{clipPath: clip, opacity: fade}}>{children}</AbsoluteFill>
+    </ShotCtx.Provider>
+  );
+};
+
+/** Collage look: the next shot is revealed by a torn-paper edge sweeping across, in stop-motion steps. */
+const TEAR = Array.from({length: 17}).map((_, i) => ((Math.sin(i * 12.9898) * 43758.5453) % 1 + 1) % 1);
+const ShotTear: React.FC<WrapProps> = ({duration, pad, first, children}) => {
+  const f = useCurrentFrame();
+  const stepped = Math.floor(f / 2) * 2;
+  const t = first ? 1 : interpolate(stepped, [0, pad * 2], [0, 1], clamp);
+  const x = -12 + t * 135;
+  const pts = TEAR.map((j, i) => `${x + (j - 0.5) * 12}% ${(i / (TEAR.length - 1)) * 100}%`).join(", ");
+  const clip = first || t >= 1 ? undefined : `polygon(-5% 0, ${pts}, -5% 100%)`;
   const fade = first ? interpolate(f, [0, 6], [0, 1], clamp) : 1;
   return (
     <ShotCtx.Provider value={{duration}}>
@@ -136,8 +154,8 @@ export const EpisodeVideo: React.FC<{episode: Episode; timings: Timings}> = ({ep
   const end = interpolate(f, [total - 14, total], [1, 0], clamp);
   const brandText = {...DEFAULT_BRAND_TEXT, ...(episode.brandText ?? {})};
   const look = episode.look ?? "night";
-  const PAD = look === "manuscript" ? PAD_MANUSCRIPT : look === "casefile" ? PAD_CASEFILE : look === "poster" ? PAD_POSTER : PAD_NIGHT;
-  const Wrap = look === "manuscript" ? ShotSlide : look === "casefile" ? ShotCut : look === "poster" ? ShotWipe : ShotFade;
+  const PAD = look === "manuscript" ? PAD_MANUSCRIPT : look === "casefile" ? PAD_CASEFILE : look === "poster" ? PAD_POSTER : look === "collage" ? PAD_COLLAGE : PAD_NIGHT;
+  const Wrap = look === "manuscript" ? ShotSlide : look === "casefile" ? ShotCut : look === "poster" ? ShotWipe : look === "collage" ? ShotTear : ShotFade;
   const keywords = new Set((episode.keywords ?? []).map(norm));
   const replace = Object.fromEntries(Object.entries(episode.displayReplace ?? {}).map(([k, v]) => [norm(k), v]));
 

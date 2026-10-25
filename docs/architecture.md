@@ -25,7 +25,7 @@ timings.json ──┘   (calculateMetadata sizes it)    └─> audio (voice, m
 | `src/engine/Episode.tsx` | The renderer: scene lengths, shot sequencing and transitions, subtitles, audio mix. |
 | `src/engine/kit.tsx` | Drawing parts shared by the looks (people, chips, stamps, id cards, map, globe, stage). |
 | `src/engine/library.tsx` | The `night` look and the dispatcher `ShotView` that maps a shot's `type` to a component. |
-| `src/engine/manuscript.tsx`, `casefile.tsx`, `poster.tsx` | The other looks. |
+| `src/engine/manuscript.tsx`, `casefile.tsx`, `poster.tsx`, `collage.tsx` | The other looks. `collage.tsx` also reads `public/collage/manifest.json` for image sizes. |
 | `scripts/episode.mjs` | The CLI. Reimplements the cue grammar in plain JS so it can lint without bundling React. |
 
 ## Timing model
@@ -52,6 +52,7 @@ episode uses exactly one (`"look"` in its JSON), and the linter rejects shots fr
 | `manuscript` | `folio` | slide like a scroll | 7 |
 | `casefile` | `board` | hard cut with a camera flash | 3 |
 | `poster` | `poster` | diagonal wipe | 5 |
+| `collage` | `collage` | torn-paper wipe (stop-motion steps) | 5 |
 
 ## CLI vs. browser code
 

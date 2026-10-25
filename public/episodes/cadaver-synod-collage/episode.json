@@ -1,0 +1,747 @@
+{
+  "id": "cadaver-synod-collage",
+  "title": "The Trial of a Dead Pope (collage)",
+  "look": "collage",
+  "keywords": [
+    "897",
+    "dead",
+    "trial",
+    "guilty",
+    "strangled",
+    "overturned",
+    "reapproved",
+    "exaggerated",
+    "real",
+    "Formosus",
+    "fingers"
+  ],
+  "displayReplace": {},
+  "scenes": [
+    {
+      "id": "s1",
+      "vo": "In 897, Pope Stephen VI had a dead pope dug up. Then he put him on trial.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "I · THE EXHUMATION",
+          "items": [
+            {
+              "kind": "ransom",
+              "text": "897",
+              "x": 540,
+              "y": 360,
+              "size": 300,
+              "at": 0
+            },
+            {
+              "kind": "image",
+              "src": "piranesi-lateran",
+              "x": 540,
+              "y": 930,
+              "w": 880,
+              "rot": -2,
+              "tape": true,
+              "caption": "THE LATERAN, ROME",
+              "at": "@pope"
+            }
+          ]
+        },
+        {
+          "at": "@dead -0.2",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "I · THE EXHUMATION",
+          "items": [
+            {
+              "kind": "image",
+              "src": "morin-memento-mori",
+              "x": 350,
+              "y": 900,
+              "w": 600,
+              "rot": -6,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "DUG UP",
+              "x": 690,
+              "y": 440,
+              "size": 170,
+              "rot": 4,
+              "at": "@dug"
+            },
+            {
+              "kind": "label",
+              "text": "A DEAD POPE",
+              "x": 640,
+              "y": 1250,
+              "size": 44,
+              "rot": -2,
+              "at": "@dead"
+            }
+          ]
+        },
+        {
+          "at": "@then",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "I · THE EXHUMATION",
+          "items": [
+            {
+              "kind": "image",
+              "src": "laurens-formosus-stephen",
+              "x": 540,
+              "y": 820,
+              "w": 1000,
+              "rot": -1.5,
+              "tint": "none",
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "marker",
+              "shape": "circle",
+              "x": 710,
+              "y": 665,
+              "w": 170,
+              "h": 200,
+              "at": "@him"
+            },
+            {
+              "kind": "ransom",
+              "text": "ON TRIAL",
+              "x": 540,
+              "y": 1230,
+              "size": 170,
+              "rot": -2,
+              "at": "@trial"
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": 0,
+          "file": "bass-hit",
+          "vol": 0.45
+        },
+        {
+          "at": "@trial",
+          "file": "stamp",
+          "vol": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "vo": "The corpse was Pope Formosus. His enemies said he had broken church law to become pope. So the body was propped on a throne in court, and a deacon was appointed to speak for the dead.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "II · THE ACCUSATION",
+          "items": [
+            {
+              "kind": "ransom",
+              "text": "THE CORPSE",
+              "x": 540,
+              "y": 330,
+              "size": 130,
+              "at": "@corpse"
+            },
+            {
+              "kind": "image",
+              "src": "laurens-formosus-stephen",
+              "x": 540,
+              "y": 840,
+              "w": 700,
+              "h": 820,
+              "focus": [
+                0.68,
+                0.45
+              ],
+              "zoom": 2,
+              "tint": "none",
+              "rot": 2,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "label",
+              "text": "POPE FORMOSUS",
+              "x": 540,
+              "y": 1270,
+              "size": 48,
+              "rot": -2,
+              "at": "@formosus"
+            }
+          ]
+        },
+        {
+          "at": "@his",
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "II · THE ACCUSATION",
+          "items": [
+            {
+              "kind": "image",
+              "src": "holbein-the-abbot",
+              "x": 400,
+              "y": 980,
+              "w": 600,
+              "rot": -3,
+              "tape": true,
+              "at": "@enemies"
+            },
+            {
+              "kind": "ransom",
+              "text": "BROKEN CHURCH LAW",
+              "x": 540,
+              "y": 380,
+              "size": 118,
+              "at": "@broken"
+            },
+            {
+              "kind": "marker",
+              "shape": "underline",
+              "x": 540,
+              "y": 560,
+              "w": 800,
+              "at": "@law"
+            }
+          ]
+        },
+        {
+          "at": "@so",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "II · THE ACCUSATION",
+          "items": [
+            {
+              "kind": "ransom",
+              "text": "PROPPED UP",
+              "x": 540,
+              "y": 330,
+              "size": 130,
+              "at": "@propped"
+            },
+            {
+              "kind": "image",
+              "src": "laurens-formosus-stephen",
+              "x": 540,
+              "y": 860,
+              "w": 1000,
+              "rot": 1,
+              "tint": "none",
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "marker",
+              "shape": "circle",
+              "x": 490,
+              "y": 720,
+              "w": 240,
+              "h": 340,
+              "at": "@deacon"
+            },
+            {
+              "kind": "label",
+              "text": "A DEACON SPEAKS FOR THE DEAD",
+              "x": 540,
+              "y": 1250,
+              "size": 34,
+              "rot": -1,
+              "at": "@deacon"
+            }
+          ]
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "id": "s3",
+      "vo": "The verdict was guilty. Reportedly, three fingers, the ones used to bless, were cut from his right hand. Then the body was thrown into the Tiber.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "III · THE VERDICT",
+          "items": [
+            {
+              "kind": "ransom",
+              "text": "GUILTY",
+              "x": 540,
+              "y": 440,
+              "size": 300,
+              "rot": -2,
+              "at": "@guilty"
+            },
+            {
+              "kind": "image",
+              "src": "morin-memento-mori",
+              "x": 540,
+              "y": 1010,
+              "w": 620,
+              "rot": 4,
+              "tape": true,
+              "at": 0
+            }
+          ]
+        },
+        {
+          "at": "@reportedly -0.1",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "III · THE VERDICT",
+          "items": [
+            {
+              "kind": "image",
+              "src": "holbein-the-pope",
+              "x": 540,
+              "y": 880,
+              "w": 700,
+              "rot": -3,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "THREE FINGERS",
+              "x": 540,
+              "y": 330,
+              "size": 120,
+              "at": "@three"
+            },
+            {
+              "kind": "marker",
+              "shape": "underline",
+              "x": 540,
+              "y": 440,
+              "w": 760,
+              "at": "@fingers"
+            },
+            {
+              "kind": "label",
+              "text": "REPORTEDLY",
+              "x": 540,
+              "y": 1270,
+              "size": 44,
+              "color": "red",
+              "rot": -2,
+              "at": "@reportedly"
+            }
+          ]
+        },
+        {
+          "at": "@then",
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "III · THE VERDICT",
+          "items": [
+            {
+              "kind": "ransom",
+              "text": "INTO THE TIBER",
+              "x": 540,
+              "y": 330,
+              "size": 120,
+              "at": "@tiber"
+            },
+            {
+              "kind": "image",
+              "src": "piranesi-sant-angelo",
+              "x": 540,
+              "y": 860,
+              "w": 1000,
+              "rot": -1.5,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "marker",
+              "shape": "arrow",
+              "x": 500,
+              "y": 1000,
+              "w": 320,
+              "h": 300,
+              "rot": 60,
+              "at": "@thrown"
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@guilty",
+          "file": "stamp",
+          "vol": 0.45
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "vo": "But the backlash came fast. Within months, Stephen was arrested, and strangled in prison. The verdict was overturned, Formosus was reburied in St. Peter's, and trials of dead popes were banned. Years later, Pope Sergius III reapproved the verdict.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "IV · THE REVERSAL",
+          "items": [
+            {
+              "kind": "ransom",
+              "text": "BACKLASH",
+              "x": 540,
+              "y": 350,
+              "size": 200,
+              "rot": -2,
+              "at": 0
+            },
+            {
+              "kind": "image",
+              "src": "laurens-formosus-stephen",
+              "x": 540,
+              "y": 900,
+              "w": 640,
+              "h": 780,
+              "focus": [
+                0.14,
+                0.3
+              ],
+              "zoom": 2.2,
+              "tint": "none",
+              "rot": -2,
+              "tape": true,
+              "at": "@came"
+            }
+          ]
+        },
+        {
+          "at": "@within -0.1",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "IV · THE REVERSAL",
+          "items": [
+            {
+              "kind": "image",
+              "src": "laurens-formosus-stephen",
+              "x": 540,
+              "y": 900,
+              "w": 640,
+              "h": 780,
+              "focus": [
+                0.14,
+                0.3
+              ],
+              "zoom": 2.2,
+              "tint": "none",
+              "rot": -2,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "ARRESTED",
+              "x": 540,
+              "y": 330,
+              "size": 150,
+              "at": "@arrested"
+            },
+            {
+              "kind": "marker",
+              "shape": "cross",
+              "x": 540,
+              "y": 900,
+              "w": 440,
+              "h": 520,
+              "at": "@arrested"
+            },
+            {
+              "kind": "ransom",
+              "text": "STRANGLED",
+              "x": 540,
+              "y": 1250,
+              "size": 100,
+              "rot": 2,
+              "at": "@strangled"
+            }
+          ]
+        },
+        {
+          "at": "@verdict -0.2",
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "IV · THE REVERSAL",
+          "items": [
+            {
+              "kind": "ransom",
+              "text": "OVERTURNED",
+              "x": 540,
+              "y": 330,
+              "size": 130,
+              "at": "@overturned"
+            },
+            {
+              "kind": "image",
+              "src": "piranesi-st-peters-interior",
+              "x": 540,
+              "y": 840,
+              "w": 1000,
+              "rot": 1.5,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "label",
+              "text": "REBURIED IN ST. PETER'S",
+              "x": 540,
+              "y": 1260,
+              "size": 38,
+              "rot": -1.5,
+              "at": "@reburied"
+            }
+          ]
+        },
+        {
+          "at": "@trials -0.1",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "IV · THE REVERSAL",
+          "items": [
+            {
+              "kind": "ransom",
+              "text": "NO MORE CORPSE TRIALS",
+              "x": 540,
+              "y": 360,
+              "size": 100,
+              "at": "@banned"
+            },
+            {
+              "kind": "image",
+              "src": "morin-memento-mori",
+              "x": 540,
+              "y": 960,
+              "w": 620,
+              "rot": 3,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "marker",
+              "shape": "cross",
+              "x": 540,
+              "y": 960,
+              "w": 560,
+              "h": 520,
+              "at": "@banned"
+            }
+          ]
+        },
+        {
+          "at": "@years -0.1",
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "IV · THE REVERSAL",
+          "items": [
+            {
+              "kind": "ransom",
+              "text": "YEARS LATER",
+              "x": 540,
+              "y": 330,
+              "size": 140,
+              "at": "@years"
+            },
+            {
+              "kind": "image",
+              "src": "holbein-the-pope",
+              "x": 540,
+              "y": 880,
+              "w": 640,
+              "rot": 3,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "VERDICT RESTORED",
+              "x": 540,
+              "y": 1260,
+              "size": 100,
+              "rot": -2,
+              "at": "@reapproved"
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@arrested",
+          "file": "fail-thud",
+          "vol": 0.4
+        },
+        {
+          "at": "@overturned",
+          "file": "stamp",
+          "vol": 0.4
+        },
+        {
+          "at": "@reapproved",
+          "file": "stamp",
+          "vol": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "vo": "The best-known account was written decades later, so some details may be exaggerated. But the trial itself is real history. Follow for the next dark true story.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "V · THE RECORD",
+          "items": [
+            {
+              "kind": "ransom",
+              "text": "DECADES LATER",
+              "x": 540,
+              "y": 340,
+              "size": 130,
+              "at": "@decades"
+            },
+            {
+              "kind": "image",
+              "src": "holbein-the-abbot",
+              "x": 540,
+              "y": 920,
+              "w": 560,
+              "rot": -3,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "label",
+              "text": "DETAILS MAY BE EXAGGERATED",
+              "x": 540,
+              "y": 1260,
+              "size": 34,
+              "color": "red",
+              "rot": 1.5,
+              "at": "@exaggerated"
+            }
+          ]
+        },
+        {
+          "at": "@but",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "V · THE RECORD",
+          "items": [
+            {
+              "kind": "ransom",
+              "text": "REAL HISTORY",
+              "x": 540,
+              "y": 330,
+              "size": 150,
+              "at": "@real"
+            },
+            {
+              "kind": "image",
+              "src": "laurens-formosus-stephen",
+              "x": 540,
+              "y": 860,
+              "w": 1000,
+              "rot": -1,
+              "tint": "none",
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "marker",
+              "shape": "circle",
+              "x": 710,
+              "y": 707,
+              "w": 170,
+              "h": 200,
+              "at": "@trial"
+            }
+          ]
+        },
+        {
+          "at": "@follow",
+          "type": "collage",
+          "bg": "kraft",
+          "cta": true,
+          "items": []
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@follow",
+          "file": "whoosh",
+          "vol": 0.3
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "title": "The Pope Who Put a Corpse on Trial (True Story)",
+    "description": "In 897, a pope had a dead pope dug up and put on trial. What happened next, and how the verdict was reversed, restored and argued over for years.",
+    "hashtags": [
+      "#darkhistory",
+      "#truestory",
+      "#history",
+      "#medievalhistory",
+      "#animatedhistory",
+      "#shorts"
+    ],
+    "sources": [
+      {
+        "claim": "In early 897 Pope Stephen VI had Formosus's corpse exhumed and put on trial at a synod in Rome",
+        "source": "Wikipedia, 'Cadaver Synod'; National Geographic, 'Vatican dead pope on trial'; Catholic Encyclopedia, 'Pope Formosus'",
+        "verified": true,
+        "note": "Date is 'probably January 897'; narration says only '897'."
+      },
+      {
+        "claim": "Charge: he had broken church law to become pope; corpse propped on a throne; a deacon appointed to speak for it",
+        "source": "Wikipedia, 'Cadaver Synod'; National Geographic; Catholic Encyclopedia (throne)",
+        "verified": true
+      },
+      {
+        "claim": "Verdict guilty; three fingers of the right hand cut off; body thrown into the Tiber",
+        "source": "Wikipedia, 'Cadaver Synod'; National Geographic; Catholic Encyclopedia",
+        "verified": true,
+        "note": "Narration uses 'Reportedly'. The Tiber detail is flagged [citation needed] on Wikipedia; all three sources report it. The fisherman rescue story is legend: not used."
+      },
+      {
+        "claim": "Stephen VI was arrested and strangled in prison within months (July/August 897)",
+        "source": "Wikipedia, 'Cadaver Synod'; National Geographic",
+        "verified": true,
+        "note": "Narration says 'within months' and does not give a date."
+      },
+      {
+        "claim": "The verdict was overturned, Formosus reburied in St. Peter's, trials of dead popes banned",
+        "source": "Wikipedia, 'Cadaver Synod' (Theodore II 897, John IX 898); National Geographic (John IX); Catholic Encyclopedia",
+        "verified": true,
+        "note": "Sources differ on which pope and exact year, so the narration names no one and gives no date."
+      },
+      {
+        "claim": "Years later Pope Sergius III reapproved the verdict (and required re-ordination of clergy ordained by Formosus)",
+        "source": "Wikipedia, 'Pope Formosus'; Catholic Encyclopedia, 'Pope Formosus'",
+        "verified": true,
+        "note": "No year stated in narration (Sergius III's pontificate began 904)."
+      },
+      {
+        "claim": "The best-known account of the trial (Liutprand of Cremona) was written decades later and is considered partisan, so some details may be exaggerated",
+        "source": "Encyclopedia.com, 'Liutprand of Cremona' (Antapodosis written 955-962; 'drastic distortions' from hostility); Wikipedia, 'Pope Formosus' (historians think the account likely exaggerates); Medievalists.net, 'The Cadaver Synod' (Liutprand the only chronicler named for the trial's content)",
+        "verified": true,
+        "note": "Narration says 'best-known' rather than 'only': shorter contemporary mentions exist (e.g. Annales Alamannici; acts of the 898 synods). Not claimed: any specific detail is false."
+      }
+    ]
+  }
+}

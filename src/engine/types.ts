@@ -178,7 +178,40 @@ export type PosterShot = {
   cta?: boolean;
 };
 
-export type Shot = {at: Cue} & (SceneShot | GlobeShot | IdCardShot | MapShot | PaperShot | SketchShot | ObjectShot | CtaShot | FolioShot | BoardShot | PosterShot);
+/** Collage look: archival images cut out and pasted like stop-motion paper collage. */
+export type CollageItem = {
+  kind: string; // image | ransom | marker | label
+  at?: Cue;
+  x?: number;
+  y?: number;
+  rot?: number;
+  s?: number;
+  // image
+  src?: string; // id in public/collage/manifest.json (add images with `npm run assets`)
+  w?: number; // display width (px); height follows the image unless `h` crops it
+  h?: number;
+  focus?: [number, number]; // crop focus point, 0..1
+  zoom?: number; // crop zoom, 1 = fit
+  tint?: "duotone" | "sepia" | "none";
+  tape?: boolean;
+  caption?: string;
+  drift?: [number, number]; // px per second
+  // ransom / label / marker
+  text?: string;
+  size?: number;
+  color?: string;
+  shape?: "circle" | "arrow" | "underline" | "cross";
+};
+export type CollageShot = {
+  type: "collage";
+  bg?: "kraft" | "newsprint" | "navy";
+  tab?: string;
+  items: CollageItem[];
+  stamps?: StampSpec[];
+  cta?: boolean;
+};
+
+export type Shot = {at: Cue} & (SceneShot | GlobeShot | IdCardShot | MapShot | PaperShot | SketchShot | ObjectShot | CtaShot | FolioShot | BoardShot | PosterShot | CollageShot);
 export type SfxCue = {at: Cue; file: string; vol?: number};
 export type SceneDef = {id: string; vo: string; shots: Shot[]; sfx?: SfxCue[]};
 
@@ -192,7 +225,7 @@ export type Episode = {
   /** Localise the brand strings (closing card, watermark). Missing fields fall back to brand.json. */
   brandText?: {name?: string; watermark?: string; tagline?: string; ctaButton?: string; ctaQuestion?: string};
   /** "night" (default): silhouettes on a night stage, crossfades. "manuscript": illuminated folios that slide like a scroll. "casefile": a cork evidence board with camera-flash cuts. "poster": constructivist printed posters with kinetic type and diagonal wipes. Alternate looks between episodes. */
-  look?: "night" | "manuscript" | "casefile" | "poster";
+  look?: "night" | "manuscript" | "casefile" | "poster" | "collage";
   keywords?: string[];
   displayReplace?: Record<string, string>;
   scenes: SceneDef[];

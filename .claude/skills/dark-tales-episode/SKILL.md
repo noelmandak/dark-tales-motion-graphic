@@ -40,8 +40,21 @@ The brand (navy and gold, faceless figures, serif + sans type, subtitle style, a
 - `"manuscript"`: illuminated-manuscript folios (parchment, gold-leaf frame, robed faceless figures with halos), chapter headings ("I · THE EXHUMATION"), and folios that slide like a scroll. Fits medieval/ancient/religious stories, trials, decrees, chronicles. Uses the `folio` shot type only.
 - `"casefile"`: an investigator cork evidence board: polaroids and index cards pinned up, typewriter text, red string between clues, ink stamps, and a camera-flash cut between shots. Fits mysteries, crimes, investigations, anything "unsolved". Uses the `board` shot type only.
 - `"poster"`: 1930s constructivist-style printed posters: diagonal colour blocks, giant block headlines that slam in word by word, angular icons, halftone and grain, diagonal print wipes. Fits wars, regimes, propaganda-era, industrial or ideological stories, anything with a strong slogan. Uses the `poster` shot type only.
+- `"collage"`: archival images (public domain, with provenance) cut out with torn edges and pasted on kraft paper or newsprint, ransom-note headlines, a red marker, stop-motion movement, torn-paper wipes. Fits stories that have genuine period art or prints to show: medieval, early modern, 19th century. Uses the `collage` shot type only. **Images must come through `npm run assets` (see below).**
 
 Pick the look that suits the era and theme, and **don't use the same look two episodes in a row** unless the story demands it. If a new story needs a look neither covers, propose a third one to the user and build it as a new look in `src/engine/` rather than bending an existing one. Looks cannot be mixed within one episode.
+
+## Images for the collage look
+
+Real pictures need real permission, so the tool does the checking and you do the judging:
+
+1. Find candidates with `npm run assets -- search "<query>"` (Wikimedia Commons only). The output shows each file's licence: PD (public domain / CC0), BY (needs credit) or ?? (rejected).
+2. Add with `npm run assets -- add "File:..." <id>`. It refuses anything that is not public domain or CC0 unless you pass `--allow-attribution`, and it records provenance in `public/collage/manifest.json`.
+3. **Look at the picture** before using it: is it what you think it is, is it a *depiction* (painting, print) rather than a photograph of the event, and does it avoid recognisable living or recently deceased people? Caption honestly (artist, year, "painting" / "woodcut").
+4. Reference images by id in `items`; `npm run ep -- lint` fails on unknown ids, and `render` puts the credits in `publish.txt`. Tell the user which images were used and that they should keep the credits in the video description.
+5. Never use images from search engines, social media or stock sites, and never pass a non-Commons URL to the tool. If no suitable public-domain image exists, use a different look for that episode.
+
+Details: `docs/collage-look.md`.
 
 ## Brand rules
 

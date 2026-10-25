@@ -30,7 +30,8 @@
     "ep:lint": "node scripts/episode.mjs lint all",
     "audio:sfx": "node scripts/generate-audio.mjs sfx",
     "audio:bgm": "node scripts/make-bgm.mjs",
-    "upgrade": "remotion upgrade"
+    "upgrade": "remotion upgrade",
+    "assets": "node scripts/collage-assets.mjs"
   },
   "allowScripts": {
     "esbuild": false
