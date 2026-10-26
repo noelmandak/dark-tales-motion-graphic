@@ -1,9 +1,9 @@
 import React from "react";
-import {AbsoluteFill, Audio, Sequence, interpolate, staticFile, useCurrentFrame} from "remotion";
+import {AbsoluteFill, Audio, Easing, Img, Sequence, interpolate, staticFile, useCurrentFrame} from "remotion";
 import BRAND from "../brand/brand.json";
 import {C, SANS, SERIF, ShotCtx, clamp} from "./kit";
 import {resolveCue} from "./cue";
-import {BrandTextCtx, DEFAULT_BRAND_TEXT, ShotEnv} from "./env";
+import {BrandTextCtx, DEFAULT_BRAND_TEXT, ShotEnv, ThemeCtx, useTheme} from "./env";
 import {ShotView} from "./library";
 import type {Episode, Timings, Word} from "./types";
 
@@ -13,14 +13,19 @@ const PAD_MANUSCRIPT = 7; // folios slide over a longer overlap
 const PAD_CASEFILE = 3; // hard cuts (with a camera flash inside the shot)
 const PAD_POSTER = 5; // diagonal print wipe
 const PAD_COLLAGE = 5; // torn-paper reveal
+const PAD_COMIC = 5; // zig-zag page wipe
+const PAD_CORPORATE = 8; // iris reveal
 
 type WrapProps = {duration: number; pad: number; first: boolean; last: boolean; children: React.ReactNode};
 
-export const sceneFrames = (timings: Timings, sceneId: string) =>
-  Math.ceil((timings.scenes[sceneId].voSeconds + BRAND.audio.voTail) * FPS);
+/** Silence after a scene's voice-over: the scene's own `tail`, else the episode's `audio.voTail`, else brand.json. */
+export const tailOf = (episode: Episode, scene: {tail?: number}) => scene.tail ?? episode.audio?.voTail ?? BRAND.audio.voTail;
+
+export const sceneFrames = (timings: Timings, sceneId: string, tail: number = BRAND.audio.voTail) =>
+  Math.ceil((timings.scenes[sceneId].voSeconds + tail) * FPS);
 
 export const episodeFrames = (episode: Episode, timings: Timings) =>
-  episode.scenes.reduce((sum, s) => sum + sceneFrames(timings, s.id), 0);
+  episode.scenes.reduce((sum, s) => sum + sceneFrames(timings, s.id, tailOf(episode, s)), 0);
 
 /** Used by calculateMetadata: fetch the episode definition + its voice timings from public/episodes/<id>/. */
 export const loadEpisode = async (id: string): Promise<{episode: Episode; timings: Timings}> => {
@@ -80,6 +85,21 @@ const ShotTear: React.FC<WrapProps> = ({duration, pad, first, children}) => {
   );
 };
 
+/** Comic look: the next page is revealed by a zig-zag edge sweeping up from the bottom. */
+const ShotPage: React.FC<WrapProps> = ({duration, pad, first, children}) => {
+  const f = useCurrentFrame();
+  const t = first ? 1 : interpolate(f, [0, pad * 2], [0, 1], clamp);
+  const y = 112 - t * 126;
+  const pts = Array.from({length: 11}).map((_, i) => `${i * 10}% ${y + (i % 2 ? 4 : -3)}%`).join(", ");
+  const clip = first || t >= 1 ? undefined : `polygon(${pts}, 100% 120%, 0% 120%)`;
+  const fade = first ? interpolate(f, [0, 6], [0, 1], clamp) : 1;
+  return (
+    <ShotCtx.Provider value={{duration}}>
+      <AbsoluteFill style={{clipPath: clip, opacity: fade}}>{children}</AbsoluteFill>
+    </ShotCtx.Provider>
+  );
+};
+
 /** Casefile look: hard cut; the board itself fires the camera flash. */
 const ShotCut: React.FC<WrapProps> = ({duration, first, children}) => {
   const f = useCurrentFrame();
@@ -87,6 +107,20 @@ const ShotCut: React.FC<WrapProps> = ({duration, first, children}) => {
   return (
     <ShotCtx.Provider value={{duration}}>
       <AbsoluteFill style={{opacity: o}}>{children}</AbsoluteFill>
+    </ShotCtx.Provider>
+  );
+};
+
+/** Corporate look: each shot opens as a circular iris over the previous one (shots are opaque, so there is no dip to black). */
+const ShotIris: React.FC<WrapProps> = ({duration, first, children}) => {
+  const f = useCurrentFrame();
+  const t = interpolate(f, [0, PAD_CORPORATE + 9], [0, 1], {...clamp, easing: Easing.out(Easing.cubic)});
+  const style: React.CSSProperties = first
+    ? {opacity: interpolate(f, [0, 6], [0, 1], clamp)}
+    : {clipPath: `circle(${t * 1300}px at 540px 900px)`};
+  return (
+    <ShotCtx.Provider value={{duration}}>
+      <AbsoluteFill style={style}>{children}</AbsoluteFill>
     </ShotCtx.Provider>
   );
 };
@@ -119,6 +153,7 @@ const buildChunks = (words: Word[]) => {
 
 const Subs: React.FC<{words: Word[]; keywords: Set<string>; replace: Record<string, string>}> = ({words, keywords, replace}) => {
   const f = useCurrentFrame();
+  const accent = useTheme().accent ?? C.gold;
   const t = f / FPS;
   const chunks = React.useMemo(() => buildChunks(words), [words]);
   const chunk = chunks.find((c) => t >= c.from - 0.04 && t < c.to);
@@ -137,7 +172,7 @@ const Subs: React.FC<{words: Word[]; keywords: Set<string>; replace: Record<stri
           const key = norm(w.text);
           const shown = replace[key] ? w.text.replace(new RegExp(key, "i"), replace[key]) : w.text;
           return (
-            <span key={i} style={{color: keywords.has(norm(shown)) ? C.gold : C.cream, opacity: t >= w.from ? 1 : BRAND.subtitles.dimOpacity}}>
+            <span key={i} style={{color: keywords.has(norm(shown)) ? accent : C.cream, opacity: t >= w.from ? 1 : BRAND.subtitles.dimOpacity}}>
               {shown}
             </span>
           );
@@ -154,14 +189,14 @@ export const EpisodeVideo: React.FC<{episode: Episode; timings: Timings}> = ({ep
   const end = interpolate(f, [total - 14, total], [1, 0], clamp);
   const brandText = {...DEFAULT_BRAND_TEXT, ...(episode.brandText ?? {})};
   const look = episode.look ?? "night";
-  const PAD = look === "manuscript" ? PAD_MANUSCRIPT : look === "casefile" ? PAD_CASEFILE : look === "poster" ? PAD_POSTER : look === "collage" ? PAD_COLLAGE : PAD_NIGHT;
-  const Wrap = look === "manuscript" ? ShotSlide : look === "casefile" ? ShotCut : look === "poster" ? ShotWipe : look === "collage" ? ShotTear : ShotFade;
+  const PAD = look === "manuscript" ? PAD_MANUSCRIPT : look === "casefile" ? PAD_CASEFILE : look === "poster" ? PAD_POSTER : look === "collage" ? PAD_COLLAGE : look === "comic" ? PAD_COMIC : look === "corporate" ? PAD_CORPORATE : PAD_NIGHT;
+  const Wrap = look === "manuscript" ? ShotSlide : look === "casefile" ? ShotCut : look === "poster" ? ShotWipe : look === "collage" ? ShotTear : look === "comic" ? ShotPage : look === "corporate" ? ShotIris : ShotFade;
   const keywords = new Set((episode.keywords ?? []).map(norm));
   const replace = Object.fromEntries(Object.entries(episode.displayReplace ?? {}).map(([k, v]) => [norm(k), v]));
 
   let cursor = 0;
   const scenes = episode.scenes.map((sc) => {
-    const frames = sceneFrames(timings, sc.id);
+    const frames = sceneFrames(timings, sc.id, tailOf(episode, sc));
     const words = timings.scenes[sc.id].words;
     const base = cursor;
     cursor += frames;
@@ -178,11 +213,12 @@ export const EpisodeVideo: React.FC<{episode: Episode; timings: Timings}> = ({ep
   const sfx: typeof cues = [];
   for (const c of cues) {
     const prev = sfx[sfx.length - 1];
-    if (!prev || c.t - prev.t >= BRAND.audio.sfxMinGap) sfx.push(c);
+    if (!prev || c.t - prev.t >= (episode.audio?.sfxMinGap ?? BRAND.audio.sfxMinGap)) sfx.push(c);
   }
 
   return (
     <BrandTextCtx.Provider value={brandText}>
+    <ThemeCtx.Provider value={episode.theme ?? {}}>
     <AbsoluteFill style={{backgroundColor: C.navy0}}>
       <AbsoluteFill style={{opacity: end}}>
         {scenes.map(({sc, frames, base, shots}) =>
@@ -207,14 +243,18 @@ export const EpisodeVideo: React.FC<{episode: Episode; timings: Timings}> = ({ep
             <Subs words={words} keywords={keywords} replace={replace} />
           </Sequence>
         ))}
-        <div style={{position: "absolute", right: 56, bottom: 54, fontFamily: SERIF, fontStyle: "italic", fontSize: 28, color: C.cream, opacity: 0.55}}>
-          {brandText.watermark}
-        </div>
+        {episode.theme?.logo ? (
+          <Img src={staticFile(episode.theme.logo)} style={{position: "absolute", right: 56, bottom: 50, width: 230, opacity: 0.8}} />
+        ) : (
+          <div style={{position: "absolute", right: 56, bottom: 54, fontFamily: SERIF, fontStyle: "italic", fontSize: 28, color: C.cream, opacity: 0.55}}>
+            {brandText.watermark}
+          </div>
+        )}
       </AbsoluteFill>
 
       <Audio
-        src={staticFile(BRAND.audio.bgmFile)}
-        volume={(fr) => BRAND.audio.bgmVolume * interpolate(fr, [0, 45, total - 60, total], [0, 1, 1, 0], clamp)}
+        src={staticFile(episode.audio?.bgm ?? BRAND.audio.bgmFile)}
+        volume={(fr) => (episode.audio?.bgmVolume ?? BRAND.audio.bgmVolume) * interpolate(fr, [0, 45, total - 60, total], [0, 1, 1, 0], clamp)}
       />
       {scenes.map(({sc, frames, base}) => (
         <Sequence key={sc.id} from={base} durationInFrames={frames} layout="none">
@@ -227,6 +267,7 @@ export const EpisodeVideo: React.FC<{episode: Episode; timings: Timings}> = ({ep
         </Sequence>
       ))}
     </AbsoluteFill>
+    </ThemeCtx.Provider>
     </BrandTextCtx.Provider>
   );
 };

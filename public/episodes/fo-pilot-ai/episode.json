@@ -1,0 +1,845 @@
+{
+  "id": "fo-pilot-ai",
+  "title": "Kenapa MVP AI Berhenti di Tahap Demo",
+  "lang": "id",
+  "look": "corporate",
+  "brandText": {
+    "name": "Fata Organa",
+    "watermark": "Fata Organa",
+    "tagline": "Dari MVP ke production, tanpa mengganggu operasi.",
+    "ctaButton": "Ikuti",
+    "ctaQuestion": "MVP AI Anda tertahan di gerbang mana?"
+  },
+  "theme": {
+    "logo": "brand/fata-organa-logo-white.png",
+    "logoLight": "brand/fata-organa-logo-blue.png",
+    "primary": "#155485",
+    "primaryDark": "#0b2b4a",
+    "accent": "#7cc4ff"
+  },
+  "audio": {
+    "bgm": "audio/bgm-fataorgana.wav",
+    "bgmVolume": 0.17,
+    "sfxMinGap": 0.1,
+    "voTail": 0.9
+  },
+  "keywords": [
+    "demo",
+    "mvp",
+    "purgatory",
+    "data",
+    "integrasi",
+    "pemilik",
+    "modelnya",
+    "production",
+    "direncanakan",
+    "assessment"
+  ],
+  "displayReplace": {
+    "ei-ai": "AI",
+    "em-vi-pi": "MVP",
+    "i-ar-pi": "ERP",
+    "prodak-syen": "production",
+    "pergatori": "purgatory",
+    "spred-syit": "spreadsheet"
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "vo": "Demonya sempurna. Direksi bertepuk tangan. Anggaran disetujui. Enam bulan kemudian, sistem ei-ai itu tidak pernah dipakai. Apa yang terjadi?",
+      "shots": [
+        {
+          "at": 0,
+          "type": "brief",
+          "tab": "01 · SITUASI",
+          "bg": "dark",
+          "broll": "skyline",
+          "blocks": [
+            {
+              "kind": "text",
+              "text": "Proyek MVP AI",
+              "size": 62,
+              "hl": [
+                "MVP"
+              ]
+            },
+            {
+              "kind": "list",
+              "items": [
+                {
+                  "text": "Demo",
+                  "value": "Sukses",
+                  "state": "ok"
+                },
+                {
+                  "text": "Direksi",
+                  "value": "Mendukung",
+                  "state": "ok",
+                  "at": "@direksi"
+                },
+                {
+                  "text": "Anggaran",
+                  "value": "Disetujui",
+                  "state": "ok",
+                  "at": "@anggaran"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "at": "@enam -0.1",
+          "type": "brief",
+          "tab": "01 · SITUASI",
+          "bg": "dark",
+          "broll": "belt",
+          "blocks": [
+            {
+              "kind": "counter",
+              "from": 0,
+              "to": 6,
+              "unit": "bulan",
+              "label": "kemudian"
+            },
+            {
+              "kind": "steps",
+              "items": [
+                {
+                  "label": "Demo",
+                  "state": "done"
+                },
+                {
+                  "label": "MVP",
+                  "state": "done"
+                },
+                {
+                  "label": "Production",
+                  "sub": "Belum go-live",
+                  "state": "stalled",
+                  "at": "@sistem"
+                }
+              ]
+            },
+            {
+              "kind": "badge",
+              "text": "Tidak go-live",
+              "tone": "bad",
+              "icon": "cross",
+              "at": "@tidak"
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@direksi",
+          "file": "fo-pop",
+          "vol": 0.16
+        },
+        {
+          "at": "@anggaran",
+          "file": "fo-pop",
+          "vol": 0.16
+        },
+        {
+          "at": "@enam -0.4",
+          "file": "fo-whoosh",
+          "vol": 0.11
+        },
+        {
+          "at": "@enam +0.1",
+          "file": "fo-tick",
+          "vol": 0.2
+        },
+        {
+          "at": "@enam +0.32",
+          "file": "fo-tick",
+          "vol": 0.2
+        },
+        {
+          "at": "@enam +0.54",
+          "file": "fo-tick",
+          "vol": 0.2
+        },
+        {
+          "at": "@enam +0.76",
+          "file": "fo-tick",
+          "vol": 0.2
+        },
+        {
+          "at": "@enam +0.98",
+          "file": "fo-tick",
+          "vol": 0.2
+        },
+        {
+          "at": "@enam +1.2",
+          "file": "fo-tick",
+          "vol": 0.2
+        },
+        {
+          "at": "@tidak",
+          "file": "fo-thud",
+          "vol": 0.13
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "vo": "Ini bukan satu perusahaan, tapi pola yang berulang: em-vi-pi ei-ai memukau di presentasi, lalu berhenti sebelum sampai ke operasi. Orang menyebutnya em-vi-pi pergatori.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "brief",
+          "tab": "02 · POLA",
+          "bg": "light",
+          "broll": "network",
+          "blocks": [
+            {
+              "kind": "cards",
+              "items": [
+                {
+                  "icon": "pause",
+                  "title": "MVP A",
+                  "sub": "Berhenti",
+                  "tone": "warn"
+                },
+                {
+                  "icon": "pause",
+                  "title": "MVP B",
+                  "sub": "Berhenti",
+                  "tone": "warn"
+                },
+                {
+                  "icon": "pause",
+                  "title": "MVP C",
+                  "sub": "Berhenti",
+                  "tone": "warn"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "at": "@memukau -0.2",
+          "type": "brief",
+          "tab": "02 · POLA",
+          "bg": "dark",
+          "broll": "servers",
+          "blocks": [
+            {
+              "kind": "link",
+              "from": {
+                "icon": "present",
+                "label": "Demo"
+              },
+              "to": {
+                "icon": "gear",
+                "label": "Operasi"
+              },
+              "broken": true,
+              "brokenAt": "@berhenti"
+            },
+            {
+              "kind": "text",
+              "text": "Berhenti sebelum\nsampai ke operasi",
+              "size": 46,
+              "tone": "bad",
+              "at": "@berhenti"
+            }
+          ]
+        },
+        {
+          "at": "@orang -0.1",
+          "type": "brief",
+          "tab": "02 · POLA",
+          "bg": "dark",
+          "broll": "rings",
+          "blocks": [
+            {
+              "kind": "text",
+              "text": "Sukses di demo,\ntertahan sebelum production",
+              "size": 44
+            },
+            {
+              "kind": "badge",
+              "text": "MVP purgatory",
+              "tone": "warn",
+              "icon": "pause",
+              "at": "@pergatori"
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": -0.25,
+          "file": "fo-whoosh",
+          "vol": 0.11
+        },
+        {
+          "at": "@memukau -0.5",
+          "file": "fo-whoosh",
+          "vol": 0.11
+        },
+        {
+          "at": "@berhenti",
+          "file": "fo-thud",
+          "vol": 0.13
+        },
+        {
+          "at": "@orang -0.4",
+          "file": "fo-whoosh",
+          "vol": 0.11
+        },
+        {
+          "at": "@pergatori",
+          "file": "fo-pop",
+          "vol": 0.16
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "vo": "Biasanya, modelnya yang disalahkan. Tapi coba lihat lebih dekat. Pertama: data tersebar di i-ar-pi, gudang, dan spred-syit. Kedua: tidak terhubung ke sistem yang dipakai tim. Ketiga: tidak ada pemilik bisnis.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "brief",
+          "tab": "03 · PENYEBAB",
+          "bg": "light",
+          "broll": "network",
+          "blocks": [
+            {
+              "kind": "cards",
+              "items": [
+                {
+                  "icon": "chip",
+                  "title": "Model AI",
+                  "sub": "Biasanya yang disalahkan",
+                  "tone": "warn"
+                }
+              ]
+            },
+            {
+              "kind": "text",
+              "text": "Tapi coba lihat lebih dekat",
+              "size": 46,
+              "tone": "info",
+              "hl": [
+                "dekat"
+              ],
+              "at": "@tapi"
+            }
+          ]
+        },
+        {
+          "at": "@pertama -0.3",
+          "type": "brief",
+          "tab": "03 · PENYEBAB",
+          "bg": "dark",
+          "broll": "servers",
+          "blocks": [
+            {
+              "kind": "text",
+              "text": "1 · Data tersebar",
+              "size": 54,
+              "hl": [
+                "tersebar"
+              ]
+            },
+            {
+              "kind": "cards",
+              "items": [
+                {
+                  "icon": "db",
+                  "title": "ERP",
+                  "sub": "Sistem inti",
+                  "tone": "warn",
+                  "at": "@i-ar-pi"
+                },
+                {
+                  "icon": "warehouse",
+                  "title": "Gudang",
+                  "sub": "WMS",
+                  "tone": "warn",
+                  "at": "@gudang"
+                },
+                {
+                  "icon": "sheet",
+                  "title": "Spreadsheet",
+                  "sub": "Manual",
+                  "tone": "warn",
+                  "at": "@spred-syit"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "at": "@kedua -0.3",
+          "type": "brief",
+          "tab": "03 · PENYEBAB",
+          "bg": "dark",
+          "broll": "network",
+          "blocks": [
+            {
+              "kind": "text",
+              "text": "2 · Tidak terintegrasi",
+              "size": 54,
+              "hl": [
+                "terintegrasi"
+              ]
+            },
+            {
+              "kind": "link",
+              "from": {
+                "icon": "chip",
+                "label": "Model AI"
+              },
+              "to": {
+                "icon": "chart",
+                "label": "Sistem tim"
+              },
+              "broken": true,
+              "brokenAt": "@dipakai"
+            }
+          ]
+        },
+        {
+          "at": "@ketiga -0.3",
+          "type": "brief",
+          "tab": "03 · PENYEBAB",
+          "bg": "light",
+          "broll": "rings",
+          "blocks": [
+            {
+              "kind": "text",
+              "text": "3 · Tanpa pemilik bisnis",
+              "size": 54,
+              "hl": [
+                "pemilik"
+              ]
+            },
+            {
+              "kind": "cards",
+              "items": [
+                {
+                  "icon": "userq",
+                  "title": "Pemilik bisnis",
+                  "sub": "Belum ada",
+                  "tone": "bad",
+                  "at": "@pemilik"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": -0.25,
+          "file": "fo-whoosh",
+          "vol": 0.11
+        },
+        {
+          "at": "@tapi -0.2",
+          "file": "fo-whoosh",
+          "vol": 0.11
+        },
+        {
+          "at": "@pertama -0.6",
+          "file": "fo-whoosh",
+          "vol": 0.11
+        },
+        {
+          "at": "@i-ar-pi",
+          "file": "fo-pop",
+          "vol": 0.16
+        },
+        {
+          "at": "@gudang",
+          "file": "fo-pop",
+          "vol": 0.16
+        },
+        {
+          "at": "@spred-syit",
+          "file": "fo-pop",
+          "vol": 0.16
+        },
+        {
+          "at": "@kedua -0.6",
+          "file": "fo-whoosh",
+          "vol": 0.11
+        },
+        {
+          "at": "@dipakai",
+          "file": "fo-thud",
+          "vol": 0.13
+        },
+        {
+          "at": "@ketiga -0.6",
+          "file": "fo-whoosh",
+          "vol": 0.11
+        },
+        {
+          "at": "@pemilik",
+          "file": "fo-pop",
+          "vol": 0.16
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "vo": "Masalahnya bukan di modelnya. Modelnya sudah berfungsi dengan baik. Keamanan data belum disetujui. Biaya operasional tidak dihitung. Tidak ada kriteria berhasil. Em-vi-pi ini gagal bukan karena teknologi, tapi karena jalan ke prodak-syen tidak pernah direncanakan.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "brief",
+          "tab": "04 · KESIMPULAN",
+          "bg": "light",
+          "broll": "network",
+          "blocks": [
+            {
+              "kind": "cards",
+              "items": [
+                {
+                  "icon": "chip",
+                  "title": "Model AI",
+                  "sub": "Berfungsi sesuai harapan",
+                  "tone": "ok"
+                }
+              ]
+            },
+            {
+              "kind": "badge",
+              "text": "Bukan penyebabnya",
+              "tone": "ok",
+              "icon": "check",
+              "at": "@modelnya"
+            }
+          ]
+        },
+        {
+          "at": "@keamanan -0.2",
+          "type": "brief",
+          "tab": "04 · KESIMPULAN",
+          "bg": "dark",
+          "broll": "belt",
+          "blocks": [
+            {
+              "kind": "text",
+              "text": "Yang sebenarnya belum ada",
+              "size": 50,
+              "hl": [
+                "belum"
+              ]
+            },
+            {
+              "kind": "list",
+              "items": [
+                {
+                  "text": "Keamanan data",
+                  "value": "Belum disetujui",
+                  "state": "bad",
+                  "at": "@keamanan"
+                },
+                {
+                  "text": "Biaya operasional",
+                  "value": "Belum dihitung",
+                  "state": "bad",
+                  "at": "@biaya"
+                },
+                {
+                  "text": "Kriteria sukses",
+                  "value": "Belum ada",
+                  "state": "bad",
+                  "at": "@kriteria"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "at": "@teknologi -0.4",
+          "type": "brief",
+          "tab": "04 · KESIMPULAN",
+          "bg": "dark",
+          "broll": "belt",
+          "blocks": [
+            {
+              "kind": "steps",
+              "items": [
+                {
+                  "label": "Demo",
+                  "state": "done"
+                },
+                {
+                  "label": "MVP",
+                  "state": "done"
+                },
+                {
+                  "label": "Jalur ke production",
+                  "sub": "Tidak direncanakan",
+                  "state": "stalled",
+                  "at": "@jalan"
+                }
+              ]
+            },
+            {
+              "kind": "badge",
+              "text": "Jalur tidak direncanakan",
+              "tone": "bad",
+              "icon": "flag",
+              "at": "@direncanakan"
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": -0.25,
+          "file": "fo-whoosh",
+          "vol": 0.11
+        },
+        {
+          "at": "@modelnya",
+          "file": "fo-ding",
+          "vol": 0.12
+        },
+        {
+          "at": "@keamanan -0.5",
+          "file": "fo-whoosh",
+          "vol": 0.11
+        },
+        {
+          "at": "@keamanan",
+          "file": "fo-thud",
+          "vol": 0.13
+        },
+        {
+          "at": "@biaya",
+          "file": "fo-thud",
+          "vol": 0.13
+        },
+        {
+          "at": "@kriteria",
+          "file": "fo-thud",
+          "vol": 0.13
+        },
+        {
+          "at": "@teknologi -0.7",
+          "file": "fo-whoosh",
+          "vol": 0.11
+        },
+        {
+          "at": "@direncanakan",
+          "file": "fo-thud",
+          "vol": 0.13
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "vo": "Di Fata Organa, jalan itu direncanakan sejak hari pertama. Dimulai dari assessment dua minggu, lalu em-vi-pi dengan kriteria sukses tertulis, sampai prodak-syen tanpa mengganggu operasi.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "brief",
+          "tab": "05 · SOLUSI",
+          "bg": "light",
+          "broll": "rings",
+          "blocks": [
+            {
+              "kind": "text",
+              "text": "Di Fata Organa,\njalannya direncanakan\nsejak hari pertama",
+              "size": 56,
+              "hl": [
+                "direncanakan"
+              ]
+            }
+          ]
+        },
+        {
+          "at": "@dimulai -0.1",
+          "type": "brief",
+          "tab": "05 · SOLUSI",
+          "bg": "dark",
+          "broll": "network",
+          "blocks": [
+            {
+              "kind": "text",
+              "text": "Jalur yang direncanakan",
+              "size": 50,
+              "hl": [
+                "direncanakan"
+              ]
+            },
+            {
+              "kind": "steps",
+              "items": [
+                {
+                  "label": "Assessment",
+                  "sub": "2 minggu",
+                  "state": "done",
+                  "at": "@assessment"
+                },
+                {
+                  "label": "MVP",
+                  "sub": "Kriteria sukses tertulis",
+                  "state": "done",
+                  "at": "@em-vi-pi"
+                },
+                {
+                  "label": "Production",
+                  "sub": "Tanpa gangguan",
+                  "state": "done",
+                  "at": "@prodak-syen"
+                }
+              ]
+            },
+            {
+              "kind": "badge",
+              "text": "Risiko terkontrol",
+              "tone": "ok",
+              "icon": "shield",
+              "at": "@tanpa"
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": -0.25,
+          "file": "fo-whoosh",
+          "vol": 0.11
+        },
+        {
+          "at": "@dimulai -0.4",
+          "file": "fo-whoosh",
+          "vol": 0.11
+        },
+        {
+          "at": "@assessment",
+          "file": "fo-pop",
+          "vol": 0.16
+        },
+        {
+          "at": "@em-vi-pi",
+          "file": "fo-pop",
+          "vol": 0.16
+        },
+        {
+          "at": "@prodak-syen",
+          "file": "fo-pop",
+          "vol": 0.16
+        },
+        {
+          "at": "@tanpa",
+          "file": "fo-ding",
+          "vol": 0.12
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "tail": 3.2,
+      "vo": "Pernah melihat em-vi-pi berhenti di tahap demo? Ceritakan di komentar. Ikuti Fata Organa, dan bawa ei-ai Anda dari em-vi-pi ke prodak-syen.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "brief",
+          "tab": "06 · DISKUSI",
+          "bg": "dark",
+          "broll": "network",
+          "blocks": [
+            {
+              "kind": "text",
+              "text": "MVP Anda berhenti\ndi tahap mana?",
+              "size": 54,
+              "hl": [
+                "tahap"
+              ]
+            },
+            {
+              "kind": "cards",
+              "cols": 2,
+              "items": [
+                {
+                  "icon": "db",
+                  "title": "Data"
+                },
+                {
+                  "icon": "gear",
+                  "title": "Integrasi"
+                },
+                {
+                  "icon": "userq",
+                  "title": "Pemilik bisnis"
+                },
+                {
+                  "icon": "shield",
+                  "title": "Governance"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "at": "@ikuti -0.1",
+          "type": "brief",
+          "bg": "light",
+          "broll": "rings",
+          "cta": true,
+          "blocks": [],
+          "ctaChips": [
+            "Assessment",
+            "MVP",
+            "Production"
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": -0.25,
+          "file": "fo-whoosh",
+          "vol": 0.11
+        },
+        {
+          "at": "@ikuti -0.4",
+          "file": "fo-whoosh",
+          "vol": 0.11
+        },
+        {
+          "at": "@ikuti +0.3",
+          "file": "fo-sparkle",
+          "vol": 0.13
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Kenapa MVP AI Berhenti di Tahap Demo",
+    "description": "Demo berhasil, anggaran disetujui, tapi sistemnya tidak pernah dipakai. Kami membedah pola yang membuat banyak MVP AI berhenti sebelum sampai ke operasi, dan bagaimana Fata Organa merencanakan jalurnya dari assessment ke production.",
+    "hashtags": [
+      "#AIenterprise",
+      "#MVP",
+      "#DigitalTransformation",
+      "#AIproduction",
+      "#FataOrgana"
+    ],
+    "sources": [
+      {
+        "claim": "MVP AI yang berhenti di tahap demo (MVP purgatory) disebabkan data, integrasi, kepemilikan bisnis, governance dan biaya operasional",
+        "source": "Pola umum dari strategi konten internal Fata Organa; ilustrasi komposit, bukan kasus klien nyata",
+        "verified": false,
+        "note": "Tidak ada angka atau nama klien. Statistik pihak ketiga perlu diverifikasi sebelum ditambahkan."
+      },
+      {
+        "claim": "Jalur penawaran Fata Organa: AI Readiness Assessment (2 minggu) lalu MVP dengan kriteria sukses tertulis, lalu production",
+        "source": "Fata-Organa-Enterprise-Strategy.md, bagian 0 dan 3 (#23, #24)",
+        "verified": false,
+        "note": "Dokumen internal; konfirmasi durasi dan nama penawaran dengan tim Fata Organa sebelum publikasi."
+      }
+    ]
+  }
+}

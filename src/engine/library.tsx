@@ -3,8 +3,10 @@ import {interpolate, useCurrentFrame} from "remotion";
 import {ShotEnv, useBrandText, useCue} from "./env";
 import {FolioView} from "./manuscript";
 import {BoardView} from "./casefile";
+import {BriefView} from "./corporate";
 import {PosterView} from "./poster";
 import {CollageView} from "./collage";
+import {ComicView} from "./comic";
 import {
   C, Chip, DottedRoute, Facade, Globe, Ground, IdCard, LocationTag, MapArt, Moon, Paper, Person, Pin, QMark, SANS, SERIF, Stage, Stamp, Tree,
   clamp, prog, routeAt, useSpring,
@@ -476,7 +478,9 @@ export const ShotView: React.FC<{shot: Shot}> = ({shot}) => {
     case "cta": return <CtaView />;
     case "folio": return <FolioView s={shot} />;
     case "board": return <BoardView s={shot} />;
+    case "brief": return <BriefView s={shot} />;
     case "poster": return <PosterView s={shot} />;
     case "collage": return <CollageView s={shot} />;
+    case "comic": return <ComicView s={shot} />;
   }
 };

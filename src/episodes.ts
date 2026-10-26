@@ -9,4 +9,8 @@ export const EPISODE_IDS: string[] = [
   "somerton-man-id",
   "leningrad-seeds-id",
   "cadaver-synod-collage",
+  "fo-pilot-ai",
+  "beer-flood",
+  "laughter-epidemic",
+  "mattoon-gasser",
 ];

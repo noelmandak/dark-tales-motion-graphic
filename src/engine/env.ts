@@ -1,6 +1,6 @@
 import {createContext, useContext} from "react";
 import BRAND from "../brand/brand.json";
-import type {Cue} from "./types";
+import type {Cue, EpisodeTheme} from "./types";
 
 /** Per-shot timing environment: resolves cues to scene-seconds, knows where the shot starts and how early it begins (`pad` frames). */
 export const ShotEnv = createContext<{resolve: (c: Cue) => number; start: number; pad: number}>({resolve: (c) => Number(c), start: 0, pad: 4});
@@ -22,3 +22,7 @@ export const DEFAULT_BRAND_TEXT: BrandText = {
 };
 export const BrandTextCtx = createContext<BrandText>(DEFAULT_BRAND_TEXT);
 export const useBrandText = () => useContext(BrandTextCtx);
+
+/** Per-episode theme (client brand). Empty means the Dark Tales brand. */
+export const ThemeCtx = createContext<EpisodeTheme>({});
+export const useTheme = () => useContext(ThemeCtx);

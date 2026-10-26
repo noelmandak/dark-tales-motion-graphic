@@ -1,0 +1,1012 @@
+{
+  "id": "mattoon-gasser",
+  "title": "The Mad Gasser of Mattoon",
+  "look": "comic",
+  "keywords": [
+    "1944",
+    "Mattoon",
+    "phantom",
+    "died",
+    "armed",
+    "nothing",
+    "stopped",
+    "caught",
+    "hysteria",
+    "denied"
+  ],
+  "displayReplace": {},
+  "scenes": [
+    {
+      "id": "s1",
+      "vo": "Mattoon, Illinois, September 1944. A woman reported a strange smell in her home, and legs she could not move. Within days, a whole town was hunting a phantom.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "comic",
+          "layout": "one",
+          "tab": "I · MATTOON, 1944",
+          "panels": [
+            {
+              "bg": "dusk",
+              "art": [
+                {
+                  "kind": "moon",
+                  "x": 800,
+                  "y": 230,
+                  "at": 0
+                },
+                {
+                  "kind": "town",
+                  "x": 500,
+                  "y": 975,
+                  "s": 1.25,
+                  "at": 0
+                }
+              ],
+              "caption": {
+                "text": "MATTOON, ILLINOIS. SEPTEMBER, 1944.",
+                "at": 0
+              }
+            }
+          ]
+        },
+        {
+          "at": "@woman -0.1",
+          "type": "comic",
+          "layout": "two",
+          "tab": "I · MATTOON, 1944",
+          "panels": [
+            {
+              "bg": "interior",
+              "art": [
+                {
+                  "kind": "figure",
+                  "x": 300,
+                  "y": 520,
+                  "s": 1,
+                  "at": "@woman"
+                },
+                {
+                  "kind": "gas",
+                  "x": 720,
+                  "y": 500,
+                  "s": 1,
+                  "at": "@strange"
+                }
+              ],
+              "caption": {
+                "text": "A WOMAN REPORTS A STRANGE SMELL",
+                "at": "@strange"
+              }
+            },
+            {
+              "bg": "interior",
+              "art": [
+                {
+                  "kind": "figure",
+                  "x": 500,
+                  "y": 540,
+                  "s": 1,
+                  "pose": "slump",
+                  "color": "#8a3a3a",
+                  "at": "@legs"
+                }
+              ],
+              "caption": {
+                "text": "HER LEGS WON'T MOVE",
+                "at": "@legs"
+              },
+              "sfx": {
+                "text": "?!",
+                "at": "@legs",
+                "x": 800,
+                "y": 260,
+                "size": 200,
+                "color": "red"
+              }
+            }
+          ]
+        },
+        {
+          "at": "@within -0.1",
+          "type": "comic",
+          "layout": "one",
+          "tab": "I · MATTOON, 1944",
+          "panels": [
+            {
+              "bg": "night",
+              "art": [
+                {
+                  "kind": "beam",
+                  "x": 120,
+                  "y": 760,
+                  "rot": -8,
+                  "at": "@hunting"
+                },
+                {
+                  "kind": "crowd",
+                  "x": 560,
+                  "y": 960,
+                  "s": 1.6,
+                  "n": 5,
+                  "at": 0
+                },
+                {
+                  "kind": "question",
+                  "x": 840,
+                  "y": 400,
+                  "s": 0.9,
+                  "at": "@phantom"
+                }
+              ],
+              "caption": {
+                "text": "A WHOLE TOWN HUNTS A PHANTOM",
+                "at": "@hunting",
+                "pos": "bottom"
+              }
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": 0,
+          "file": "bass-hit",
+          "vol": 0.45
+        },
+        {
+          "at": "@hunting",
+          "file": "drone",
+          "vol": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "vo": "The local paper treated it as fact. More than two dozen cases were reported to police in about two weeks. Nausea, weakness, and legs that would not work. No one died.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "comic",
+          "layout": "one",
+          "tab": "II · THE PAPER",
+          "panels": [
+            {
+              "bg": "burst",
+              "art": [
+                {
+                  "kind": "paper",
+                  "x": 500,
+                  "y": 640,
+                  "s": 1.6,
+                  "rot": -5,
+                  "text": "GAS SCARE",
+                  "at": "@paper"
+                }
+              ],
+              "caption": {
+                "text": "THE LOCAL PAPER TREATED IT AS FACT",
+                "at": "@paper",
+                "pos": "bottom"
+              },
+              "sfx": {
+                "text": "EXTRA!",
+                "at": "@treated",
+                "x": 690,
+                "y": 270,
+                "size": 150,
+                "rot": -10,
+                "color": "red"
+              }
+            }
+          ]
+        },
+        {
+          "at": "@more -0.1",
+          "type": "comic",
+          "layout": "two",
+          "tab": "II · THE PAPER",
+          "panels": [
+            {
+              "bg": "paper",
+              "art": [],
+              "caption": {
+                "text": "MORE THAN TWO DOZEN CASES",
+                "at": "@more"
+              },
+              "sfx": {
+                "text": "24+ CASES",
+                "at": "@dozen",
+                "x": 500,
+                "y": 330,
+                "size": 190,
+                "rot": -3,
+                "color": "red"
+              }
+            },
+            {
+              "bg": "dusk",
+              "art": [
+                {
+                  "kind": "clock",
+                  "x": 500,
+                  "y": 330,
+                  "s": 1.2,
+                  "at": "@weeks"
+                }
+              ],
+              "caption": {
+                "text": "IN ABOUT TWO WEEKS",
+                "at": "@weeks",
+                "pos": "bottom"
+              }
+            }
+          ]
+        },
+        {
+          "at": "@nausea -0.1",
+          "type": "comic",
+          "layout": "three",
+          "tab": "II · THE PAPER",
+          "panels": [
+            {
+              "bg": "interior",
+              "art": [
+                {
+                  "kind": "figure",
+                  "x": 500,
+                  "y": 560,
+                  "s": 1.15,
+                  "pose": "slump",
+                  "at": "@nausea"
+                }
+              ],
+              "caption": {
+                "text": "NAUSEA",
+                "at": "@nausea"
+              }
+            },
+            {
+              "bg": "gas",
+              "art": [
+                {
+                  "kind": "gas",
+                  "x": 244,
+                  "y": 440,
+                  "s": 0.8,
+                  "at": "@weakness"
+                }
+              ],
+              "caption": {
+                "text": "WEAKNESS",
+                "at": "@weakness",
+                "pos": "bottom"
+              }
+            },
+            {
+              "bg": "interior",
+              "art": [
+                {
+                  "kind": "figure",
+                  "x": 244,
+                  "y": 450,
+                  "s": 0.8,
+                  "pose": "slump",
+                  "flip": true,
+                  "color": "#8a3a3a",
+                  "at": "@legs"
+                }
+              ],
+              "caption": {
+                "text": "LEGS WON'T WORK",
+                "at": "@legs",
+                "pos": "bottom"
+              }
+            }
+          ]
+        },
+        {
+          "at": "@no -0.1",
+          "type": "comic",
+          "layout": "one",
+          "tab": "II · THE PAPER",
+          "panels": [
+            {
+              "bg": "red",
+              "art": [
+                {
+                  "kind": "figure",
+                  "x": 500,
+                  "y": 1000,
+                  "s": 1.5,
+                  "hat": true,
+                  "at": "@no"
+                }
+              ],
+              "sfx": {
+                "text": "NO ONE DIED",
+                "at": "@no",
+                "x": 500,
+                "y": 330,
+                "size": 150,
+                "rot": -4,
+                "color": "white"
+              },
+              "caption": {
+                "text": "NO SERIOUS HARM",
+                "at": "@died",
+                "pos": "bottom"
+              }
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@paper",
+          "file": "whoosh",
+          "vol": 0.3
+        },
+        {
+          "at": "@died",
+          "file": "stamp",
+          "vol": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "vo": "Neighbors armed themselves and patrolled the streets. Police told them to stop and go home. On one porch, a cloth was found. The woman who sniffed it became violently ill. But the lab found nothing in it.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "comic",
+          "layout": "one",
+          "tab": "III · THE PATROLS",
+          "panels": [
+            {
+              "bg": "night",
+              "art": [
+                {
+                  "kind": "beam",
+                  "x": 100,
+                  "y": 800,
+                  "rot": -6,
+                  "at": "@armed"
+                },
+                {
+                  "kind": "crowd",
+                  "x": 560,
+                  "y": 960,
+                  "s": 1.7,
+                  "n": 5,
+                  "at": "@armed"
+                }
+              ],
+              "caption": {
+                "text": "NEIGHBORS ARMED THEMSELVES AND PATROLLED THE STREETS",
+                "at": "@neighbors",
+                "pos": "bottom"
+              },
+              "sfx": {
+                "text": "TRAMP! TRAMP!",
+                "at": "@patrolled",
+                "x": 500,
+                "y": 330,
+                "size": 150,
+                "rot": -4
+              }
+            }
+          ]
+        },
+        {
+          "at": "@police -0.1",
+          "type": "comic",
+          "layout": "two",
+          "tab": "III · THE PATROLS",
+          "panels": [
+            {
+              "bg": "night",
+              "art": [
+                {
+                  "kind": "figure",
+                  "x": 300,
+                  "y": 520,
+                  "s": 1,
+                  "hat": true,
+                  "pose": "point",
+                  "color": "#2a3a6e",
+                  "at": "@police"
+                },
+                {
+                  "kind": "crowd",
+                  "x": 740,
+                  "y": 500,
+                  "s": 0.9,
+                  "n": 3,
+                  "at": "@police"
+                }
+              ],
+              "caption": {
+                "text": "POLICE: STOP!",
+                "at": "@police"
+              }
+            },
+            {
+              "bg": "dusk",
+              "art": [
+                {
+                  "kind": "crowd",
+                  "x": 500,
+                  "y": 510,
+                  "s": 1,
+                  "n": 4,
+                  "flip": true,
+                  "at": "@home"
+                }
+              ],
+              "caption": {
+                "text": "GO HOME.",
+                "at": "@home",
+                "pos": "bottom"
+              }
+            }
+          ]
+        },
+        {
+          "at": "@porch -0.1",
+          "type": "comic",
+          "layout": "three",
+          "tab": "III · THE PATROLS",
+          "panels": [
+            {
+              "bg": "night",
+              "art": [
+                {
+                  "kind": "house",
+                  "x": 500,
+                  "y": 520,
+                  "s": 1.1,
+                  "at": "@porch"
+                },
+                {
+                  "kind": "cloth",
+                  "x": 500,
+                  "y": 520,
+                  "s": 0.7,
+                  "at": "@cloth"
+                }
+              ],
+              "caption": {
+                "text": "ON ONE PORCH, A CLOTH",
+                "at": "@porch"
+              }
+            },
+            {
+              "bg": "gas",
+              "art": [
+                {
+                  "kind": "figure",
+                  "x": 244,
+                  "y": 470,
+                  "s": 0.85,
+                  "pose": "slump",
+                  "at": "@sniffed"
+                },
+                {
+                  "kind": "gas",
+                  "x": 380,
+                  "y": 470,
+                  "s": 0.6,
+                  "at": "@sniffed"
+                }
+              ],
+              "caption": {
+                "text": "SHE SNIFFED IT",
+                "at": "@sniffed"
+              }
+            },
+            {
+              "bg": "red",
+              "art": [],
+              "sfx": {
+                "text": "ILL!",
+                "at": "@violently",
+                "x": 244,
+                "y": 260,
+                "size": 230,
+                "rot": -6,
+                "color": "white"
+              },
+              "caption": {
+                "text": "VIOLENTLY ILL",
+                "at": "@violently",
+                "pos": "bottom"
+              }
+            }
+          ]
+        },
+        {
+          "at": "@lab -0.1",
+          "type": "comic",
+          "layout": "one",
+          "tab": "III · THE PATROLS",
+          "panels": [
+            {
+              "bg": "paper",
+              "art": [
+                {
+                  "kind": "flask",
+                  "x": 500,
+                  "y": 760,
+                  "s": 1.7,
+                  "at": "@lab"
+                }
+              ],
+              "caption": {
+                "text": "THE LAB FOUND...",
+                "at": "@lab"
+              },
+              "sfx": {
+                "text": "NOTHING!",
+                "at": "@nothing",
+                "x": 500,
+                "y": 1010,
+                "size": 200,
+                "rot": -4,
+                "color": "red"
+              }
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@patrolled",
+          "file": "footsteps",
+          "vol": 0.3
+        },
+        {
+          "at": "@nothing",
+          "file": "stamp",
+          "vol": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "vo": "Then, on September twelfth, police said most reports came from ordinary causes, made worse by fear. After that, the reports nearly stopped. No gasser was ever caught. A researcher later studied it as mass hysteria.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "comic",
+          "layout": "one",
+          "tab": "IV · THE TURN",
+          "panels": [
+            {
+              "bg": "paper",
+              "art": [
+                {
+                  "kind": "clock",
+                  "x": 500,
+                  "y": 560,
+                  "s": 1.7,
+                  "at": 0
+                }
+              ],
+              "caption": {
+                "text": "THEN, ON SEPTEMBER TWELFTH...",
+                "at": 0
+              },
+              "sfx": {
+                "text": "SEPT. 12",
+                "at": "@september",
+                "x": 500,
+                "y": 1010,
+                "size": 190,
+                "rot": -3,
+                "color": "red"
+              }
+            }
+          ]
+        },
+        {
+          "at": "@police -0.1",
+          "type": "comic",
+          "layout": "two",
+          "tab": "IV · THE TURN",
+          "panels": [
+            {
+              "bg": "interior",
+              "art": [
+                {
+                  "kind": "figure",
+                  "x": 500,
+                  "y": 520,
+                  "s": 1,
+                  "hat": true,
+                  "pose": "point",
+                  "color": "#2a3a6e",
+                  "at": "@police"
+                }
+              ],
+              "caption": {
+                "text": "POLICE: ORDINARY CAUSES",
+                "at": "@ordinary"
+              }
+            },
+            {
+              "bg": "gas",
+              "art": [
+                {
+                  "kind": "gas",
+                  "x": 500,
+                  "y": 520,
+                  "s": 1,
+                  "at": "@fear"
+                }
+              ],
+              "sfx": {
+                "text": "+ FEAR",
+                "at": "@fear",
+                "x": 500,
+                "y": 250,
+                "size": 220,
+                "rot": -4,
+                "color": "red"
+              },
+              "caption": {
+                "text": "MADE WORSE BY FEAR",
+                "at": "@fear",
+                "pos": "bottom"
+              }
+            }
+          ]
+        },
+        {
+          "at": "@after -0.1",
+          "type": "comic",
+          "layout": "one",
+          "tab": "IV · THE TURN",
+          "panels": [
+            {
+              "bg": "dusk",
+              "art": [
+                {
+                  "kind": "moon",
+                  "x": 800,
+                  "y": 230,
+                  "at": 0
+                },
+                {
+                  "kind": "town",
+                  "x": 500,
+                  "y": 975,
+                  "s": 1.25,
+                  "at": 0
+                }
+              ],
+              "caption": {
+                "text": "AFTER THAT, THE REPORTS NEARLY STOPPED",
+                "at": "@after"
+              },
+              "sfx": {
+                "text": "QUIET.",
+                "at": "@stopped",
+                "x": 500,
+                "y": 420,
+                "size": 200,
+                "rot": -4,
+                "color": "white"
+              }
+            }
+          ]
+        },
+        {
+          "at": "@no -0.1",
+          "type": "comic",
+          "layout": "one",
+          "tab": "IV · THE TURN",
+          "panels": [
+            {
+              "bg": "night",
+              "art": [
+                {
+                  "kind": "beam",
+                  "x": 140,
+                  "y": 900,
+                  "rot": -5,
+                  "at": "@no"
+                },
+                {
+                  "kind": "question",
+                  "x": 520,
+                  "y": 760,
+                  "s": 2.1,
+                  "at": "@gasser"
+                }
+              ],
+              "caption": {
+                "text": "NO GASSER WAS EVER CAUGHT",
+                "at": "@gasser",
+                "pos": "bottom"
+              },
+              "sfx": {
+                "text": "NEVER CAUGHT",
+                "at": "@caught",
+                "x": 500,
+                "y": 250,
+                "size": 130,
+                "rot": -3,
+                "color": "red"
+              }
+            }
+          ]
+        },
+        {
+          "at": "@researcher -0.1",
+          "type": "comic",
+          "layout": "one",
+          "tab": "IV · THE TURN",
+          "panels": [
+            {
+              "bg": "paper",
+              "art": [
+                {
+                  "kind": "paper",
+                  "x": 500,
+                  "y": 640,
+                  "s": 1.6,
+                  "rot": 3,
+                  "head": "FIELD STUDY",
+                  "text": "1945",
+                  "at": "@researcher"
+                }
+              ],
+              "caption": {
+                "text": "A RESEARCHER LATER STUDIED IT",
+                "at": "@researcher",
+                "pos": "bottom"
+              },
+              "sfx": {
+                "text": "MASS HYSTERIA",
+                "at": "@hysteria",
+                "x": 500,
+                "y": 1040,
+                "size": 150,
+                "rot": -4,
+                "color": "red"
+              }
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@september",
+          "file": "ticking",
+          "vol": 0.3
+        },
+        {
+          "at": "@caught",
+          "file": "stamp",
+          "vol": 0.4
+        },
+        {
+          "at": "@hysteria",
+          "file": "drone",
+          "vol": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "vo": "Some researchers think a few attacks may have been real, and fear did the rest. Pollution from a nearby factory was also suggested, and denied. No one knows for sure. Follow for the next dark true story.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "comic",
+          "layout": "two",
+          "tab": "V · THE VERDICT",
+          "panels": [
+            {
+              "bg": "night",
+              "art": [
+                {
+                  "kind": "figure",
+                  "x": 330,
+                  "y": 520,
+                  "s": 1,
+                  "hat": true,
+                  "at": "@some"
+                },
+                {
+                  "kind": "beam",
+                  "x": 470,
+                  "y": 380,
+                  "at": "@real"
+                }
+              ],
+              "caption": {
+                "text": "SOME THINK A FEW ATTACKS WERE REAL",
+                "at": "@some"
+              }
+            },
+            {
+              "bg": "gas",
+              "art": [
+                {
+                  "kind": "crowd",
+                  "x": 500,
+                  "y": 520,
+                  "s": 0.95,
+                  "n": 5,
+                  "at": "@fear"
+                }
+              ],
+              "caption": {
+                "text": "AND FEAR DID THE REST",
+                "at": "@fear",
+                "pos": "bottom"
+              }
+            }
+          ]
+        },
+        {
+          "at": "@pollution -0.1",
+          "type": "comic",
+          "layout": "one",
+          "tab": "V · THE VERDICT",
+          "panels": [
+            {
+              "bg": "dusk",
+              "art": [
+                {
+                  "kind": "town",
+                  "x": 420,
+                  "y": 975,
+                  "s": 1.2,
+                  "at": "@pollution"
+                },
+                {
+                  "kind": "gas",
+                  "x": 780,
+                  "y": 960,
+                  "s": 1.4,
+                  "at": "@pollution"
+                }
+              ],
+              "caption": {
+                "text": "POLLUTION FROM A NEARBY FACTORY WAS SUGGESTED",
+                "at": "@pollution",
+                "pos": "bottom"
+              },
+              "sfx": {
+                "text": "DENIED!",
+                "at": "@denied",
+                "x": 500,
+                "y": 330,
+                "size": 200,
+                "rot": -5,
+                "color": "red"
+              }
+            }
+          ]
+        },
+        {
+          "at": "@no -0.1",
+          "type": "comic",
+          "layout": "one",
+          "tab": "V · THE VERDICT",
+          "panels": [
+            {
+              "bg": "burst",
+              "art": [
+                {
+                  "kind": "question",
+                  "x": 500,
+                  "y": 760,
+                  "s": 2.3,
+                  "color": "#fff",
+                  "at": "@no"
+                }
+              ],
+              "sfx": {
+                "text": "NO ONE KNOWS",
+                "at": "@knows",
+                "x": 500,
+                "y": 1040,
+                "size": 150,
+                "rot": -3,
+                "color": "red"
+              }
+            }
+          ]
+        },
+        {
+          "at": "@follow",
+          "type": "comic",
+          "cta": true,
+          "panels": []
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@denied",
+          "file": "stamp",
+          "vol": 0.35
+        },
+        {
+          "at": "@follow",
+          "file": "whoosh",
+          "vol": 0.3
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "title": "The Town That Hunted a Phantom Gasser (True Story)",
+    "description": "In 1944, a whole Illinois town hunted a mysterious gasser. Police found nothing, and the reports stopped after one announcement. What was really going on?",
+    "hashtags": [
+      "#darkhistory",
+      "#truestory",
+      "#history",
+      "#mystery",
+      "#illinois",
+      "#shorts"
+    ],
+    "sources": [
+      {
+        "claim": "In late Aug / early Sept 1944 in Mattoon, Illinois, residents reported strange odors and symptoms; the first case in the media was Aline Kearney's on 1 September",
+        "source": "Wikipedia, 'Mad Gasser of Mattoon' (read in full); Atlas Obscura, Damn Interesting, PopSci (search summaries)",
+        "verified": true,
+        "note": "Sources differ on the first call (31 Aug vs 1 Sept) and on details of the Kearney family; narration says only 'September 1944' and 'a woman'."
+      },
+      {
+        "claim": "Victims reported strange odors, nausea, weakness and partial paralysis of the legs; no one died or had serious lasting effects",
+        "source": "Wikipedia, 'Mad Gasser of Mattoon'; search summaries (Atlas Obscura, Skeptoid, PopSci)",
+        "verified": true
+      },
+      {
+        "claim": "The local paper treated the accounts as fact",
+        "source": "Wikipedia, 'Mad Gasser of Mattoon' (Mattoon Journal-Gazette headlines)",
+        "verified": true,
+        "note": "Exact headline wording differs between sources and is not quoted."
+      },
+      {
+        "claim": "More than two dozen cases were reported to police over about two weeks",
+        "source": "Wikipedia, 'Mad Gasser of Mattoon'; Skeptic / Damn Interesting (search summaries)",
+        "verified": true,
+        "note": "Wikipedia's case table is marked incomplete."
+      },
+      {
+        "claim": "Armed citizens patrolled; police told patrol groups to disband and urged restraint with firearms",
+        "source": "Wikipedia, 'Mad Gasser of Mattoon'; popular retellings mention armed patrols",
+        "verified": true
+      },
+      {
+        "claim": "A cloth was found on the Cordes porch; Beulah Cordes became violently ill after sniffing it; analysis found no chemicals that explained her reaction",
+        "source": "Wikipedia, 'Mad Gasser of Mattoon'; Atlas Obscura (search summary)",
+        "verified": true,
+        "note": "Wikipedia says 'authorities analyzed the cloth'; narration says 'the lab'."
+      },
+      {
+        "claim": "On 12 Sept police lowered the priority of gasser reports and attributed the incident to explainable occurrences worsened by public fear; reports then declined; no gasser was ever arrested",
+        "source": "Wikipedia, 'Mad Gasser of Mattoon'",
+        "verified": true,
+        "note": "Single main source for the date; the narration says 'made worse by fear'."
+      },
+      {
+        "claim": "Donald M. Johnson's 1945 field study documented the case as mass hysteria",
+        "source": "Wikipedia, 'Mad Gasser of Mattoon' (J. Abnormal and Social Psychology, 1945)",
+        "verified": true,
+        "note": "Narration says only 'a researcher later studied it as mass hysteria'."
+      },
+      {
+        "claim": "Some researchers conclude at least some incidents were real; pollution from a nearby plant was suggested and the plant denied it",
+        "source": "Wikipedia, 'Mad Gasser of Mattoon' (Cole's carbon tetrachloride suggestion; Atlas-Imperial denial; BCI's Piper: 'genuine')",
+        "verified": true
+      }
+    ]
+  }
+}

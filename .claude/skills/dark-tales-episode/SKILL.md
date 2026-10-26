@@ -44,6 +44,8 @@ The brand (navy and gold, faceless figures, serif + sans type, subtitle style, a
 
 Pick the look that suits the era and theme, and **don't use the same look two episodes in a row** unless the story demands it. If a new story needs a look neither covers, propose a third one to the user and build it as a new look in `src/engine/` rather than bending an existing one. Looks cannot be mixed within one episode.
 
+- `"comic"`: a 1940s pulp-comic page: inked panels (1-3 per page) on a dark halftone page, flat-colour faceless figures (fedoras, lanterns, crowds), gas clouds and flashlight beams, yellow caption boxes and sound-effect lettering ("ILL!", "QUIET."), zig-zag page wipes. Fits mid-20th-century small-town mysteries, panics, hoaxes and anything "pulp". Uses the `comic` shot type only; nothing to license. Details in `docs/episode-format.md`.
+
 ## Images for the collage look
 
 Real pictures need real permission, so the tool does the checking and you do the judging:

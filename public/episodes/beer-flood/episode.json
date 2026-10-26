@@ -1,0 +1,835 @@
+{
+  "id": "beer-flood",
+  "title": "The London Beer Flood",
+  "look": "collage",
+  "keywords": [
+    "1814",
+    "burst",
+    "eight",
+    "accident",
+    "nothing",
+    "reportedly",
+    "never",
+    "wave",
+    "vats",
+    "paid"
+  ],
+  "displayReplace": {},
+  "scenes": [
+    {
+      "id": "s1",
+      "vo": "London, 1814. A giant wooden vat in a brewery burst, and a wave of beer flooded the streets. Eight people died. So who paid for it?",
+      "shots": [
+        {
+          "at": 0,
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "I · LONDON, 1814",
+          "items": [
+            {
+              "kind": "ransom",
+              "text": "1814",
+              "x": 540,
+              "y": 360,
+              "size": 300,
+              "at": 0
+            },
+            {
+              "kind": "image",
+              "src": "hogarth-gin-lane",
+              "x": 540,
+              "y": 930,
+              "w": 700,
+              "rot": -2,
+              "tape": true,
+              "caption": "LONDON · HOGARTH, 1751",
+              "at": 0
+            }
+          ]
+        },
+        {
+          "at": "@giant -0.1",
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "I · LONDON, 1814",
+          "items": [
+            {
+              "kind": "image",
+              "src": "rowlandson-miseries",
+              "x": 540,
+              "y": 900,
+              "w": 920,
+              "rot": 2,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "BURST",
+              "x": 540,
+              "y": 370,
+              "size": 260,
+              "rot": -2,
+              "at": "@burst"
+            }
+          ]
+        },
+        {
+          "at": "@eight -0.1",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "I · LONDON, 1814",
+          "items": [
+            {
+              "kind": "image",
+              "src": "rowlandson-angry-street",
+              "x": 540,
+              "y": 900,
+              "w": 960,
+              "rot": -2,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "EIGHT DEAD",
+              "x": 540,
+              "y": 360,
+              "size": 150,
+              "at": "@eight"
+            },
+            {
+              "kind": "label",
+              "text": "SO WHO PAID?",
+              "x": 540,
+              "y": 1270,
+              "size": 52,
+              "color": "red",
+              "rot": -2,
+              "at": "@paid"
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": 0,
+          "file": "bass-hit",
+          "vol": 0.45
+        },
+        {
+          "at": "@eight",
+          "file": "fail-thud",
+          "vol": 0.35
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "vo": "It happened on October seventeenth, at the Horse Shoe Brewery, near Tottenham Court Road. A clerk noticed an iron hoop slipping on a vat of porter twenty-two feet tall. Reportedly, he was told no harm would come of it.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "II · THE VAT",
+          "items": [
+            {
+              "kind": "image",
+              "src": "hogarth-beer-street",
+              "x": 540,
+              "y": 920,
+              "w": 700,
+              "rot": 3,
+              "tape": true,
+              "caption": "BEER STREET · HOGARTH, 1751",
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "OCT 17",
+              "x": 540,
+              "y": 350,
+              "size": 230,
+              "rot": -2,
+              "at": "@october"
+            }
+          ]
+        },
+        {
+          "at": "@horse -0.1",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "II · THE VAT",
+          "items": [
+            {
+              "kind": "image",
+              "src": "rowlandson-angry-street",
+              "x": 540,
+              "y": 880,
+              "w": 940,
+              "rot": 2,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "HORSE SHOE BREWERY",
+              "x": 540,
+              "y": 330,
+              "size": 100,
+              "at": "@horse"
+            },
+            {
+              "kind": "label",
+              "text": "TOTTENHAM COURT ROAD",
+              "x": 540,
+              "y": 1270,
+              "size": 40,
+              "rot": -1.5,
+              "at": "@tottenham"
+            }
+          ]
+        },
+        {
+          "at": "@clerk -0.1",
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "II · THE VAT",
+          "items": [
+            {
+              "kind": "image",
+              "src": "hogarth-beer-street",
+              "x": 540,
+              "y": 930,
+              "w": 700,
+              "tint": "sepia",
+              "rot": -3,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "A SLIPPING HOOP",
+              "x": 540,
+              "y": 330,
+              "size": 110,
+              "at": "@hoop"
+            },
+            {
+              "kind": "marker",
+              "shape": "underline",
+              "x": 540,
+              "y": 440,
+              "w": 760,
+              "at": "@slipping"
+            },
+            {
+              "kind": "label",
+              "text": "22 FEET TALL",
+              "x": 540,
+              "y": 1270,
+              "size": 48,
+              "rot": 1.5,
+              "at": "@twenty-two"
+            }
+          ]
+        },
+        {
+          "at": "@reportedly -0.1",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "II · THE VAT",
+          "items": [
+            {
+              "kind": "image",
+              "src": "rowlandson-miseries",
+              "x": 540,
+              "y": 900,
+              "w": 820,
+              "rot": -3,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "NO HARM",
+              "x": 540,
+              "y": 380,
+              "size": 230,
+              "rot": 2,
+              "at": "@harm"
+            },
+            {
+              "kind": "label",
+              "text": "REPORTEDLY",
+              "x": 540,
+              "y": 1270,
+              "size": 44,
+              "color": "red",
+              "rot": -2,
+              "at": "@reportedly"
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@hoop",
+          "file": "ticking",
+          "vol": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "vo": "About an hour later, it ruptured. Accounts differ, but at least a hundred thousand gallons of porter burst out. A wave, reportedly fifteen feet high, tore into the crowded slums of Saint Giles, and brought down houses.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "III · THE WAVE",
+          "items": [
+            {
+              "kind": "image",
+              "src": "hogarth-gin-lane",
+              "x": 540,
+              "y": 920,
+              "w": 700,
+              "rot": 3,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "ONE HOUR LATER",
+              "x": 540,
+              "y": 330,
+              "size": 120,
+              "at": "@hour"
+            }
+          ]
+        },
+        {
+          "at": "@accounts -0.1",
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "III · THE WAVE",
+          "items": [
+            {
+              "kind": "image",
+              "src": "rowlandson-fire-london",
+              "x": 540,
+              "y": 880,
+              "w": 950,
+              "rot": -2,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "100,000 GALLONS",
+              "x": 540,
+              "y": 340,
+              "size": 110,
+              "at": "@gallons"
+            },
+            {
+              "kind": "label",
+              "text": "ACCOUNTS DIFFER",
+              "x": 540,
+              "y": 1270,
+              "size": 44,
+              "color": "red",
+              "rot": 1.5,
+              "at": "@differ"
+            }
+          ]
+        },
+        {
+          "at": "@wave -0.1",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "III · THE WAVE",
+          "items": [
+            {
+              "kind": "image",
+              "src": "rowlandson-angry-street",
+              "x": 540,
+              "y": 900,
+              "w": 960,
+              "rot": 2,
+              "tint": "none",
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "15 FT WAVE",
+              "x": 540,
+              "y": 340,
+              "size": 170,
+              "rot": -2,
+              "at": "@fifteen"
+            }
+          ]
+        },
+        {
+          "at": "@crowded -0.1",
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "III · THE WAVE",
+          "items": [
+            {
+              "kind": "image",
+              "src": "hogarth-gin-lane",
+              "x": 540,
+              "y": 940,
+              "w": 760,
+              "rot": -2,
+              "tint": "none",
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "SAINT GILES",
+              "x": 540,
+              "y": 340,
+              "size": 200,
+              "rot": 2,
+              "at": "@giles"
+            },
+            {
+              "kind": "label",
+              "text": "HOUSES BROUGHT DOWN",
+              "x": 540,
+              "y": 1290,
+              "size": 40,
+              "color": "red",
+              "rot": -1.5,
+              "at": "@houses"
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@ruptured",
+          "file": "bass-hit",
+          "vol": 0.4
+        },
+        {
+          "at": "@wave",
+          "file": "whoosh",
+          "vol": 0.35
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "vo": "Eight people died, all of them women and children. Some were mourners at a wake for a two-year-old boy. The jury ruled it an accident, by misfortune. The brewery paid nothing. Reportedly, it even asked Parliament for help, and got some of its tax money back.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "IV · THE VERDICT",
+          "items": [
+            {
+              "kind": "image",
+              "src": "rowlandson-miseries",
+              "x": 540,
+              "y": 900,
+              "w": 900,
+              "rot": -2,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "EIGHT DEAD",
+              "x": 540,
+              "y": 340,
+              "size": 190,
+              "rot": 2,
+              "at": "@eight"
+            },
+            {
+              "kind": "label",
+              "text": "ALL WOMEN AND CHILDREN",
+              "x": 540,
+              "y": 1280,
+              "size": 38,
+              "rot": -1.5,
+              "at": "@children"
+            }
+          ]
+        },
+        {
+          "at": "@some -0.1",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "IV · THE VERDICT",
+          "items": [
+            {
+              "kind": "image",
+              "src": "rowlandson-angry-street",
+              "x": 540,
+              "y": 900,
+              "w": 920,
+              "tint": "sepia",
+              "rot": 2,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "A WAKE",
+              "x": 540,
+              "y": 360,
+              "size": 230,
+              "rot": -2,
+              "at": "@wake"
+            },
+            {
+              "kind": "label",
+              "text": "FOR A TWO-YEAR-OLD BOY",
+              "x": 540,
+              "y": 1280,
+              "size": 40,
+              "rot": 1.5,
+              "at": "@two-year-old"
+            }
+          ]
+        },
+        {
+          "at": "@jury -0.1",
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "IV · THE VERDICT",
+          "items": [
+            {
+              "kind": "image",
+              "src": "hogarth-gin-lane",
+              "x": 540,
+              "y": 930,
+              "w": 700,
+              "rot": 2,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "ACCIDENT",
+              "x": 540,
+              "y": 340,
+              "size": 210,
+              "rot": -2,
+              "at": "@accident"
+            },
+            {
+              "kind": "label",
+              "text": "BY MISFORTUNE",
+              "x": 540,
+              "y": 1290,
+              "size": 48,
+              "color": "red",
+              "rot": -2,
+              "at": "@misfortune"
+            }
+          ]
+        },
+        {
+          "at": "@brewery -0.1",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "IV · THE VERDICT",
+          "items": [
+            {
+              "kind": "image",
+              "src": "rowlandson-fire-london",
+              "x": 540,
+              "y": 880,
+              "w": 920,
+              "rot": 2,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "PAID NOTHING",
+              "x": 540,
+              "y": 340,
+              "size": 150,
+              "rot": -2,
+              "at": "@nothing"
+            }
+          ],
+          "stamps": [
+            {
+              "at": "@nothing",
+              "text": "NO COMPENSATION",
+              "y": 760
+            }
+          ]
+        },
+        {
+          "at": "@reportedly -0.1",
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "IV · THE VERDICT",
+          "items": [
+            {
+              "kind": "image",
+              "src": "hogarth-beer-street",
+              "x": 540,
+              "y": 920,
+              "w": 700,
+              "tint": "sepia",
+              "rot": -3,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "TAX MONEY BACK",
+              "x": 540,
+              "y": 340,
+              "size": 110,
+              "at": "@tax"
+            },
+            {
+              "kind": "label",
+              "text": "REPORTEDLY",
+              "x": 540,
+              "y": 1290,
+              "size": 44,
+              "color": "red",
+              "rot": -2,
+              "at": "@reportedly"
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@eight",
+          "file": "fail-thud",
+          "vol": 0.35
+        },
+        {
+          "at": "@nothing",
+          "file": "stamp",
+          "vol": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "vo": "Stories say people drank the street dry, and some died from it. Newspapers of the time never mention that. But the real tragedy was bad enough. Large wooden vats were later phased out. Follow for the next dark true story.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "V · THE LEGEND",
+          "items": [
+            {
+              "kind": "image",
+              "src": "hogarth-beer-street",
+              "x": 540,
+              "y": 920,
+              "w": 700,
+              "rot": -3,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "DRANK THE STREET DRY",
+              "x": 540,
+              "y": 340,
+              "size": 100,
+              "at": "@drank"
+            }
+          ]
+        },
+        {
+          "at": "@newspapers -0.1",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "V · THE LEGEND",
+          "items": [
+            {
+              "kind": "image",
+              "src": "rowlandson-miseries",
+              "x": 540,
+              "y": 900,
+              "w": 900,
+              "rot": 2,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "NEVER MENTIONED",
+              "x": 540,
+              "y": 340,
+              "size": 120,
+              "rot": -2,
+              "at": "@never"
+            },
+            {
+              "kind": "marker",
+              "shape": "cross",
+              "x": 540,
+              "y": 900,
+              "w": 560,
+              "h": 420,
+              "at": "@never"
+            }
+          ]
+        },
+        {
+          "at": "@but -0.1",
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "V · THE LEGEND",
+          "items": [
+            {
+              "kind": "image",
+              "src": "hogarth-gin-lane",
+              "x": 540,
+              "y": 930,
+              "w": 700,
+              "tint": "none",
+              "rot": 2,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "BAD ENOUGH",
+              "x": 540,
+              "y": 340,
+              "size": 190,
+              "rot": -2,
+              "at": "@enough"
+            }
+          ]
+        },
+        {
+          "at": "@large -0.1",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "V · THE LEGEND",
+          "items": [
+            {
+              "kind": "image",
+              "src": "rowlandson-fire-london",
+              "x": 540,
+              "y": 880,
+              "w": 920,
+              "rot": -2,
+              "tape": true,
+              "at": 0
+            },
+            {
+              "kind": "ransom",
+              "text": "NO MORE WOODEN VATS",
+              "x": 540,
+              "y": 340,
+              "size": 100,
+              "at": "@vats"
+            },
+            {
+              "kind": "marker",
+              "shape": "underline",
+              "x": 540,
+              "y": 450,
+              "w": 800,
+              "at": "@phased"
+            }
+          ]
+        },
+        {
+          "at": "@follow",
+          "type": "collage",
+          "bg": "kraft",
+          "cta": true,
+          "items": []
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@follow",
+          "file": "whoosh",
+          "vol": 0.3
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "title": "The Day a Wave of Beer Flooded London (True Story)",
+    "description": "In 1814 a giant brewery vat burst in London and sent a wave of porter into the slums. Who paid for the deaths, and which parts of the story are legend?",
+    "hashtags": [
+      "#darkhistory",
+      "#truestory",
+      "#history",
+      "#london",
+      "#animatedhistory",
+      "#shorts"
+    ],
+    "sources": [
+      {
+        "claim": "On 17 Oct 1814, at about 4:30 pm, a vat at Meux & Co's Horse Shoe Brewery (Tottenham Court Road / Oxford Street) burst after a hoop slipped; the vat was about 22 feet tall",
+        "source": "Wikipedia, 'London Beer Flood'; City AM, 'On this day in 1814' (search summary); Historic UK, 'The London Beer Flood of 1814' (search summary)",
+        "verified": true,
+        "note": "Wikipedia article read in full; City AM and Historic UK seen only as search summaries, which agree on date and hoop."
+      },
+      {
+        "claim": "A clerk noticed the slipped hoop and was reportedly told no harm would ensue",
+        "source": "Wikipedia, 'London Beer Flood' (George Crick, storehouse clerk)",
+        "verified": false,
+        "note": "Single source; narration says 'Reportedly'."
+      },
+      {
+        "claim": "Volume released: sources disagree, 128,000 to 323,000 imperial gallons; narration says 'at least a hundred thousand'",
+        "source": "Wikipedia, 'London Beer Flood'; Historic UK (over 320,000 gallons)",
+        "verified": true,
+        "note": "Narration says 'accounts differ'."
+      },
+      {
+        "claim": "A wave about 15 feet high swept into the St Giles rookery (New Street), destroying two houses",
+        "source": "Wikipedia, 'London Beer Flood'",
+        "verified": false,
+        "note": "Single source for the 15 ft figure; narration says 'reportedly'. Narration says 'houses' (plural) were brought down; Wikipedia says two destroyed, two damaged."
+      },
+      {
+        "claim": "Eight people died, all women and children; some were mourners at a wake for a two-year-old boy",
+        "source": "Wikipedia, 'London Beer Flood' (list of eight victims, five at the wake); City AM and Old Salt Blog (search summaries: eight dead, women and children); Historic UK says four mourners",
+        "verified": true,
+        "note": "Mourner count differs by source, so narration says only 'some'."
+      },
+      {
+        "claim": "Inquest jury ruled the deaths accidental, 'by misfortune'; the brewery paid no compensation",
+        "source": "Wikipedia, 'London Beer Flood' (verdict 'casually, accidentally and by misfortune'; 'act of God'; no compensation); City AM (search summary: coroner's wording; Meux not held liable)",
+        "verified": true
+      },
+      {
+        "claim": "The brewery reportedly petitioned Parliament and recovered part of its excise duty",
+        "source": "Wikipedia, 'London Beer Flood' (about £7,250 from HM Excise after a private petition); The Drinks Business and other accounts (search summaries: brewery petitioned Parliament to reclaim excise duty on the lost beer)",
+        "verified": true,
+        "note": "Amounts differ between sources (about 7,000 to 7,250 pounds), so the narration gives no figure and says 'Reportedly'."
+      },
+      {
+        "claim": "Stories of mass drinking and a later death from it are not found in contemporary newspapers; large wooden vats were later phased out",
+        "source": "Wikipedia, 'London Beer Flood' (citing brewing historian Martyn Cornell)",
+        "verified": false,
+        "note": "Single source; Cornell's blog not read directly."
+      }
+    ]
+  }
+}

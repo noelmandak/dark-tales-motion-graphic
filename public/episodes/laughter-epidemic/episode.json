@@ -1,0 +1,1002 @@
+{
+  "id": "laughter-epidemic",
+  "title": "The Tanganyika Laughter Epidemic",
+  "look": "collage",
+  "keywords": [
+    "tanganyika",
+    "laughter",
+    "ninety-five",
+    "closed",
+    "normal",
+    "hysteria",
+    "stress",
+    "proved",
+    "crying",
+    "faded"
+  ],
+  "displayReplace": {
+    "ninety-five": "95"
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "vo": "Tanganyika, 1962. At a girls' boarding school, three students started laughing. And the laughter would not stop.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "I · TANGANYIKA, 1962",
+          "items": [
+            {
+              "kind": "image",
+              "src": "tanganyika-survey-map",
+              "x": 540,
+              "y": 930,
+              "w": 900,
+              "tape": true,
+              "at": 0,
+              "h": 780,
+              "focus": [
+                0.3,
+                0.1
+              ],
+              "zoom": 2.2,
+              "rot": -2,
+              "caption": "OLD SURVEY MAP OF TANGANYIKA"
+            },
+            {
+              "kind": "ransom",
+              "text": "1962",
+              "x": 540,
+              "y": 360,
+              "size": 300,
+              "at": 0
+            },
+            {
+              "kind": "marker",
+              "shape": "circle",
+              "x": 505,
+              "y": 725,
+              "w": 210,
+              "h": 150,
+              "at": "@tanganyika +0.5"
+            }
+          ]
+        },
+        {
+          "at": "@girls -0.1",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "I · TANGANYIKA, 1962",
+          "items": [
+            {
+              "kind": "image",
+              "src": "hogarth-laughing-audience",
+              "x": 540,
+              "y": 880,
+              "w": 820,
+              "tape": true,
+              "at": 0,
+              "h": 760,
+              "focus": [
+                0.72,
+                0.74
+              ],
+              "zoom": 1.7,
+              "rot": 2,
+              "tint": "none",
+              "caption": "ILLUSTRATION: HOGARTH, 1733"
+            },
+            {
+              "kind": "ransom",
+              "text": "3 GIRLS",
+              "x": 540,
+              "y": 360,
+              "size": 230,
+              "at": "@three",
+              "rot": -2
+            },
+            {
+              "kind": "label",
+              "text": "GIRLS' BOARDING SCHOOL",
+              "x": 540,
+              "y": 1285,
+              "size": 42,
+              "at": "@girls",
+              "rot": -1.5
+            }
+          ]
+        },
+        {
+          "at": "@and -0.1",
+          "type": "collage",
+          "bg": "navy",
+          "tab": "I · TANGANYIKA, 1962",
+          "items": [
+            {
+              "kind": "image",
+              "src": "hogarth-laughing-audience",
+              "x": 540,
+              "y": 930,
+              "w": 780,
+              "tape": true,
+              "at": 0,
+              "h": 780,
+              "rot": -1.5,
+              "tint": "none"
+            },
+            {
+              "kind": "ransom",
+              "text": "LAUGHTER",
+              "x": 540,
+              "y": 330,
+              "size": 150,
+              "at": "@laughter",
+              "rot": 2
+            },
+            {
+              "kind": "ransom",
+              "text": "WOULD NOT STOP",
+              "x": 540,
+              "y": 470,
+              "size": 100,
+              "at": "@stop",
+              "rot": -2
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": 0,
+          "file": "bass-hit",
+          "vol": 0.4
+        },
+        {
+          "at": "@stop",
+          "file": "stamp",
+          "vol": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "vo": "It began on January thirtieth, not long after the country won independence. The fits spread through the classrooms. Soon, ninety-five of the hundred and fifty-nine pupils were affected, and in March the school was closed.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "II · THE OUTBREAK",
+          "items": [
+            {
+              "kind": "ransom",
+              "text": "JAN 30",
+              "x": 540,
+              "y": 340,
+              "size": 240,
+              "at": "@january",
+              "rot": -2
+            },
+            {
+              "kind": "image",
+              "src": "tanganyika-uhuru-stamp",
+              "x": 540,
+              "y": 930,
+              "w": 440,
+              "tape": true,
+              "at": "@independence",
+              "rot": 4,
+              "tint": "none",
+              "caption": "UHURU · 9 DEC 1961"
+            }
+          ]
+        },
+        {
+          "at": "@fits -0.1",
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "II · THE OUTBREAK",
+          "items": [
+            {
+              "kind": "image",
+              "src": "hogarth-laughing-audience",
+              "x": 540,
+              "y": 900,
+              "w": 880,
+              "tape": true,
+              "at": 0,
+              "h": 740,
+              "rot": -2
+            },
+            {
+              "kind": "ransom",
+              "text": "THE FITS SPREAD",
+              "x": 540,
+              "y": 340,
+              "size": 110,
+              "at": "@spread",
+              "rot": 1.5
+            }
+          ]
+        },
+        {
+          "at": "@soon -0.1",
+          "type": "collage",
+          "bg": "navy",
+          "tab": "II · THE OUTBREAK",
+          "items": [
+            {
+              "kind": "image",
+              "src": "hogarth-laughing-audience",
+              "x": 540,
+              "y": 880,
+              "w": 780,
+              "tape": true,
+              "at": 0,
+              "h": 700,
+              "focus": [
+                0.72,
+                0.76
+              ],
+              "zoom": 2,
+              "tint": "none",
+              "rot": 2
+            },
+            {
+              "kind": "ransom",
+              "text": "95 OF 159",
+              "x": 540,
+              "y": 380,
+              "size": 190,
+              "at": "@ninety-five",
+              "rot": -2
+            },
+            {
+              "kind": "label",
+              "text": "PUPILS AFFECTED",
+              "x": 540,
+              "y": 1270,
+              "size": 48,
+              "at": "@affected",
+              "rot": 1.5
+            }
+          ]
+        },
+        {
+          "at": "@march -0.2",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "II · THE OUTBREAK",
+          "items": [
+            {
+              "kind": "image",
+              "src": "tanganyika-survey-map",
+              "x": 540,
+              "y": 880,
+              "w": 900,
+              "tape": true,
+              "at": 0,
+              "h": 760,
+              "focus": [
+                0.3,
+                0.1
+              ],
+              "zoom": 2.2,
+              "rot": 2
+            },
+            {
+              "kind": "ransom",
+              "text": "SCHOOL CLOSED",
+              "x": 540,
+              "y": 340,
+              "size": 120,
+              "at": "@closed",
+              "rot": -2
+            },
+            {
+              "kind": "marker",
+              "shape": "cross",
+              "x": 505,
+              "y": 675,
+              "w": 240,
+              "h": 190,
+              "at": "@closed"
+            },
+            {
+              "kind": "label",
+              "text": "MARCH 1962",
+              "x": 540,
+              "y": 1270,
+              "size": 48,
+              "at": "@march",
+              "rot": -1.5
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@january",
+          "file": "ticking",
+          "vol": 0.3
+        },
+        {
+          "at": "@closed",
+          "file": "stamp",
+          "vol": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "vo": "But the girls went home, and the laughter went with them. It reached nearby villages, and a second school, where dozens more were struck. Attacks came with crying, fainting, and pain. Reportedly, over a dozen schools closed.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "III · THE SPREAD",
+          "items": [
+            {
+              "kind": "image",
+              "src": "tanganyika-survey-map",
+              "x": 540,
+              "y": 900,
+              "w": 900,
+              "tape": true,
+              "at": 0,
+              "h": 780,
+              "focus": [
+                0.3,
+                0.12
+              ],
+              "zoom": 1.6,
+              "rot": -2
+            },
+            {
+              "kind": "ransom",
+              "text": "SENT HOME",
+              "x": 540,
+              "y": 340,
+              "size": 180,
+              "at": "@home",
+              "rot": 2
+            },
+            {
+              "kind": "marker",
+              "shape": "arrow",
+              "x": 640,
+              "y": 940,
+              "w": 320,
+              "h": 240,
+              "at": "@laughter",
+              "rot": 40
+            }
+          ]
+        },
+        {
+          "at": "@reached -0.2",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "III · THE SPREAD",
+          "items": [
+            {
+              "kind": "image",
+              "src": "tanganyika-survey-map",
+              "x": 540,
+              "y": 890,
+              "w": 960,
+              "tape": true,
+              "at": 0,
+              "h": 800,
+              "focus": [
+                0.3,
+                0.15
+              ],
+              "zoom": 1.2,
+              "rot": 2
+            },
+            {
+              "kind": "ransom",
+              "text": "VILLAGES",
+              "x": 540,
+              "y": 340,
+              "size": 200,
+              "at": "@villages",
+              "rot": -2
+            },
+            {
+              "kind": "marker",
+              "shape": "circle",
+              "x": 450,
+              "y": 700,
+              "w": 480,
+              "h": 360,
+              "at": "@villages"
+            },
+            {
+              "kind": "label",
+              "text": "AND A SECOND SCHOOL",
+              "x": 540,
+              "y": 1285,
+              "size": 44,
+              "at": "@second",
+              "rot": -1.5
+            }
+          ]
+        },
+        {
+          "at": "@second -0.1",
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "III · THE SPREAD",
+          "items": [
+            {
+              "kind": "image",
+              "src": "hogarth-laughing-audience",
+              "x": 540,
+              "y": 890,
+              "w": 820,
+              "tape": true,
+              "at": 0,
+              "h": 780,
+              "focus": [
+                0.75,
+                0.2
+              ],
+              "zoom": 1.8,
+              "tint": "sepia",
+              "rot": 3
+            },
+            {
+              "kind": "ransom",
+              "text": "DOZENS MORE",
+              "x": 540,
+              "y": 340,
+              "size": 160,
+              "at": "@dozens",
+              "rot": -2
+            }
+          ]
+        },
+        {
+          "at": "@attacks -0.1",
+          "type": "collage",
+          "bg": "navy",
+          "tab": "III · THE SPREAD",
+          "items": [
+            {
+              "kind": "image",
+              "src": "hogarth-laughing-audience",
+              "x": 540,
+              "y": 1010,
+              "w": 780,
+              "tape": true,
+              "at": 0,
+              "h": 600,
+              "focus": [
+                0.62,
+                0.82
+              ],
+              "zoom": 2.2,
+              "tint": "none",
+              "rot": -2
+            },
+            {
+              "kind": "ransom",
+              "text": "CRYING",
+              "x": 540,
+              "y": 330,
+              "size": 130,
+              "at": "@crying",
+              "rot": -2
+            },
+            {
+              "kind": "ransom",
+              "text": "FAINTING",
+              "x": 540,
+              "y": 470,
+              "size": 110,
+              "at": "@fainting",
+              "rot": 2
+            },
+            {
+              "kind": "ransom",
+              "text": "PAIN",
+              "x": 540,
+              "y": 610,
+              "size": 120,
+              "at": "@pain",
+              "rot": -1.5
+            }
+          ]
+        },
+        {
+          "at": "@reportedly -0.1",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "III · THE SPREAD",
+          "items": [
+            {
+              "kind": "image",
+              "src": "tanganyika-survey-map",
+              "x": 540,
+              "y": 900,
+              "w": 920,
+              "tape": true,
+              "at": 0,
+              "h": 820,
+              "rot": 1.5
+            },
+            {
+              "kind": "ransom",
+              "text": "A DOZEN+ SCHOOLS",
+              "x": 540,
+              "y": 340,
+              "size": 110,
+              "at": "@dozen",
+              "rot": -2
+            },
+            {
+              "kind": "marker",
+              "shape": "cross",
+              "x": 540,
+              "y": 900,
+              "w": 600,
+              "h": 520,
+              "at": "@closed"
+            },
+            {
+              "kind": "label",
+              "text": "REPORTEDLY",
+              "x": 540,
+              "y": 1285,
+              "size": 46,
+              "at": "@reportedly",
+              "color": "red",
+              "rot": -2
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@attacks",
+          "file": "bass-hit",
+          "vol": 0.35
+        },
+        {
+          "at": "@closed",
+          "file": "stamp",
+          "vol": 0.4
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "vo": "Doctors came to investigate. They took blood samples, and tested the food. They found no physical cause. Everything came back normal. Their tentative diagnosis was mass hysteria. In the end, it faded on its own, about eighteen months after it began.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "IV · THE DOCTORS",
+          "items": [
+            {
+              "kind": "image",
+              "src": "daumier-doctor-patient",
+              "x": 540,
+              "y": 900,
+              "w": 640,
+              "tape": true,
+              "at": 0,
+              "rot": -3,
+              "caption": "A DOCTOR · DAUMIER, 19TH C."
+            },
+            {
+              "kind": "ransom",
+              "text": "DOCTORS",
+              "x": 540,
+              "y": 340,
+              "size": 200,
+              "at": "@doctors",
+              "rot": 2
+            }
+          ]
+        },
+        {
+          "at": "@they -0.1",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "IV · THE DOCTORS",
+          "items": [
+            {
+              "kind": "image",
+              "src": "tanganyika-stamp-a",
+              "x": 540,
+              "y": 880,
+              "w": 900,
+              "tape": true,
+              "at": 0,
+              "rot": 2,
+              "tint": "none",
+              "caption": "TANGANYIKA STAMP, 1961"
+            },
+            {
+              "kind": "ransom",
+              "text": "THE TESTS",
+              "x": 540,
+              "y": 340,
+              "size": 190,
+              "at": "@blood",
+              "rot": -2
+            },
+            {
+              "kind": "label",
+              "text": "NO PHYSICAL CAUSE",
+              "x": 540,
+              "y": 1285,
+              "size": 46,
+              "at": "@physical",
+              "color": "red",
+              "rot": -1.5
+            }
+          ]
+        },
+        {
+          "at": "@everything -0.1",
+          "type": "collage",
+          "bg": "navy",
+          "tab": "IV · THE DOCTORS",
+          "items": [
+            {
+              "kind": "image",
+              "src": "daumier-doctor-patient",
+              "x": 540,
+              "y": 920,
+              "w": 700,
+              "tape": true,
+              "at": 0,
+              "h": 700,
+              "focus": [
+                0.72,
+                0.36
+              ],
+              "zoom": 2,
+              "tint": "none",
+              "rot": -2
+            },
+            {
+              "kind": "ransom",
+              "text": "ALL NORMAL",
+              "x": 540,
+              "y": 380,
+              "size": 190,
+              "at": "@normal",
+              "rot": 2
+            },
+            {
+              "kind": "label",
+              "text": "NOTHING FOUND",
+              "x": 540,
+              "y": 1290,
+              "size": 46,
+              "at": "@came#2",
+              "rot": -1.5
+            }
+          ]
+        },
+        {
+          "at": "@their -0.1",
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "IV · THE DOCTORS",
+          "items": [
+            {
+              "kind": "image",
+              "src": "hogarth-laughing-audience",
+              "x": 540,
+              "y": 900,
+              "w": 760,
+              "tape": true,
+              "at": 0,
+              "h": 780,
+              "tint": "sepia",
+              "rot": 2
+            },
+            {
+              "kind": "ransom",
+              "text": "MASS HYSTERIA?",
+              "x": 540,
+              "y": 340,
+              "size": 120,
+              "at": "@hysteria",
+              "rot": -2
+            },
+            {
+              "kind": "marker",
+              "shape": "underline",
+              "x": 540,
+              "y": 440,
+              "w": 800,
+              "h": 40,
+              "at": "@hysteria"
+            },
+            {
+              "kind": "label",
+              "text": "TENTATIVE DIAGNOSIS",
+              "x": 540,
+              "y": 1290,
+              "size": 44,
+              "at": "@tentative",
+              "rot": -1.5
+            }
+          ]
+        },
+        {
+          "at": "@end -0.2",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "IV · THE DOCTORS",
+          "items": [
+            {
+              "kind": "image",
+              "src": "tanganyika-survey-map",
+              "x": 540,
+              "y": 890,
+              "w": 900,
+              "tape": true,
+              "at": 0,
+              "h": 760,
+              "focus": [
+                0.3,
+                0.1
+              ],
+              "zoom": 2.2,
+              "rot": -2
+            },
+            {
+              "kind": "ransom",
+              "text": "18 MONTHS",
+              "x": 540,
+              "y": 340,
+              "size": 200,
+              "at": "@eighteen",
+              "rot": 2
+            },
+            {
+              "kind": "marker",
+              "shape": "circle",
+              "x": 505,
+              "y": 685,
+              "w": 210,
+              "h": 150,
+              "at": "@began"
+            },
+            {
+              "kind": "label",
+              "text": "THEN IT FADED",
+              "x": 540,
+              "y": 1285,
+              "size": 48,
+              "at": "@faded",
+              "rot": -1.5
+            }
+          ]
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@normal",
+          "file": "stamp",
+          "vol": 0.4
+        },
+        {
+          "at": "@hysteria",
+          "file": "drone",
+          "vol": 0.3
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "vo": "The leading theory is stress. The pressure, some researchers think, found a way out through laughter. No one has proved it. Follow for the next dark true story.",
+      "shots": [
+        {
+          "at": 0,
+          "type": "collage",
+          "bg": "newsprint",
+          "tab": "V · THE THEORY",
+          "items": [
+            {
+              "kind": "image",
+              "src": "tanganyika-uhuru-stamp",
+              "x": 540,
+              "y": 930,
+              "w": 440,
+              "tape": true,
+              "at": 0,
+              "rot": -3,
+              "tint": "none"
+            },
+            {
+              "kind": "ransom",
+              "text": "STRESS",
+              "x": 540,
+              "y": 340,
+              "size": 260,
+              "at": "@stress",
+              "rot": 2
+            },
+            {
+              "kind": "label",
+              "text": "THE LEADING THEORY",
+              "x": 540,
+              "y": 1290,
+              "size": 44,
+              "at": "@leading",
+              "rot": -1.5
+            }
+          ]
+        },
+        {
+          "at": "@pressure -0.1",
+          "type": "collage",
+          "bg": "navy",
+          "tab": "V · THE THEORY",
+          "items": [
+            {
+              "kind": "image",
+              "src": "hogarth-laughing-audience",
+              "x": 540,
+              "y": 900,
+              "w": 780,
+              "tape": true,
+              "at": 0,
+              "h": 760,
+              "tint": "none",
+              "rot": -1.5
+            },
+            {
+              "kind": "ransom",
+              "text": "PRESSURE",
+              "x": 540,
+              "y": 340,
+              "size": 180,
+              "at": "@pressure",
+              "rot": -2
+            },
+            {
+              "kind": "label",
+              "text": "SOME RESEARCHERS THINK",
+              "x": 540,
+              "y": 1290,
+              "size": 40,
+              "at": "@researchers",
+              "rot": 1.5
+            }
+          ]
+        },
+        {
+          "at": "@no -0.1",
+          "type": "collage",
+          "bg": "kraft",
+          "tab": "V · THE THEORY",
+          "items": [
+            {
+              "kind": "image",
+              "src": "daumier-doctor-patient",
+              "x": 540,
+              "y": 900,
+              "w": 700,
+              "tape": true,
+              "at": 0,
+              "h": 720,
+              "focus": [
+                0.72,
+                0.36
+              ],
+              "zoom": 2,
+              "rot": 2
+            },
+            {
+              "kind": "ransom",
+              "text": "UNPROVEN",
+              "x": 540,
+              "y": 360,
+              "size": 200,
+              "at": "@proved",
+              "rot": -2
+            },
+            {
+              "kind": "marker",
+              "shape": "cross",
+              "x": 540,
+              "y": 900,
+              "w": 460,
+              "h": 420,
+              "at": "@proved"
+            }
+          ]
+        },
+        {
+          "at": "@follow",
+          "type": "collage",
+          "bg": "kraft",
+          "cta": true,
+          "items": []
+        }
+      ],
+      "sfx": [
+        {
+          "at": "@stress",
+          "file": "bass-hit",
+          "vol": 0.35
+        },
+        {
+          "at": "@follow",
+          "file": "whoosh",
+          "vol": 0.3
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "title": "The Laughter Epidemic That Closed Schools (True Story)",
+    "description": "In 1962, three schoolgirls in Tanganyika started laughing and it would not stop. Doctors found nothing wrong. What really happened?",
+    "hashtags": [
+      "#darkhistory",
+      "#truestory",
+      "#history",
+      "#tanzania",
+      "#mystery",
+      "#shorts"
+    ],
+    "sources": [
+      {
+        "claim": "On 30 January 1962, at a mission-run girls' boarding school in Kashasha (Tanganyika), three girls began laughing; it spread to 95 of 159 pupils (aged 12-18); the school closed on 18 March",
+        "source": "Wikipedia, 'Tanganyika laughter epidemic' (read in full); Rankin & Philip 1963 (as summarised by secondary sources)",
+        "verified": true,
+        "note": "Narration says only 'in March'. Reopened 21 May, second phase hit 57 more, closed again end of June (not in narration)."
+      },
+      {
+        "claim": "Tanganyika had become independent not long before (9 December 1961)",
+        "source": "Tanganyika Independence Act 1961 / Wikipedia 'Tanganyika (1961-1964)' (search result); Wikipedia 'Tanganyika laughter epidemic' (Hempelmann: 'had just gained independence')",
+        "verified": true,
+        "note": "About seven weeks before 30 January 1962."
+      },
+      {
+        "claim": "It spread to nearby villages (Nshamba: 217 villagers) and a second school (Ramashenye girls' middle school: 48 girls); 14 schools shut down in total, about 1,000 people affected",
+        "source": "Wikipedia, 'Tanganyika laughter epidemic' (read in full)",
+        "verified": true,
+        "note": "Narration says 'dozens more' and 'reportedly over a dozen schools'."
+      },
+      {
+        "claim": "Symptoms included laughing and crying, fainting and pain (also restlessness, respiratory problems, rashes)",
+        "source": "Wikipedia, 'Tanganyika laughter epidemic' (read in full); PMC4988490 (laughing, crying, restlessness)",
+        "verified": true,
+        "note": "'Screaming' appeared in one secondary summary only and was removed from the narration."
+      },
+      {
+        "claim": "Doctors took blood samples and tested food for an organic cause, found nothing, and reached a tentative diagnosis of mass hysteria by elimination",
+        "source": "PMC4988490 (account of Rankin & Philip: blood and lumbar puncture samples, local food tested, 'tentative diagnosis of mass hysteria by process of elimination')",
+        "verified": true,
+        "note": "That article describes the Bukoba epidemic through Rankin & Philip; water tests were not confirmed, so the narration omits water. Original 1963 paper (Central African Journal of Medicine 9:167-170) not read directly."
+      },
+      {
+        "claim": "The epidemic died out about 18 months after it began",
+        "source": "Wikipedia, 'Tanganyika laughter epidemic' (read in full); Boing Boing (search summary)",
+        "verified": true,
+        "note": "One secondary source says six months; narration follows Wikipedia's 18 months with 'about'."
+      },
+      {
+        "claim": "Leading explanation: stress-induced mass psychogenic illness (Christian Hempelmann); alternatives exist (Bartholomew & Wessely: culture-specific conversion reactions)",
+        "source": "Wikipedia, 'Tanganyika laughter epidemic' (read in full)",
+        "verified": true,
+        "note": "Narration says 'The leading theory is stress' and 'some researchers think'; 'No one has proved it'."
+      }
+    ]
+  }
+}

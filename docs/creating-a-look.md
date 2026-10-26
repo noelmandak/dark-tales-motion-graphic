@@ -19,6 +19,7 @@ Each look has its vocabulary in one file:
 | `casefile` | `src/engine/casefile.tsx` | a photo subject in `Picto`, or an item kind in `renderItem` |
 | `poster` | `src/engine/poster.tsx` | a component and a `case` in `renderArt` |
 | `collage` | `src/engine/collage.tsx` | a component and a `case` in `renderItem` (images must go through `npm run assets`) |
+| `comic` | `src/engine/comic.tsx` | an art component and a `case` in `renderArt`, or a page layout in `LAYOUTS` |
 
 Then:
 

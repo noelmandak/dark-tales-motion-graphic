@@ -4,9 +4,9 @@
  * camera flash. Same brand family (navy/gold/red, faceless, subtitle style), different visual language.
  */
 import React, {useId} from "react";
-import {AbsoluteFill, interpolate, useCurrentFrame} from "remotion";
+import {AbsoluteFill, interpolate, staticFile, useCurrentFrame} from "remotion";
 import {clamp, prog, useSpring} from "./kit";
-import {useBrandText, useCue} from "./env";
+import {useBrandText, useCue, useTheme} from "./env";
 import type {BoardItem, BoardShot, StampSpec} from "./types";
 
 const TYPE = "'Courier New', Courier, monospace";
@@ -295,12 +295,13 @@ const ItemSlot: React.FC<{it: BoardItem; index: number; shadowId: string}> = ({i
 
 const Stencil: React.FC<{spec: StampSpec; delay: number}> = ({spec, delay}) => {
   const s = useSpring(delay, 9, 230);
+  const onBlue = !!useTheme().board; // themed boards are dark: give the stamp a paper backing so red/green still read
   const size = spec.size ?? 70;
   const w = spec.text.length * size * 0.66 + 70;
   const col = spec.color === "navy" ? K.navy : spec.color === "green" ? "#2f7a4a" : K.red;
   return (
     <g transform={`translate(${spec.x ?? 540} ${spec.y ?? 900}) rotate(${spec.rot ?? -9}) scale(${interpolate(s, [0, 1], [2.4, 1])})`} opacity={interpolate(s, [0, 0.3], [0, 0.93], clamp)}>
-      <rect x={-w / 2} y={-size * 0.8} width={w} height={size * 1.6} fill="none" stroke={col} strokeWidth={9} />
+      <rect x={-w / 2} y={-size * 0.8} width={w} height={size * 1.6} fill={onBlue ? "#ffffff" : "none"} fillOpacity={0.94} stroke={col} strokeWidth={9} />
       <text x={0} y={size * 0.3} textAnchor="middle" fill={col} fontFamily={TYPE} fontWeight={900} fontSize={size} letterSpacing={4}>
         {spec.text}
       </text>
@@ -312,16 +313,18 @@ const Stencil: React.FC<{spec: StampSpec; delay: number}> = ({spec, delay}) => {
 export const BoardView: React.FC<{s: BoardShot}> = ({s}) => {
   const f = useCurrentFrame();
   const bt = useBrandText();
+  const theme = useTheme();
+  const board = theme.board;
   const cf = useCue();
   const id = useId().replace(/:/g, "");
-  const items = s.items;
+  const items = s.items ?? [];
   const byId = new Map(items.map((it) => [it.id, it] as const));
   const push = interpolate(f, [0, 160], [1, 1.06], clamp);
   const flash = interpolate(f, [0, 9], [0.85, 0], clamp);
   const [ox, oy] = s.focus ?? [540, 900];
 
   return (
-    <AbsoluteFill style={{background: K.cork2}}>
+    <AbsoluteFill style={{background: board?.bg2 ?? K.cork2}}>
       <svg viewBox="0 0 1080 1920" width="100%" height="100%">
         <defs>
           <Shadow id={id + "s"} />
@@ -335,8 +338,17 @@ export const BoardView: React.FC<{s: BoardShot}> = ({s}) => {
             <stop offset="1" stopColor="#000" stopOpacity={0.6} />
           </radialGradient>
         </defs>
-        <rect width={1080} height={1920} fill={K.cork} />
-        <rect width={1080} height={1920} fill="#000" filter={`url(#${id}n)`} />
+        <rect width={1080} height={1920} fill={board?.bg ?? K.cork} />
+        {board ? (
+          <>
+            <pattern id={id + "d"} width={54} height={54} patternUnits="userSpaceOnUse">
+              <circle cx={27} cy={27} r={3} fill={board.dots ?? "#ffffff"} opacity={0.16} />
+            </pattern>
+            <rect width={1080} height={1920} fill={`url(#${id}d)`} />
+          </>
+        ) : (
+          <rect width={1080} height={1920} fill="#000" filter={`url(#${id}n)`} />
+        )}
 
         <g transform={`translate(${ox} ${oy}) scale(${push}) translate(${-ox} ${-oy})`}>
           {/* strings sit under the items but over the cork */}
@@ -369,8 +381,8 @@ export const BoardView: React.FC<{s: BoardShot}> = ({s}) => {
         {/* manila folder tab (the "chapter") */}
         {s.tab && (
           <g opacity={prog(f, 3, 14)} transform={`translate(0 ${(1 - prog(f, 3, 14)) * -40})`}>
-            <path d="M80 150 L110 92 L520 92 L552 150 Z" fill="#e1c47c" stroke="#7a5a1c" strokeWidth={3} />
-            <text x={316} y={132} textAnchor="middle" fontFamily={TYPE} fontWeight={800} fontSize={30} letterSpacing={3} fill="#4a3410">
+            <path d="M80 150 L110 92 L520 92 L552 150 Z" fill={board?.tab ?? "#e1c47c"} stroke={board ? "#0b2b4a" : "#7a5a1c"} strokeWidth={3} />
+            <text x={316} y={132} textAnchor="middle" fontFamily={TYPE} fontWeight={800} fontSize={30} letterSpacing={3} fill={board?.tabText ?? "#4a3410"}>
               {s.tab}
             </text>
           </g>
@@ -379,17 +391,21 @@ export const BoardView: React.FC<{s: BoardShot}> = ({s}) => {
         {s.cta && (
           <g>
             <g opacity={prog(f, 14, 28)}>
-              <rect x={150} y={470} width={780} height={560} rx={10} fill="#e1c47c" stroke="#7a5a1c" strokeWidth={4} />
-              <rect x={150} y={430} width={300} height={50} rx={6} fill="#e1c47c" stroke="#7a5a1c" strokeWidth={4} />
-              <text x={540} y={640} textAnchor="middle" fontFamily={TYPE} fontWeight={900} fontSize={92} fill="#4a3410">{bt.name.toUpperCase()}</text>
-              <text x={540} y={700} textAnchor="middle" fontFamily={TYPE} fontSize={21} fill="#4a3410">{bt.tagline}</text>
+              <rect x={150} y={470} width={780} height={560} rx={10} fill={board?.card ?? "#e1c47c"} stroke={board ? "#0b2b4a" : "#7a5a1c"} strokeWidth={4} />
+              <rect x={150} y={430} width={300} height={50} rx={6} fill={board?.card ?? "#e1c47c"} stroke={board ? "#0b2b4a" : "#7a5a1c"} strokeWidth={4} />
+              {theme.logoLight ? (
+                <image href={staticFile(theme.logoLight)} x={210} y={540} width={660} height={180} preserveAspectRatio="xMidYMid meet" />
+              ) : (
+                <text x={540} y={640} textAnchor="middle" fontFamily={TYPE} fontWeight={900} fontSize={92} fill="#4a3410">{bt.name.toUpperCase()}</text>
+              )}
+              <text x={540} y={board ? 790 : 700} textAnchor="middle" fontFamily={TYPE} fontSize={board ? 25 : 21} fill={board?.cardText ?? "#4a3410"}>{bt.tagline}</text>
             </g>
-            <g opacity={prog(f, 34, 46)} transform={`translate(540 860) scale(${1 + Math.sin(f * 0.25) * 0.04})`}>
-              <rect x={-170} y={-46} width={340} height={92} rx={10} fill={K.red} />
+            <g opacity={prog(f, 34, 46)} transform={`translate(540 ${board ? 900 : 860}) scale(${1 + Math.sin(f * 0.25) * 0.04})`}>
+              <rect x={-170} y={-46} width={340} height={92} rx={10} fill={board?.tabText ?? K.red} />
               <text x={0} y={20} textAnchor="middle" fontFamily={TYPE} fontWeight={900} fontSize={56} fill="#fff" letterSpacing={4}>{bt.ctaButton.toUpperCase()}</text>
             </g>
             <g opacity={prog(f, 54, 66)}>
-              <text x={540} y={970} textAnchor="middle" fontFamily={TYPE} fontWeight={700} fontSize={30} fill="#4a3410">{bt.ctaQuestion}</text>
+              <text x={540} y={1000} textAnchor="middle" fontFamily={TYPE} fontWeight={700} fontSize={28} fill={board?.cardText ?? "#4a3410"}>{bt.ctaQuestion}</text>
             </g>
           </g>
         )}

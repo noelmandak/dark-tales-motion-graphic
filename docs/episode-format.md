@@ -9,7 +9,7 @@ An episode is one JSON file, `public/episodes/<id>/episode.json`. The authoritat
 |---|---|---|
 | `id` | yes | Must equal the folder name. Lowercase letters, numbers and dashes. |
 | `title` | yes | Working title. |
-| `look` | no | `night` (default), `manuscript`, `casefile`, `poster` or `collage`. Decides which shot types are allowed. |
+| `look` | no | `night` (default), `manuscript`, `casefile`, `poster`, `collage` or `comic`. Decides which shot types are allowed. |
 | `lang` | no | Narration language code (`"en"`, `"id"`, ...). Selects `ELEVENLABS_VOICE_ID_<LANG>`. See [localization.md](localization.md). |
 | `brandText` | no | Overrides `name`, `watermark`, `tagline`, `ctaButton`, `ctaQuestion` from `brand.json`. |
 | `voice` | no | `{"voiceId": "..."}` pins the narrator for this episode. |
@@ -137,6 +137,40 @@ A cork board seen straight on; items are pinned in at their `at` cue (or in sequ
 ### `collage`: collage look (use only when `"look": "collage"`)
 
 Archival images cut out with torn edges, ransom-note headlines, hand-drawn markers, stop-motion movement. Images must be registered with `npm run assets` and referenced by id (`{"kind": "image", "src": "my-id"}`). The full item reference, the licensing rules and examples are in [collage-look.md](collage-look.md).
+
+### `comic`: comic look (use only when `"look": "comic"`)
+
+A 1940s pulp-comic page: inked panels on a dark halftone page, flat-colour faceless figures, yellow caption boxes, sound-effect lettering. Everything is drawn in code (no images, nothing to license).
+```json
+{"at": "@woman -0.1", "type": "comic", "layout": "two", "tab": "I · MATTOON, 1944",
+ "panels": [
+   {"bg": "interior", "art": [{"kind": "figure", "x": 300, "y": 520, "hat": true, "at": "@woman"}, {"kind": "gas", "x": 720, "y": 500, "at": "@strange"}],
+    "caption": {"text": "A woman reports a strange smell", "at": "@strange"}},
+   {"bg": "interior", "art": [{"kind": "figure", "x": 500, "y": 540, "pose": "slump", "at": "@legs"}],
+    "sfx": {"text": "?!", "at": "@legs", "x": 800, "y": 260, "size": 200, "color": "red"}}]}
+```
+- `layout`: `one` (1000x1180 panel), `two` (stacked, 1000x570 each) or `three` (one wide panel above two small ones). Default follows the number of panels. A panel may set `x`, `y`, `w`, `h` itself. Panels slam in one after another (or at their own `at`); the page stays inside y 170-1380 so subtitles keep the bottom band.
+- Panel `bg`: `dusk`, `night`, `interior`, `burst` (yellow rays), `gas` (green rays), `red` (red rays), `paper`.
+- Panel `art` (positions are panel-local pixels, `x`,`y` is the base/centre, `s` scale, `at` cue; each pops in): `figure` (`pose` stand/point/slump/run/hold, `hat`, `flip`, `color`), `crowd` (`n`), `house`, `town`, `gas` (drifting puffs), `beam` (flashlight sweep), `cloth`, `paper` (`head` masthead, `text` headline), `flask`, `clock`, `question`, `moon`.
+- `caption`: yellow narration box (`text`, `at`, `pos` top/bottom). `sfx`: lettering such as "ILL!" (`text`, `at`, `x`, `y`, `size`, `rot`, `color` yellow/red/white). `bubble`: speech/thought/shout balloon (use sparingly; never put invented quotes in people's mouths).
+- `"cta": true` draws the closing page from brand.json, cued on "Follow".
+
+### `brief`: corporate look (use only when `"look": "corporate"`)
+
+A modern business-briefing style for company and client videos (no Dark Tales props). Set per-episode identity with `theme` (`logo`, `logoLight`, `primary`, `primaryDark`, `accent`) and sound with `audio` (`bgm`, `bgmVolume`, `sfxMinGap`).
+```json
+{"at": "@enam -0.1", "type": "brief", "tab": "01 · SITUASI", "bg": "dark", "broll": "belt",
+ "blocks": [
+   {"kind": "counter", "from": 0, "to": 6, "unit": "bulan", "label": "kemudian"},
+   {"kind": "steps", "items": [{"label": "Demo", "state": "done"}, {"label": "Production", "sub": "Belum go-live", "state": "stalled", "at": "@sistem"}]},
+   {"kind": "badge", "text": "Tidak go-live", "tone": "bad", "icon": "cross", "at": "@tidak"}]}
+```
+- `bg`: `dark` (default, brand-blue scene) or `light` (white). Alternate them between shots. `broll`: `network`, `belt` (boxes queue at a red gate), `servers`, `skyline`, `rings`, or `{"video": "broll/clip.mp4"}` to play a real stock clip from `public/` under a dark overlay (licence it yourself).
+- Blocks stack and centre automatically (usable height about y 250-1330; the bottom is a dark scrim for subtitles and the logo). Each block takes an optional `at` cue; list/cards items take their own `at`.
+- `text` (kinetic headline; `size`, `sub`, `tone`, `hl`: words to highlight), `counter`, `cards` (`cols`, items `icon`/`title`/`sub`/`tone`), `steps` (`done`/`stalled`/`todo`), `list` (`ok`/`bad`/`warn` rows with a `value`), `badge`, `link` (two nodes; `broken` + `brokenAt`).
+- Icons: `chip db sheet warehouse user userq shield coins flag check cross pause alert chart present gear play doc`.
+- `"cta": true` draws the closing card (logo, tagline, button) from `theme` and `brandText`; always the last shot, cued on "Follow"/"Ikuti".
+- Shots open with a circular iris over the previous one. A bright sound kit (`public/audio/bgm-fataorgana.wav`, `sfx-fo-*.mp3`) comes from `node scripts/make-brand-audio.mjs`.
 
 ## Recipes by beat
 

@@ -211,9 +211,60 @@ export type CollageShot = {
   cta?: boolean;
 };
 
-export type Shot = {at: Cue} & (SceneShot | GlobeShot | IdCardShot | MapShot | PaperShot | SketchShot | ObjectShot | CtaShot | FolioShot | BoardShot | PosterShot | CollageShot);
+/** Comic look: a pulp-comic page of inked panels with caption boxes, sound-effect lettering and flat-colour faceless figures. */
+export type ComicArt = {
+  kind: string; // house | town | figure | crowd | gas | beam | cloth | paper | flask | clock | question | moon
+  at?: Cue;
+  x?: number; // panel-local pixels (0,0 = panel top-left)
+  y?: number;
+  s?: number;
+  rot?: number;
+  flip?: boolean;
+  color?: string;
+  pose?: "stand" | "point" | "slump" | "run" | "hold";
+  hat?: boolean;
+  n?: number; // crowd size
+  text?: string; // paper headline / clock label
+  head?: string; // paper masthead (default "EXTRA")
+};
+export type ComicPanel = {
+  at?: Cue;
+  /** Explicit geometry; otherwise the page `layout` slot is used. */
+  x?: number;
+  y?: number;
+  w?: number;
+  h?: number;
+  bg?: "dusk" | "night" | "interior" | "burst" | "gas" | "paper" | "red";
+  art?: ComicArt[];
+  caption?: {text: string; at?: Cue; pos?: "top" | "bottom"};
+  sfx?: {text: string; at?: Cue; x?: number; y?: number; size?: number; rot?: number; color?: "yellow" | "red" | "white"};
+  bubble?: {text: string; at?: Cue; x?: number; y?: number; tail?: [number, number]; kind?: "speech" | "thought" | "shout"};
+};
+export type ComicShot = {
+  type: "comic";
+  layout?: "one" | "two" | "three";
+  tab?: string;
+  panels: ComicPanel[];
+  cta?: boolean;
+};
+
+/** Corporate look: stacked, auto-centred blocks on a clean canvas; subtitles sit in the brand band below. */
+export type Tone = "ok" | "bad" | "warn" | "neutral" | "info";
+export type BriefBlock =
+  | {kind: "text"; at?: Cue; text: string; size?: number; sub?: string; tone?: Tone; color?: string; /** words to highlight (accent colour + underline) */ hl?: string[]}
+  | {kind: "counter"; at?: Cue; from?: number; to: number; unit?: string; label?: string}
+  | {kind: "cards"; at?: Cue; cols?: number; items: {icon?: string; title: string; sub?: string; tone?: Tone; at?: Cue}[]}
+  | {kind: "steps"; at?: Cue; items: {label: string; sub?: string; state?: "done" | "stalled" | "todo"; icon?: string; at?: Cue}[]}
+  | {kind: "list"; at?: Cue; items: {text: string; value?: string; state?: "ok" | "bad" | "warn"; at?: Cue}[]}
+  | {kind: "badge"; at?: Cue; text: string; tone?: Tone; icon?: string}
+  | {kind: "link"; at?: Cue; from: {icon?: string; label: string}; to: {icon?: string; label: string}; broken?: boolean; brokenAt?: Cue};
+/** Animated background layer. "video" plays public/<src> (stock footage) under a dark overlay; the rest are procedural. */
+export type BriefBroll = "network" | "belt" | "servers" | "skyline" | "rings" | {video: string};
+export type BriefShot = {type: "brief"; tab?: string; /** "dark" (default) brand-blue scene or "light" white scene */ bg?: "dark" | "light"; broll?: BriefBroll; blocks?: BriefBlock[]; cta?: boolean; /** Short labels shown as a path on the closing card, e.g. ["Assessment", "MVP", "Production"] */ ctaChips?: string[]};
+
+export type Shot = {at: Cue} & (SceneShot | GlobeShot | IdCardShot | MapShot | PaperShot | SketchShot | ObjectShot | CtaShot | FolioShot | BoardShot | BriefShot | PosterShot | CollageShot | ComicShot);
 export type SfxCue = {at: Cue; file: string; vol?: number};
-export type SceneDef = {id: string; vo: string; shots: Shot[]; sfx?: SfxCue[]};
+export type SceneDef = {id: string; vo: string; shots: Shot[]; sfx?: SfxCue[]; /** Seconds of silence after this scene's voice-over (default: episode.audio.voTail, then brand.json). Give the closing card a longer one. */ tail?: number};
 
 export type Episode = {
   id: string;
@@ -224,8 +275,12 @@ export type Episode = {
   voice?: {voiceId?: string};
   /** Localise the brand strings (closing card, watermark). Missing fields fall back to brand.json. */
   brandText?: {name?: string; watermark?: string; tagline?: string; ctaButton?: string; ctaQuestion?: string};
+  /** Optional per-episode audio: own music bed, level, and the minimum gap between sound effects (default from brand.json). */
+  audio?: {bgm?: string; bgmVolume?: number; sfxMinGap?: number; voTail?: number};
+  /** Optional per-episode visual identity (e.g. a client's logo and colour). Without it the Dark Tales brand is used. Only the `casefile` look and the subtitles/watermark honour it. */
+  theme?: EpisodeTheme;
   /** "night" (default): silhouettes on a night stage, crossfades. "manuscript": illuminated folios that slide like a scroll. "casefile": a cork evidence board with camera-flash cuts. "poster": constructivist printed posters with kinetic type and diagonal wipes. Alternate looks between episodes. */
-  look?: "night" | "manuscript" | "casefile" | "poster" | "collage";
+  look?: "night" | "manuscript" | "casefile" | "poster" | "collage" | "comic" | "corporate";
   keywords?: string[];
   displayReplace?: Record<string, string>;
   scenes: SceneDef[];
@@ -239,3 +294,16 @@ export type Episode = {
 
 export type Word = {text: string; from: number; end: number};
 export type Timings = {estimated?: boolean; scenes: Record<string, {voSeconds: number; words: Word[]}>};
+
+export type EpisodeTheme = {
+  /** Logo files under public/, e.g. "brand/logo-blue.png" (on light surfaces) and "brand/logo-white.png" (on dark ones, used as the watermark). */
+  logo?: string;
+  logoLight?: string;
+  /** Brand colour (corporate look) and its dark shade; accent is the light tint used for highlights. */
+  primary?: string;
+  primaryDark?: string;
+  /** Highlight colour for subtitle keywords and the CTA button. */
+  accent?: string;
+  /** Casefile board: background colour, darker edge colour, and the folder tab / CTA card colours. */
+  board?: {bg: string; bg2: string; dots?: string; tab?: string; tabText?: string; card?: string; cardText?: string};
+};

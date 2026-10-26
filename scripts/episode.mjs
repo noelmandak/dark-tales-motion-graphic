@@ -42,6 +42,9 @@ async function loadEnv() {
   }
 }
 
+/** Silence after a scene's voice-over: scene.tail, else episode.audio.voTail, else brand.json. */
+const tailOf = (ep, sc) => sc.tail ?? ep.audio?.voTail ?? BRAND.audio.voTail;
+
 /* ---------- timings ---------- */
 async function buildTimings(id) {
   const ep = await readJson(path.join(epDir(id), "episode.json"));
@@ -64,7 +67,7 @@ async function buildTimings(id) {
     };
   }
   await writeFile(path.join(epDir(id), "timings.json"), JSON.stringify(out, null, 1));
-  const total = Object.values(out.scenes).reduce((s, v) => s + Math.ceil((v.voSeconds + BRAND.audio.voTail) * 30), 0) / 30;
+  const total = ep.scenes.reduce((s, sc) => s + Math.ceil((out.scenes[sc.id].voSeconds + tailOf(ep, sc)) * 30), 0) / 30;
   console.log(`timings.json written (${total.toFixed(1)}s total)`);
 }
 
@@ -133,7 +136,7 @@ async function check(id, quiet = false) {
   if (!timings) errors.push(`no timings.json — run: npm run ep -- voice ${id} (or draft for a free preview)`);
   if (timings?.estimated) warns.push("timings are ESTIMATED (draft). Cues are approximate and audio is missing; run voice before rendering.");
 
-  const shotTypes = new Set(["scene", "globe", "idcard", "map", "paper", "sketch", "object", "cta", "folio", "board", "poster", "collage"]);
+  const shotTypes = new Set(["scene", "globe", "idcard", "map", "paper", "sketch", "object", "cta", "folio", "board", "brief", "poster", "collage", "comic"]);
   let totalFrames = 0;
   const sfxAll = [];
 
@@ -144,7 +147,7 @@ async function check(id, quiet = false) {
     const t = timings?.scenes?.[sc.id];
     if (timings && !t) { errors.push(`${tag} not in timings.json — re-run voice`); continue; }
     if (!t) continue;
-    totalFrames += Math.ceil((t.voSeconds + BRAND.audio.voTail) * 30);
+    totalFrames += Math.ceil((t.voSeconds + tailOf(ep, sc)) * 30);
 
     const resolveSafe = (c, where) => {
       try { return resolveCue(c, t.words); } catch (e) { errors.push(`${tag} ${where}: ${e.message}`); return null; }
@@ -168,7 +171,7 @@ async function check(id, quiet = false) {
     }
     for (const c of sc.sfx ?? []) {
       const at = resolveSafe(c.at, `sfx ${c.file}`);
-      if (at !== null) sfxAll.push({scene: sc.id, t: at, file: c.file, vol: c.vol ?? BRAND.audio.sfxDefaultVolume, base: totalFrames - Math.ceil((t.voSeconds + BRAND.audio.voTail) * 30)});
+      if (at !== null) sfxAll.push({scene: sc.id, t: at, file: c.file, vol: c.vol ?? BRAND.audio.sfxDefaultVolume, base: totalFrames - Math.ceil((t.voSeconds + tailOf(ep, sc)) * 30)});
       if (!(await exists(path.join(ROOT, "public", "audio", `sfx-${c.file}.mp3`)))) errors.push(`${tag} sfx file "sfx-${c.file}.mp3" not found in public/audio`);
       if ((c.vol ?? 0) > BRAND.audio.sfxMaxVolume) warns.push(`${tag} sfx ${c.file} volume ${c.vol} will be capped to ${BRAND.audio.sfxMaxVolume}`);
     }
@@ -178,7 +181,7 @@ async function check(id, quiet = false) {
   // sfx stacking
   const flat = sfxAll.map((c) => ({...c, g: c.base / 30 + c.t})).sort((a, b) => a.g - b.g);
   for (let i = 1; i < flat.length; i++) {
-    if (flat[i].g - flat[i - 1].g < BRAND.audio.sfxMinGap) warns.push(`sfx "${flat[i].file}" is within ${BRAND.audio.sfxMinGap}s of "${flat[i - 1].file}" — it will be dropped (no stacking)`);
+    if (flat[i].g - flat[i - 1].g < (ep.audio?.sfxMinGap ?? BRAND.audio.sfxMinGap)) warns.push(`sfx "${flat[i].file}" is within ${(ep.audio?.sfxMinGap ?? BRAND.audio.sfxMinGap)}s of "${flat[i - 1].file}" — it will be dropped (no stacking)`);
   }
   if (totalFrames / 30 > BRAND.limits.maxSeconds) warns.push(`episode is ${(totalFrames / 30).toFixed(1)}s, over the ${BRAND.limits.maxSeconds}s target — consider trimming the script`);
 
@@ -203,9 +206,9 @@ async function check(id, quiet = false) {
 }
 
 /* ---------- lint (structure only: no audio, timings or API key required) ---------- */
-const SHOT_TYPES = ["scene", "globe", "idcard", "map", "paper", "sketch", "object", "cta", "folio", "board", "poster", "collage"];
-const LOOKS = ["night", "manuscript", "casefile", "poster", "collage"];
-const LOOK_SHOT = {night: ["scene", "globe", "idcard", "map", "paper", "sketch", "object", "cta"], manuscript: ["folio"], casefile: ["board"], poster: ["poster"], collage: ["collage"]};
+const SHOT_TYPES = ["scene", "globe", "idcard", "map", "paper", "sketch", "object", "cta", "folio", "board", "brief", "poster", "collage", "comic"];
+const LOOKS = ["night", "manuscript", "casefile", "poster", "collage", "comic", "corporate"];
+const LOOK_SHOT = {night: ["scene", "globe", "idcard", "map", "paper", "sketch", "object", "cta"], manuscript: ["folio"], casefile: ["board"], corporate: ["brief"], poster: ["poster"], collage: ["collage"], comic: ["comic"]};
 
 /** Every collage image an episode uses must be in the manifest, on disk, and public domain/CC0 (or flagged for credit). */
 async function imageProblems(ep) {
